@@ -1,0 +1,73 @@
+[
+    {
+        "imageURL": "https://fredassets.s3.eu-west-1.amazonaws.com/uploads/sites/4/2015/12/dutch.png",
+        "name": "FRED ENGLISH",
+        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradioen/stream/"
+    },
+    {
+        "imageURL": "https://www.fred.fm/kr/wp-content/uploads/sites/16/2014/11/korean.png",
+        "name": "FRED KOREAN",
+        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradiokr/stream/"
+    },
+    {
+        "imageURL": "https://fredassets.s3.eu-west-1.amazonaws.com/uploads/sites/5/2014/11/extras.png",
+        "name": "FRED EXTRA",
+        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradioec/stream/"
+    },
+    {
+        "imageURL": "https://www.fred.fm/enter/wp-content/uploads/sites/14/2014/11/enter242x87.png",
+        "name": "FRED ENTERTAINMENT",
+        "streamURL": "https://s10.webradio-hosting.com/proxy/fredenter/stream/"
+    },
+    {
+        "imageURL": "https://www.fred.fm/industry/wp-content/uploads/sites/29/2014/11/industry.png",
+        "name": "FRED INDUSTRY",
+        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradioind/stream/"
+    },
+    {
+        "imageURL": "https://www.fred.fm/edu/wp-content/uploads/sites/30/2014/11/education.png",
+        "name": "FRED EDUCATION",
+        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradioedu/stream/"
+    },
+    {
+        "imageURL": "https://afngo.net/static/media/AFN_Country.56ad370b2464065a0e44.png",
+        "name": "AFN COUNTRY",
+        "streamURL": "https://16643.live.streamtheworld.com/AFN_CTYPAAC.aac"
+    },
+    {
+        "imageURL": "https://afngo.net/static/media/AFN_Freedom.8da961a4fcf34e9e3849.png",
+        "name": "AFN FREEDOM ROCK",
+        "streamURL": "https://17793.live.streamtheworld.com/AFN_FREPAAC.aac"
+    },
+    {
+        "imageURL": "https://afngo.net/static/media/AFN-Blend.5ae0d0165c08b5d4181e.png",
+        "name": "AFN THE BLEND",
+        "streamURL": "https://15373.live.streamtheworld.com/AFN_HOTPAAC.aac"
+    },
+    {
+        "imageURL": "https://afngo.net/static/media/AFN_Joe.194d26d7cb7f4bd0f26b.png",
+        "name": "AFN JOE RADIO",
+        "streamURL": "https://20423.live.streamtheworld.com/AFN_JOEPAAC.aac"
+    },
+    {
+        "imageURL": "https://afngo.net/static/media/AFN_Legacy.a1870450884dc7739a72.png",
+        "name": "AFN LEGACY",
+        "streamURL": "https://18683.live.streamtheworld.com/AFN_LGYPAAC.aac"
+    },
+    {
+        "imageURL": "https://afngo.net/static/media/AFN_Fans.2e27091b5eb6faccc48a.png",
+        "name": "AFN FANS",
+        "streamURL": "https://24413.live.streamtheworld.com/AFN_FANAAC.aac",
+        "like": false
+    },
+    {
+        "imageURL": "https://afngo.net/static/media/Power-Talk.d89d33dd8e37a30950bc.png",
+        "name": "AFN POWERTALK",
+        "streamURL": "https://26233.live.streamtheworld.com/AFN_PTKAAC.aac"
+    },
+    {
+        "imageURL": "https://afngo.net/static/media/theVoice_logo.b873f90637110baec8a3.png",
+        "name": "AFN THE VOICE",
+        "streamURL": "https://18423.live.streamtheworld.com/AFN_VCEAAC.aac"
+    }
+]
