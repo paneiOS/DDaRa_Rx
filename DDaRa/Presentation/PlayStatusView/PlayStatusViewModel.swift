@@ -8,12 +8,13 @@
 import RxSwift
 import RxCocoa
 import Foundation
-
+import AVFoundation
 
 class PlayStatusViewModel {
     let disposeBag = DisposeBag()
-    private let network = StationNetwork()
+    private let player = AVPlayer()
     
+    private let network = StationNetwork()
     let playStart = PublishRelay<Void>()
     let stationSelected = PublishRelay<StationCellData>()
     
@@ -28,5 +29,22 @@ class PlayStatusViewModel {
             .map { station -> URL? in
                 return URL(string: station.streamURL)
             }
+        
+        streamURL
+            .subscribe(onNext: { [weak self] url in
+                guard let url = url else { return }
+                let item = AVPlayerItem(url: url)
+                self?.player.replaceCurrentItem(with: item)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func play() {
+        guard player.currentItem != nil else { return }
+        player.play()
+    }
+    
+    func pause() {
+        player.pause()
     }
 }

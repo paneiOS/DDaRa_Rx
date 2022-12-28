@@ -9,11 +9,9 @@ import UIKit
 import SnapKit
 import Kingfisher
 import RxSwift
-import AVFoundation
 
 class PlayStatusView: UIView {
     private let disposeBag = DisposeBag()
-    private let player = AVPlayer()
     
     private let statusBarWidth = UIScreen.main.bounds.size.height / 25
     
@@ -66,21 +64,18 @@ class PlayStatusView: UIView {
             .withLatestFrom(viewModel.stationInfo)
             .asDriver(onErrorJustReturn: StationCellData(name: "", imageURL: "", streamURL: "", like: false))
             .drive(onNext: { [weak self] station in
-                guard let url = URL(string: station.streamURL) else { return }
-                let item = AVPlayerItem(url: url)
-                self?.player.replaceCurrentItem(with: item)
                 self?.stationLabel.text = station.name
                 self?.cdImageView.kf.setImage(with: URL(string: station.imageURL), placeholder: UIImage(systemName: "photo"))
-                self?.play()
+                self?.play(viewModel)
             })
             .disposed(by: disposeBag)
         
         playButton.rx.tap
             .bind(onNext: { [weak self] _ in
                 if (false == self?.playButton.isSelected) {
-                    self?.play()
+                    self?.play(viewModel)
                 } else {
-                    self?.pause()
+                    self?.pause(viewModel)
                 }
             })
             .disposed(by: disposeBag)
@@ -126,15 +121,14 @@ class PlayStatusView: UIView {
         cdSubView.layer.cornerRadius = cdSubView.frame.size.height / 2
     }
     
-    private func play() {
-        guard player.currentItem != nil else { return }
-        player.play()
+    private func play(_ viewModel: PlayStatusViewModel) {
+        viewModel.play()
         playButton.isSelected = true
         cdImageView.startRotating()
     }
     
-    private func pause() {
-        player.pause()
+    private func pause(_ viewModel: PlayStatusViewModel) {
+        viewModel.pause()
         playButton.isSelected = false
         cdImageView.stopRotating()
     }
