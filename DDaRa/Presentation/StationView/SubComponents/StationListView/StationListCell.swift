@@ -59,8 +59,7 @@ final class StationListCell: UITableViewCell {
             $0.trailing.equalToSuperview().inset(20)
             $0.bottom.equalToSuperview().inset(20)
             $0.width.equalTo(likeButton.snp.height)
-        }
-        
+        }    
     }
     
     private func attribute() {

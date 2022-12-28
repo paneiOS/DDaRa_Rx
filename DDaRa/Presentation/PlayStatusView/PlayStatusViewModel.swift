@@ -10,16 +10,18 @@ import RxCocoa
 import Foundation
 import AVFoundation
 
-class PlayStatusViewModel {
-    let disposeBag = DisposeBag()
-    private let player = AVPlayer()
+final class PlayStatusViewModel {
+    private let disposeBag = DisposeBag()
     
     private let network = StationNetwork()
+    
     let playStart = PublishRelay<Void>()
     let stationSelected = PublishRelay<StationCellData>()
     
     let stationInfo: Driver<StationCellData>
     let streamURL: Observable<URL?>
+    
+    private let player = AVPlayer()
     
     init() {
         stationInfo = stationSelected

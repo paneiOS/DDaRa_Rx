@@ -32,7 +32,7 @@ class FavoriteListBackgroundView: UIView {
     
     private func attribute() {
         backgroundColor = .white
-        statusLabel.text = "좋아요를 눌러주세요."
+        statusLabel.text = PlaceHolder.favoriteList.rawValue
         statusLabel.textAlignment = .center
     }
     

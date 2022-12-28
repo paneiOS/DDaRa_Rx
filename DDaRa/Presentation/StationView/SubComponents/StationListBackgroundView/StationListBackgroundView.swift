@@ -9,9 +9,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class StationListBackgroundView: UIView {
-    let disposeBag = DisposeBag()
-    let statusLabel = UILabel()
+final class StationListBackgroundView: UIView {
+    private let disposeBag = DisposeBag()
+    
+    private let statusLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,7 +33,7 @@ class StationListBackgroundView: UIView {
     
     private func attribute() {
         backgroundColor = .white
-        statusLabel.text = "데이터를 불러오는 중입니다 ..."
+        statusLabel.text = PlaceHolder.stationList.rawValue
         statusLabel.textAlignment = .center
     }
     

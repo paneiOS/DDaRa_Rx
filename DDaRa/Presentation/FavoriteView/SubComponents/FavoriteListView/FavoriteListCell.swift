@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 
 final class FavoriteListCell: UITableViewCell {
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     private let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()

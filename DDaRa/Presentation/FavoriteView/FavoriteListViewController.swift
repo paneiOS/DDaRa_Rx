@@ -10,8 +10,9 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class FavoriteListViewController: UIViewController {
+final class FavoriteListViewController: UIViewController {
     private let disposeBag = DisposeBag()
+    
     private let favoriteListView = FavoriteListView()
     private let backgroundView = FavoriteListBackgroundView()
     

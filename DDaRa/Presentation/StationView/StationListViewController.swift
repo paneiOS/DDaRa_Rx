@@ -10,9 +10,10 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class StationListViewController: UIViewController {
+final class StationListViewController: UIViewController {
     private let disposeBag = DisposeBag()
-    let stationListView = StationListView()
+    
+    private let stationListView = StationListView()
     private let backgroundView = StationListBackgroundView()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {

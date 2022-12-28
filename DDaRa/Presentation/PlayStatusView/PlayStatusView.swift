@@ -10,7 +10,7 @@ import SnapKit
 import Kingfisher
 import RxSwift
 
-class PlayStatusView: UIView {
+final class PlayStatusView: UIView {
     private let disposeBag = DisposeBag()
     
     private let statusBarWidth = UIScreen.main.bounds.size.height / 25
@@ -117,7 +117,7 @@ class PlayStatusView: UIView {
         layer.borderColor = UIColor.white.cgColor
     }
     
-    func setupRound() {
+    private func setupRound() {
         cdSubView.layer.cornerRadius = cdSubView.frame.size.height / 2
     }
     

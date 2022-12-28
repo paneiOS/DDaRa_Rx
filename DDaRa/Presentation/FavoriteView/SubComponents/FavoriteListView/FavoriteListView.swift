@@ -10,8 +10,8 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
-class FavoriteListView: UITableView {
-    let disposeBag = DisposeBag()
+final class FavoriteListView: UITableView {
+    private let disposeBag = DisposeBag()
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)

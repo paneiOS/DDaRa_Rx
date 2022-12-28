@@ -10,9 +10,8 @@ import RxCocoa
 
 struct StationListViewModel {
     let stationListCellData = PublishRelay<[StationCellData]>()
-    let selectedCell = PublishRelay<Void>()
     let reloadCellData = PublishRelay<Void>()
-    
+    let selectedCell = PublishRelay<Void>()
     let cellData: Driver<[StationCellData]>
     
     init() {

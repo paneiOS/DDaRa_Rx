@@ -9,10 +9,9 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-
-
 class StationNetwork {
     private let session: URLSession
+    
     init(session: URLSession = .shared) {
         self.session = session
     }

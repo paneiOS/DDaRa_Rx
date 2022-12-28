@@ -10,6 +10,7 @@ import RxCocoa
 
 struct StationListBackgroundViewModel {
     let isStatusLabelHidden: Signal<Bool>
+    
     let shouldHideStatusLabel = PublishSubject<Bool>()
     
     init() {

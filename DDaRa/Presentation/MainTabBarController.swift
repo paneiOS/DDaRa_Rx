@@ -9,8 +9,10 @@ import UIKit
 import RxSwift
 
 final class MainTabBarController: UITabBarController {
-    private let mainTabBarViewModel = MainTabBarViewModel()
     private let disposeBag = DisposeBag()
+    private let mainTabBarViewModel = MainTabBarViewModel()
+    private let playStatusView = PlayStatusView()
+    
     private lazy var stationViewController: UIViewController = {
         let rootViewController = StationListViewController()
         rootViewController.bind(mainTabBarViewModel)
@@ -28,8 +30,6 @@ final class MainTabBarController: UITabBarController {
         viewController.tabBarItem = tabBarItem
         return viewController
     }()
-    
-    private let playStatusView = PlayStatusView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

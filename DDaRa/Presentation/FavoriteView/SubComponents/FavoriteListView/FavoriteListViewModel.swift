@@ -11,6 +11,7 @@ import RxCocoa
 
 struct FavoriteListViewModel {
     private let disposeBag = DisposeBag()
+    
     let favoriteListCellData = PublishSubject<[StationCellData]>()
     let selectedCell = PublishRelay<Void>()
     let reloadCellData = PublishRelay<Void>()
