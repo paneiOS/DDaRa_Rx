@@ -21,7 +21,7 @@ final class MainModelTests: XCTestCase {
         self.stationList = stations
     }
     
-    private func testListToCellData() {
+    func testListToCellData() {
         let cellData = model.listToCellData(stationList)
         let stationName = stationList.map {$0.name }
         let cellDataLike = cellData.map { UserDefaults.standard.bool(forKey: $0.name) }
