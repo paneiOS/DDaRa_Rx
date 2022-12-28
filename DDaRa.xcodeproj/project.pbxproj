@@ -165,9 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				3929B630295BC5FD00A1CBD0 /* DDaRaTests.swift */,
-				3929B637295BC63600A1CBD0 /* StationNetworkStub.swift */,
-				3929B639295BD6FA00A1CBD0 /* networkDummy.json */,
-				3929B63B295BD77B00A1CBD0 /* Dummy.swift */,
+				3929B667295CAAC300A1CBD0 /* Mock */,
 				3929B63D295BE4E900A1CBD0 /* MainModelTests.swift */,
 				3929B63F295BEF6100A1CBD0 /* MainTabBarViewModelTests.swift */,
 			);
@@ -192,6 +190,36 @@
 				39A1BED62952FB120007C524 /* Info.plist */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		3929B665295CA97900A1CBD0 /* MainTabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				392FBC512958B32000F359A1 /* MainTabBarController.swift */,
+				39947BBD2959878A00412BC4 /* MainTabBarViewModel.swift */,
+				39A1BF0629533ACC0007C524 /* MainModel.swift */,
+			);
+			path = MainTabBarView;
+			sourceTree = "<group>";
+		};
+		3929B666295CA98D00A1CBD0 /* SubComponents */ = {
+			isa = PBXGroup;
+			children = (
+				39C1A6062953654D00A5625F /* PlayStatusView */,
+				39A1BEF1295311670007C524 /* StationView */,
+				392FBC6629596D8F00F359A1 /* FavoriteView */,
+			);
+			path = SubComponents;
+			sourceTree = "<group>";
+		};
+		3929B667295CAAC300A1CBD0 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				3929B637295BC63600A1CBD0 /* StationNetworkStub.swift */,
+				3929B639295BD6FA00A1CBD0 /* networkDummy.json */,
+				3929B63B295BD77B00A1CBD0 /* Dummy.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		392FBC6629596D8F00F359A1 /* FavoriteView */ = {
@@ -276,12 +304,8 @@
 		39A1BEF3295326580007C524 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				392FBC512958B32000F359A1 /* MainTabBarController.swift */,
-				39947BBD2959878A00412BC4 /* MainTabBarViewModel.swift */,
-				39A1BF0629533ACC0007C524 /* MainModel.swift */,
-				39C1A6062953654D00A5625F /* PlayStatusView */,
-				39A1BEF1295311670007C524 /* StationView */,
-				392FBC6629596D8F00F359A1 /* FavoriteView */,
+				3929B665295CA97900A1CBD0 /* MainTabBarView */,
+				3929B666295CA98D00A1CBD0 /* SubComponents */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
