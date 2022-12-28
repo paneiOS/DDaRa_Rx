@@ -15,7 +15,7 @@ enum NetworkError: Error {
     var message: String {
         switch self {
         case .invalidURL:
-            return "라디오 주소에 문제가 생겼습니다."
+            return "방송국 주소가 문제가 생겼습니다."
         case .invalidJSON:
             return "서버에 문제가 생겼습니다."
         case .networkError:
