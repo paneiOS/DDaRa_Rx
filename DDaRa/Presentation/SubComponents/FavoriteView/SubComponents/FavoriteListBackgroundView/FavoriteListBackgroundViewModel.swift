@@ -6,15 +6,24 @@
 //
 
 import RxSwift
-import RxCocoa
 
-struct FavoriteListBackgroundViewModel {
-    let isStatusLabelHidden: Signal<Bool>
-    let shouldHideStatusLabel = PublishSubject<Bool>()
+struct FavoriteListBackgroundViewModel: ViewModel {
+    struct Input {
+        let favoriteList: Observable<[StationCellData]>
+    }
+    struct Output {
+        let isPlaceHolderHidden: Observable<Bool>
+    }
     
-    init() {
-        isStatusLabelHidden = shouldHideStatusLabel
-            .asSignal(onErrorJustReturn: true)
+    var disposeBag = DisposeBag()
+    
+    func transform(input: Input) -> Output {
+        let isPlaceHolderHidden = input.favoriteList
+            .map { cellData -> Bool in
+                return !cellData.isEmpty
+            }
+            .asObservable()
+        
+        return Output(isPlaceHolderHidden: isPlaceHolderHidden)
     }
 }
-

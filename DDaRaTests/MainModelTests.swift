@@ -21,20 +21,39 @@ final class MainModelTests: XCTestCase {
         self.stationList = stations
     }
     
-    func testListToCellData() {
-        let cellData = model.listToCellData(stationList)
-        let stationName = stationList.map {$0.name }
-        let cellDataLike = cellData.map { UserDefaults.standard.bool(forKey: $0.name) }
-        let stationListLike = stationList.map { UserDefaults.standard.bool(forKey: $0.name) }
+    func test_SectionOfCellData() {
+        let cellData = model.sectionOfCellData(stationList)
+        let sections = Section.allCases.map{$0.id}
         
-        expect(cellData.map {$0.name}).to(
+        expect(cellData.map{$0.header}).to(
+            equal(sections),
+            description: "stationList의 sections는 document의 sections와 일치한다."
+        )
+    }
+    
+    func test_ListToCellData() {
+        let cellData = model.listToCellData(stationList)
+        let stationName = cellData.map{$0.title}.sorted()
+        let stationListLike = stationList.map{$0.title}.filter{UserDefaults.standard.bool(forKey: $0)}
+        let favoriteCount = UserDefaults.standard.integer(forKey: "favoriteCount")
+        
+        expect(cellData.map{$0.title}.sorted()).to(
             equal(stationName),
             description: "StationCellData의 stationName은 stationList의 stationName이다."
         )
         
-        expect(cellDataLike).to(
+        expect(stationName).to(
             equal(stationListLike),
-            description: "Station의 name값을 Key값으로 cellData의 like에 Bool값이 전달된다."
+            description: "cellData의 좋아요와 document의 좋아요가 일치한다."
         )
+        
+        expect(cellData.count).to(
+            equal(favoriteCount),
+            description: "앱실행시 즐겨찾기화면으로 이동하기 위해 저장한 즐겨찾기의 수와 cellData의 즐겨찾기 수가 일치한다."
+        )
+    }
+    
+    func test_GetJsonToUrl() {
+        
     }
 }

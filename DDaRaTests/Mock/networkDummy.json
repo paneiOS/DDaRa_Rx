@@ -1,73 +1,1056 @@
 [
     {
-        "imageURL": "https://fredassets.s3.eu-west-1.amazonaws.com/uploads/sites/4/2015/12/dutch.png",
-        "name": "FRED ENGLISH",
-        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradioen/stream/"
+        "section": "지상파",
+        "title": "KBS 1라디오",
+        "subTitle": "지상파",
+        "stationType": 1,
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FKBS%201Radio%20Circle%401x.png?alt=media&token=d55137da-926b-444d-b9b7-acb8bce9a085",
+        "streamURL": "http://serpent0.duckdns.org:8088/kbs1radio.pls",
+        "detail": "KBS 제1라디오는 대한민국의 방송국 한국방송공사에서 운영·방송하는 라디오 채널이다. 1927년 2월 16일에 개국하였다. 주로 뉴스, 시사, 교양 프로그램 등을 하루 24시간 방송한다. EBS FM과 더불어 대한민국의 라디오 방송으로서는 송신소가 가장 많은 채널이며, 방송통신위원회가 지정한 긴급재난 방송사이기도 하다."
     },
     {
+        "section": "지상파",
+        "title": "KBS 2라디오",
+        "subTitle": "지상파",
+        "stationType": 1,
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FKBS%202Radio%20Circle%401x.png?alt=media&token=abdbb93b-a38c-41cc-af66-a51880c89484",
+        "streamURL": "http://serpent0.duckdns.org:8088/kbs2radio.pls",
+        "detail": "KBS 제2라디오 또는 KBS 해피FM(KBS Happy FM)은 대한민국의 방송국 한국방송공사에서 운영·방송하는 라디오 채널이다. 주로 중장년층을 대상으로 대중음악, 연예오락 등을 방송한다."
+    },
+    {
+        "section": "지상파",
+        "title": "KBS 3라디오",
+        "subTitle": "지상파",
+        "stationType": 2,
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FKBS%203Radio%20Circle%401x.png?alt=media&token=3e2224b6-69ee-4da2-91dc-7f3c0c46f41f",
+        "streamURL": "https://cfpwwwapi.kbs.co.kr/api/v1/landing/live/channel_code/23",
+        "detail": "KBS 제3라디오(호출부호: HLKC, 별칭: 사랑의 소리방송)는 대한민국의 방송국 한국방송공사에서 운영·방송하는 라디오 채널이다. 장애인 등 소외계층을 위한 복지 정보, 정책, 사회복지공동모금회 일상 정보 등을 방송한다. "
+    },
+    {
+        "section": "지상파",
+        "title": "KBS Classic FM",
+        "subTitle": "지상파",
+        "stationType": 1,
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FKBS%20Classic%20FM%20Circle%401x.png?alt=media&token=e04493fb-d2b6-4b78-9312-4c5e622f87a9",
+        "streamURL": "http://serpent0.duckdns.org:8088/kbsfm.pls",
+        "detail": "KBS 제1FM 혹은 KBS 클래식FM(KBS Classic FM)은 대한민국의 방송국 한국방송공사에서 운영·방송하는 클래식 음악 전문 라디오 채널이다."
+    },
+    {
+        "section": "지상파",
+        "title": "KBS Cool FM",
+        "subTitle": "지상파",
+        "stationType": 1,
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FKBS%20Cool%20FM%20Circle%401x.png?alt=media&token=1c10b149-a991-413a-b72f-0eb40340134c",
+        "streamURL": "http://serpent0.duckdns.org:8088/kbs2fm.pls",
+        "detail": "KBS 제2FM 혹은 KBS 쿨FM(영어: KBS Cool FM, U-KBS MUSIC)[1]은 대한민국의 방송국 한국방송공사에서 운영·송출되는 연예오락/예능·교양·대중음악 전문 라디오 채널이다."
+    },
+    {
+        "section": "지상파",
+        "title": "KBS 한민족방송",
+        "subTitle": "지상파",
+        "stationType": 2,
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FKBS%20Korean%20People%20Circle%401x.png?alt=media&token=463f674b-0fd8-4ebe-a8fc-4edafb4e92d4",
+        "streamURL": "https://cfpwwwapi.kbs.co.kr/api/v1/landing/live/channel_code/26",
+        "detail": "KBS 한민족방송(韓民族放送)은 한국방송공사가 반공주의 선전을 목적으로 실시하고 있는 대북방송이자 한국어 국제방송으로, 본래 명칭은 KBS 사회교육방송이었다. 대한민국과 조선민주주의인민공화국, 일본과 중국 연변 조선족 자치주, 러시아 연해주에 거주하는 한민족들이 주 청취 대상이다. 대한민국의 라디오 채널 중 표준FM으로 송출되지 않는 유일한 중파방송 전용 라디오 채널이다"
+    },
+    {
+        "section": "지상파",
+        "title": "KBS WORLD 라디오",
+        "subTitle": "지상파",
+        "stationType": 2,
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FKBS%20WORLD%20Radio%20Circle%401x.png?alt=media&token=4a42aab3-142f-4968-b9a5-6de24929ba22",
+        "streamURL": "https://cfpwwwapi.kbs.co.kr/api/v1/landing/live/channel_code/I92",
+        "detail": "KBS 월드라디오(KBS World Radio)는 현재 한국방송공사에서 운영,방송하는 대한민국의 유일한 대외홍보방송이다."
+    },
+    {
+        "section": "지상파",
+        "title": "MBC 표준FM",
+        "subTitle": "지상파",
+        "stationType": 1,
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FMBC%20BasicFM%20Circle%401x.png?alt=media&token=254e61f3-2a8b-4589-a461-a5423939268d",
+        "streamURL": "http://serpent0.duckdns.org:8088/mbcsfm.pls",
+        "detail": "MBC 표준FM은 대한민국의 방송국 문화방송의 라디오 채널이며 뉴스, 시사, 교양, 오락, 스포츠 등의 종합 정보를 24시간 방송하고 있다."
+    },
+    {
+        "section": "지상파",
+        "title": "MBC FM4U",
+        "subTitle": "지상파",
+        "stationType": 1,
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FMBC%20FM4U%20Circle%401x.png?alt=media&token=b99068e0-4c12-45e4-acee-8e5a7dcfea68",
+        "streamURL": "http://serpent0.duckdns.org:8088/mbcfm.pls",
+        "detail": "MBC FM4U는 대한민국의 방송국 문화방송의 라디오 채널이다. 1970년 4월 15일에 부산문화방송에서, 1971년 9월 19일에 문화방송에서 개국하였다. 주로 젊은 층을 겨낭하여 K-pop, 클래식 음악, 팝 음악 등이 방송된다. 특히 전국적으로 방송망이 구축되어 있는 점이 강점이다. 중소도시와 교외 등지의 청년층에서 KBS 제2라디오와 함께 인지도가 가장 높은 대한민국 라디오 채널이다."
+    },
+    {
+        "section": "지상파",
+        "title": "SBS 파워FM",
+        "subTitle": "지상파",
+        "stationType": 1,
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FSBS%20PowerFM%20Circle%401x.png?alt=media&token=372d06da-8586-4870-bced-c543dbadaef7",
+        "streamURL": "http://serpent0.duckdns.org:8088/sbsfm.pls",
+        "detail": "SBS 파워FM은 대한민국의 방송사 SBS의 연예오락, 대중음악 전문 라디오 채널이다."
+    },
+    {
+        "section": "지상파",
+        "title": "SBS 러브FM",
+        "subTitle": "지상파",
+        "stationType": 1,
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FSBS%20LoveFM%20Circle%401x.png?alt=media&token=69497b02-eee4-4e77-a536-74dc45feaeaa",
+        "streamURL": "http://serpent0.duckdns.org:8088/sbs2fm.pls",
+        "detail": "SBS에서 운영하는 종합편성 라디오 채널. SBS 파워FM과는 달리 뉴스, 시사, 예능, 음악, 스포츠 등 다양한 장르의 프로그램을 방송하고 있다."
+    },
+    {
+        "section": "지상파",
+        "title": "EBS FM",
+        "subTitle": "지상파, 독서",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FEBS%20FM%20Circle%401x.png?alt=media&token=53f7586c-8d2c-4303-9473-cf801d57bfdf",
+        "streamURL": "http://ebsonairiosaod.ebs.co.kr/fmradiobandiaod/bandiappaac/playlist.m3u8",
+        "detail": "EBS FM은 대한민국의 방송국 한국교육방송공사에서 운영·방송하는 FM 라디오 방송 채널이다. 주로 어학, 교육, 교양 프로그램 등을 방송한다. 아침에는 어학, 심야에는 주로 문학 관련 프로그램을 중점적으로 편성하므로, 전국적으로 산재되어 있는 KBS 지역 총국의 지상파 송출망을 공유하고 있다."
+    },
+    {
+        "section": "지상파",
+        "title": "EBS 외국어라디오",
+        "subTitle": "지상파, 외국어방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FEBS%20Forigin%20Circle%401x.png?alt=media&token=afd0cda6-a86f-4bfd-b1a7-4be1599f7152",
+        "streamURL": "http://new_iradio.ebs.co.kr/iradio/iradiolive_m4a/playlist.m3u8",
+        "detail": "EBS에서 운영하는 외국어 전문 라디오 방송 채널이다."
+    },
+    {
+        "section": "지역방송",
+        "title": "KNN 파워FM",
+        "subTitle": "부산, 경남, 지역방송, 음악",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FKNN%20PowerFM%401x.png?alt=media&token=5faac032-8937-4fea-a3db-49fbdcc5eec1",
+        "streamURL": "http://211.220.195.209:1935/live/mp4:KnnRadio1FM.sdp/chunklist_w1898647741.m3u8",
+        "detail": "KNN 파워FM은 대한민국 부산경남권의 민영 방송사인 KNN의 음악 전문 라디오 방송 채널로, 1997년 9월 9일에 개국하였다."
+    },
+    {
+        "section": "지역방송",
+        "title": "KNN 러브FM",
+        "subTitle": "부산, 경남, 지역방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FKNN%20LoveFM%401x.png?alt=media&token=f46845ad-2274-4a2a-925a-43abc2731a71",
+        "streamURL": "http://211.220.195.209:1935/live/mp4:KnnRadio2FM.sdp/chunklist_w418592936.m3u8",
+        "detail": "KNN 러브FM은 대한민국 부산경남권의 민영 방송사인 KNN의 종합 라디오 방송 채널로, 2016년 5월 10일(FM)에 개국하였다."
+    },
+    {
+        "section": "지역방송",
+        "title": "TJB 파워FM",
+        "subTitle": "대전, 지역방송, 음악",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FTJB%20PowerFM.jpeg?alt=media&token=4ae38895-92ac-4a08-b487-73e66d285163",
+        "streamURL": "http://1.245.74.5/radiolive/radio_64k/chunklist_w1048960424.m3u8",
+        "detail": "TJB(대전방송)은 대전세종충남 지역을 연고로 하는 민영 방송사이며, 주로 SBS의 프로그램을 편성, 방영하고 있다."
+    },
+    {
+        "section": "지역방송",
+        "title": "KBC 광주방송 myFM",
+        "subTitle": "광주, 지역방송",
+        "imageURL": "http://ikbc.co.kr/data/kbc/upload/save/company/kbc1657382993547.png",
+        "streamURL": "http://119.200.131.11:1935/KBCFM/kbcra_aac/chunklist_w229048097.m3u8",
+        "detail": "KBC(광주방송)은 대한민국의 광주광역시와 전라남도 및 인근 일부 지역을 가시청권으로 하는 SBS의 광주전남권 네트워크 가맹 민영 방송이다."
+    },
+    {
+        "section": "지역방송",
+        "title": "CJB 청주방송",
+        "subTitle": "청주, 지역방송, 음악",
+        "imageURL": "https://www.cjb.co.kr/home/images/layout/logo.gif",
+        "streamURL": "https://wowza1.cjb.co.kr/live/cjbradio/chunklist_w1596202035.m3u8",
+        "detail": "CJB(청주방송)은 충청북도 전역과 그 인근 지역을 가시청권으로 하는 대한민국 SBS의 네트워크 민영 방송이다."
+    },
+    {
+        "section": "지역방송",
+        "title": "GFM 관악FM",
+        "subTitle": "관악, 지역방송",
+        "imageURL": "http://www.radiogfm.net/paper/data/news/menuimg/papertitle.gif",
+        "streamURL": "http://live.radios.kr:8000",
+        "detail": "서울특별시 관악구 일원을 가청권으로 하는 소출력 공동체 라디오 방송국. 관악구 지역 주민의 활동을 전하는 라디오다."
+    },
+    {
+        "section": "지역방송",
+        "title": "UBC 울산방송",
+        "subTitle": "울산, 지역방송",
+        "imageURL": "http://web.ubc.co.kr/wp/wp-content/uploads/2015/01/logo.png",
+        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradiokr/stream/",
+        "detail": "UBC(울산방송)은 울산광역시 전지역, 경상남도 양산시 일부 및 기타 인근 일부 지역을 가시청권으로 하는 대한민국의 SBS의 울산권 네트워크 민영 방송이다."
+    },
+    {
+        "section": "지역방송",
+        "title": "경인방송",
+        "subTitle": "지역방송, 수도권",
+        "imageURL": "http://www.ifm.kr/uploads/editor/2019/07/408678f9bc40530669d319c17ad539e4.png",
+        "streamURL": "http://180.131.1.27:1935/live/aod1/chunklist_w1309591100.m3u8",
+        "detail": "경인방송은 인천광역시, 수도권 서부, 북서부와 서울 일부를 가시청권으로 하는 민영 라디오 방송사이다."
+    },
+    {
+        "section": "지역방송",
+        "title": "yfm 영주FM",
+        "subTitle": "경북, 영주, 지역방송",
+        "imageURL": "http://www.yfm.co.kr/theme/purewhite/img/logo.png",
+        "imageColor": "lightGray",
+        "streamURL": "http://220.81.2.147:8000",
+        "detail": "경상북도 영주시 일원을 가청권으로 하는 소출력 공동체 라디오 방송국. 영주시 지역 주민을 위한 방송국이다."
+    },
+    {
+        "section": "지역방송",
+        "title": "mapoFM 마포FM",
+        "subTitle": "마포, 지역방송",
+        "imageURL": "https://contents.sixshop.com/uploadedFiles/53441/default/image_1622442650821.png",
+        "imageColor": "black",
+        "streamURL": "http://onair.mapofm.net/mapofm",
+        "detail": "서울특별시 마포구 전 지역 및 서대문구 일부 지역을 가청권으로 하는 소출력 공동체 라디오 방송국. 마포 지역 주민을 대상으로, 일반 시민들이 주체가 되어 다양한 방송을 만들어 송출하고 있다."
+    },
+    {
+        "section": "지역방송",
+        "title": "G1방송",
+        "subTitle": "강원도, 음악, 지역방송",
+        "imageURL": "http://www.g1tv.co.kr/admin/data/banner/common_desktop_2101191020288.png",
+        "streamURL": "http://61.82.49.4:1935/fm/_definst_/myStream/chunklist_w992323496.m3u8",
+        "detail": "강원도 전역을 가시청권으로 하는 대한민국의 지상파 민영 방송사. SBS와 네트워크 협정을 맺고 있기 때문에 SBS 프로그램의 77%를 릴레이한다"
+    },
+    {
+        "section": "지역방송",
+        "title": "JTV 전주방송",
+        "subTitle": "전주, 지역방송",
+        "imageURL": "https://www.jtv.co.kr/2021/image/common/logo.png",
+        "streamURL": "https://61ff3340258d2.streamlock.net/jtv_radio/myStream/playlist.m3u8",
+        "detail": "JTV(전주방송)은 전라북도와 인근 일부 지역을 가시청권으로 하는 대한민국의 지상파 민영방송이다."
+    },
+    {
+        "section": "지역방송",
+        "title": "TBC Dream FM",
+        "subTitle": "대구, 지역, 지역방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FTBC%20Dream%20FM%401x.png?alt=media&token=818887c2-4d84-4e89-97c6-c8432c4c1955",
+        "streamURL": "http://221.157.125.239:1935/live/mp3:fmstream/chunklist_w830354831.m3u8",
+        "detail": "TBC는 대구경북을 방송권역으로 하는 민영방송사이며, 주로 SBS의 프로그램을 편성하고 있다."
+    },
+    {
+        "section": "전문방송",
+        "title": "YTN 라디오",
+        "subTitle": "뉴스, 전문방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FYTN.png?alt=media&token=abd15b79-cd5f-4e6a-b535-14dc9fffd110",
+        "streamURL": "https://slive.ytn.co.kr/live/_definst_/fmlive_0624_1.sdp/chunklist_w1766972754.m3u8",
+        "detail": "YTN라디오는 대한민국의 라디오 방송국이자 YTN의 자회사로, 대한민국 유일의 보도 전문 라디오 채널이다."
+    },
+    {
+        "section": "전문방송",
+        "title": "Arirang Radio",
+        "subTitle": "외국어방송, 전문방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FArirang%20Radio.png?alt=media&token=a4d8e979-6f7d-4eb7-acd6-b17b67f061ba",
+        "imageColor": "black",
+        "streamURL": "https://amdlive-ch03-ctnd-com.akamaized.net/arirang_3ch/smil:arirang_3ch.smil/chunklist_b1728000_sleng.m3u8",
+        "detail": "아리랑 라디오(Arirang Radio)은 대한민국 서울특별시에 거점을 둔 한국국제방송교류재단이 운영하는 영어 전문 라디오 방송국이다. 대한민국 최초의 영어 라디오 방송으로서, 제주지역 FM, 수도권 지상파 DMB, 휴대전화 애플리케이션(iPhone/iPad, Android), 홈페이지 On Air 서비스를 통해, 한국의 문화, 관광, 생활정보 등 실생활에 필요한 실용정보와 더불어 한국 안팎의 뉴스를 제공한다. 이를 통해 외국인에게는 한국의 문화 및 예술의 우수성을 알리고 내국인에게는 국제사회에 이바지함을 목적으로 하고 있다."
+    },
+    {
+        "section": "전문방송",
+        "title": "GFN",
+        "subTitle": "외국어방송, 광주, 전문방송, 지역방송",
+        "imageURL": "http://www.gfn.or.kr/img/logo.jpg",
+        "streamURL": "http://218.157.19.198:8000/listen.pls",
+        "detail": "GFN은 광주광역시와 전라남도 일부를 가시청권으로 하는 대한민국의 영어 전문 FM 라디오 방송국이다. 약칭은 GFN으로, Gwangju Foreign language Network의 줄임말이다. 상당수의 프로그램을 서울 TBS eFM의 것을 실시간 중계하는 것으로 편성되어 있으며, 자체 제작 프로그램의 편성 비율이 낮은 편이다."
+    },
+    {
+        "section": "전문방송",
+        "title": "TBS FM",
+        "subTitle": "교통, 서울, 전문방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FTBS%20FM.png?alt=media&token=21975a52-d19c-40b7-9dad-ab123972e603",
+        "streamURL": "https://cdnfm.tbs.seoul.kr/tbs/_definst_/tbs_fm_web_360.smil/chunklist_b414000.m3u8",
+        "detail": "TBS 교통방송은 교통 정보는 물론 서울 시민을 대상으로 다양한 정보를 전달하는 지역 공영 방송국이다. "
+    },
+    {
+        "section": "전문방송",
+        "title": "TBS eFM",
+        "subTitle": "외국어방송, 서울, 전문방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FTBS%20eFM.png?alt=media&token=0b0bcc88-4ed6-4f96-9aa2-71654d4cd3df",
+        "streamURL": "https://cdnefm.tbs.seoul.kr/tbs/_definst_/tbs_efm_web_360.smil/chunklist_b414000.m3u8",
+        "detail": "TBS eFM은 TBS 교통방송에서 서비스하고 있는 대한민국의 영어 전문 FM 라디오 방송국으로, Right here! Right now!라는 슬로건을 내걸고 100% 영어로 진행되는 한국 최초의 종합편성 FM 영어 전문 라디오 채널이다."
+    },
+    {
+        "section": "전문방송",
+        "title": "부산 eFM",
+        "subTitle": "부산, 외국어방송, 지역, 전문방송",
+        "imageURL": "https://www.befm.or.kr/img/top_logo.png",
+        "streamURL": "http://befm905.live.smilecdn.com:1935/befm905_live/live/chunklist_w565253851.m3u8",
+        "detail": "부산 eFM은 부산광역시와 그 인근을 가청권으로 하는 대한민국의 영어 전문 공익 FM 라디오 방송국이다."
+    },
+    {
+        "section": "전문방송",
+        "title": "국방FM",
+        "subTitle": "국방홍보원, 전문방송",
+        "imageURL": "https://radio.dema.mil.kr/2021/images/mark_fm_02.png",
+        "imageColor": "yellow",
+        "streamURL": "https://mediaworks.dema.mil.kr/live_edge/audio.sdp/playlist.m3u8",
+        "detail": "국방FM은 대한민국 국방부에서 관할하고 있는 라디오 방송국이다. 매일 아침 6시부터 자정까지 하루 18시간 방송, 그 외 KBS 제1라디오의 프로그램을 자정부터 아침 6시까지 재송출."
+    },
+    {
+        "section": "전문방송",
+        "title": "국악방송 FM",
+        "subTitle": "국악, 음악, 전문방송",
+        "imageURL": "https://www.igbf.kr/gugak_web/thd_img/main21/logo_kmusic.png",
+        "imageColor": "black",
+        "streamURL": "http://mgugaklive.nowcdn.co.kr/gugakradio/gugakradio.stream/playlist.m3u8",
+        "detail": "국악방송은 대한민국 전통 및 창작 국악 보급 교육과 국악의 대중화를 위하여 2000년 2월 14일에 설립된 문화체육관광부 소관의 재단법인으로 대한민국의 국악 전문 공영 방송국이다."
+    },
+    {
+        "section": "음악방송",
+        "title": "BOX K-POP 라디오",
+        "subTitle": "케이팝, 음악, 음악방송",
+        "imageURL": "https://icdn.streamafrica.net/boxradio/kpop.png",
+        "imageColor": "mint",
+        "streamURL": "https://play.streamafrica.net/kpopradio",
+        "detail": ""
+    },
+    {
+        "section": "음악방송",
+        "title": "DREAM CAST",
+        "subTitle": "음악, 음악방송",
+        "imageURL": "http://dream24.org/imgs/logo.gif",
+        "streamURL": "http://dream24.org/dream.pls",
+        "detail": ""
+    },
+    {
+        "section": "음악방송",
+        "title": "WOWCCM",
+        "subTitle": "기독교, 종교, 음악방송",
+        "imageURL": "https://wowccm.net/image/main/wowccm_logo.jpg",
+        "streamURL": "http://wowccm.iptime.org:8000",
+        "detail": "WOOCCM은 오직 복음만을 담은 선교방송으로, 방송과 문화컨텐츠를 통해 열방에 복음을 전하기 위해 만들어진 비영리 선교단체입니다. 방송, 공연, 문서 콘텐츠를 통해서 선교할 뿐만 아니라, 자국어 찬양이 부족한 나라에 현지어로 된 찬양 음반과 악보를 제작해 현지에 무료로 보급하고 있으며 24시간 찬양방송을 진행하고 있습니다."
+    },
+    {
+        "section": "음악방송",
+        "title": "BigBRadio KPOP",
+        "subTitle": "케이팝, 음악, 음악방송",
+        "imageURL": "https://cdn-profiles.tunein.com/s135096/images/logod.png?t=158317",
+        "imageColor": "black",
+        "streamURL": "https://antares.dribbcast.com/proxy/kpop?mp=/s",
+        "detail": "Big B Radio is The Only Hot Station for Asian Music. Streaming a wide variety of Asian Pop, Kpop, Jpop, Cpop music all under one station./nBig B Radio is proudly run by our volunteers who loves Asian Pop music  and we are determined to be the vanguard internet radio station for promoting Asian Pop music to the worldwide audiences./nWe are one of the first internet radio stations to broadcast Asian Pop genre music through SHOUTcast Radio since December 2004. And we are continuing to play the hottest Asian Pop music to listeners all over the world 24/7. Happy Listening!"
+    },
+    {
+        "section": "음악방송",
+        "title": "BigBRadio JPOP",
+        "subTitle": "제이팝, 음악, 외국어방송, 음악방송",
+        "imageURL": "https://cdn-profiles.tunein.com/s135097/images/logod.png?t=158317",
+        "imageColor": "black",
+        "streamURL": "https://antares.dribbcast.com/proxy/jpop?mp=/s",
+        "detail": "Big B Radio is The Only Hot Station for Asian Music. Streaming a wide variety of Asian Pop, Kpop, Jpop, Cpop music all under one station./nBig B Radio is proudly run by our volunteers who loves Asian Pop music  and we are determined to be the vanguard internet radio station for promoting Asian Pop music to the worldwide audiences./nWe are one of the first internet radio stations to broadcast Asian Pop genre music through SHOUTcast Radio since December 2004. And we are continuing to play the hottest Asian Pop music to listeners all over the world 24/7. Happy Listening!"
+    },
+    {
+        "section": "음악방송",
+        "title": "BigBRadio CPOP",
+        "subTitle": "차이나팝, 음악, 외국어방송, 음악방송",
+        "imageURL": "https://cdn-profiles.tunein.com/s138074/images/logod.png?t=158317",
+        "imageColor": "black",
+        "streamURL": "https://antares.dribbcast.com/proxy/cpop?mp=/s",
+        "detail": "Big B Radio is The Only Hot Station for Asian Music. Streaming a wide variety of Asian Pop, Kpop, Jpop, Cpop music all under one station./nBig B Radio is proudly run by our volunteers who loves Asian Pop music  and we are determined to be the vanguard internet radio station for promoting Asian Pop music to the worldwide audiences./nWe are one of the first internet radio stations to broadcast Asian Pop genre music through SHOUTcast Radio since December 2004. And we are continuing to play the hottest Asian Pop music to listeners all over the world 24/7. Happy Listening!"
+    },
+    {
+        "section": "음악방송",
+        "title": "BigBRadio APOP",
+        "subTitle": "아시아팝, 음악, 외국어방송, 음악방송",
+        "imageURL": "https://cdn-profiles.tunein.com/s54185/images/logod.png?t=158645",
+        "imageColor": "black",
+        "streamURL": "https://antares.dribbcast.com/proxy/apop?mp=/s",
+        "detail": "Big B Radio is The Only Hot Station for Asian Music. Streaming a wide variety of Asian Pop, Kpop, Jpop, Cpop music all under one station./nBig B Radio is proudly run by our volunteers who loves Asian Pop music  and we are determined to be the vanguard internet radio station for promoting Asian Pop music to the worldwide audiences./nWe are one of the first internet radio stations to broadcast Asian Pop genre music through SHOUTcast Radio since December 2004. And we are continuing to play the hottest Asian Pop music to listeners all over the world 24/7. Happy Listening!"
+    },
+    {
+        "section": "특별방송",
+        "title": "RFA 자유아시아",
+        "subTitle": "외국어방송, 특별방송",
+        "imageURL": "https://www.rfa.org/korean/++theme++korean/rfalogo.png",
+        "streamURL": "https://rfahls-i.akamaihd.net/hls/live/226233/RFALive_2/index.m3u8",
+        "detail": "자유아시아방송(Radio Free Asia, 줄임 RFA)은 1994년 미국 국회가 입법한 국제 방송법(International Broadcasting Act)에 따라, 1996년에 미국의회의 출자, 투자에 따라 세워진 국제방송국이다. 미국하원의 지원을 받아 9개 언어로 아시아 전지역을 향해 단파방송을 하고 있다. 지사는 미국워싱턴 D.C.에 있으며, 방송국 위치는 대한민국 서울특별시 용산구에 있다."
+    },
+    {
+        "section": "특별방송",
+        "title": "라디오 서울FM",
+        "subTitle": "특별방송",
+        "imageURL": "https://www.radioseoul1650.com/wp-content/uploads/2020/01/logo01242020.png",
+        "streamURL": "https://radio1.koreatimes.com/index.html?sid=1",
+        "detail": "한인타운을 중심으로 FM 106.3MHz를, 남가주에 AM 1650kHz를 서비스하고 있는 ‘라디오 서울’은 정확하고 신속한 뉴스 프로그램을 바탕으로 각종 교양, 음악, 오락 프로그램으로 미국 이민자들의 웃음과 눈물을 함께 나누는 방송으로 성장해가고 있으며, 그외에도 각종 스포츠 중계 방송을 비롯하여 매해 봄에 열리는 헐리웃 볼 축제와 각종 콘서트, 이벤트를 진행함으로써 한인들의 경제, 사회, 정치, 문화 체험 등의 주도적 역할을 해 나가고 있습니다. 라디오 서울은 한미 미주 사회 최대의 아시안 퍼시픽 그룹으로 주 7일 매일 24시간 방송되며 남가주 전역에 넓게 송출하는 최고의 음질을 자랑하는 방송사입니다. 남가주 대부분의 지역을 서비스하는 공중파 라디오매체와 계열사를 통해 남가주와 하와이에 동시 서비스하며 인터넷 (www.radioseoul1650.com)을 통해서 전 세계에 24시간 실시간 디지털 서비스를 제공하는 라디오 서울은 전 세계 재외 한인들의 구심점 역할을 하는 방송매체로서 나아가 재외 한인들의 권익을 보호하는 미주 한인 최대 라디오 방송매체이며, 발전을 위해 항상 노력하는 방송 언론이 되도록 최선을 다 할 것을 약속드립니다."
+    },
+    {
+        "section": "특별방송",
+        "title": "DK NET DALLAS",
+        "subTitle": "특별방송",
+        "imageURL": "https://dalkora.com/data/apms/background/RADIO%20LOGO.png",
+        "streamURL": "https://us3new.listen2myradio.com:2199/listen.php?port=8167&type=s1&mount=/stream",
+        "detail": "미 중남부 지역 유일한 한인 라디오 방송국으로 방송사 본사는 텍사스에 위치하고, 라디오 전파는 아칸소와 오스틴까지 닿는다. 텍사스 레인져스 야구 라디오 현장중계도 한다."
+    },
+    {
+        "section": "특별방송",
+        "title": "Seoul Community Radio",
+        "subTitle": "서울, 특별방송",
+        "imageURL": "https://cdn.shopify.com/s/files/1/0251/8109/3960/files/TRIANGLE-BK_180x.png?v=1565693978",
+        "streamURL": "http://188.166.198.223/radio/8000/radio.mp3",
+        "detail": "Channeling the spirit of pirate radio and the fresh vibe of Korea’s creative underground, Seoul Community Radio is a next-level platform for a world city about to blow. Find out more here. seoulcommunityradio@gmail.com.\n2016년 7월부터 시작된 언더그라운드 라디오 플랫폼이며 여러명의 DJ들이 공연하는 디제잉 스트리밍이다. 외국 등지에서 이미 자리매김한 DJ 스트리밍 포맷인 보일러룸에 영향을 받은 것으로 여겨진다."
+    },
+    {
+        "section": "특별방송",
+        "title": "성경방송네트워크",
+        "subTitle": "기독교, 종교, 특별방송",
+        "imageURL": "https://bbn1.bbnradio.org/korean/wp-content/uploads/sites/8/2017/10/Koreanbbnlogo-green.png",
+        "streamURL": "https://audio-edge-jfbmv.sin.d.radiomast.io/678de728-1691-4eb7-bf37-057bcc9b12f5",
+        "detail": "BBN 한국어방송을 처음 방문 하신분들을 위한 곳입니다!\n저희 방송국 이름이 모든 것을 말합니다! 우리는 성경 방송 네트워크입니다. 말 그대로 우리는 여러분에게 오직 하나님의 말씀을 나눌뿐입니다. 왜냐하면 성경은 하나님께서 쓴 유일한 책이기 때문이며 영원히 당신의 삶을 변화시킬 힘이 있기 때문입니다. 성경에서 분명하고 정확하게 가르치는 것을 듣고 싶거나 그리스도를 따르는데 격려와 도움이 필요하면 BBN방송을 여러분의 동반자로 삼으십시오."
+    },
+    {
+        "section": "특별방송",
+        "title": "KBIC 한국시각장애인인터넷방송",
+        "subTitle": "특별방송, 음악",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FKBIC.png?alt=media&token=3a4bdc5b-1407-40ab-b45b-e04a9076b28f",
+        "streamURL": "http://kbic.info:8880/listen.pls",
+        "detail": "2006년 시작한 시각장애인을 위한 인터넷 라디오 방송으로 시작장애인을 위한 정보, 뉴스, 이슈를 공유하고 있습니다. 가요 위주로 음악도 방송하고 있으며 방송에 소개되었으면 하는 제보, 신청곡, 사연도 받고있습니다. 장애우를 위한 방송이 잘 없는데 취지가 좋아 오래 유지되었으면 하는 방송입니다. 시각장애인들에게 많은 도움이 되길 기원합니다."
+    },
+    {
+        "section": "국제영화라디오",
+        "title": "FRED KOREAN",
+        "subTitle": "영화",
         "imageURL": "https://www.fred.fm/kr/wp-content/uploads/sites/16/2014/11/korean.png",
-        "name": "FRED KOREAN",
-        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradiokr/stream/"
+        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradiokr/stream/",
+        "detail": "Are you a film lover / a film buff / a filmmaker / an actor / a film critic / a journalist / a film student / a festival organizer / a producer / a distributor / a film buyer / a sales agent/ a film publicist interested in independent cinema and film festivals?\n\nYOU ARE IN THE RIGHT PLACE\nFRED FILM RADIO IS YOUR RADIO !\nThe idea is to allow all those who cannot be at film festivals to share in the experience as if they were, and to offer more in-depth information and targeted entertainment to those actually there. If English is your language, or a language you understand, THIS IS YOUR CHANNEL."
     },
     {
+        "section": "국제영화라디오",
+        "title": "FRED ENGLISH",
+        "subTitle": "영화, 외국어방송",
+        "imageURL": "https://fredassets.s3.eu-west-1.amazonaws.com/uploads/sites/4/2015/12/dutch.png",
+        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradioen/stream/",
+        "detail": "Welcome to FRED’s channel in ENGLISH\nAre you a film lover / a film buff / a filmmaker / an actor / a film critic / a journalist / a film student / a festival organizer / a producer / a distributor / a film buyer / a sales agent/ a film publicist interested in independent cinema and film festivals?\n\nYOU ARE IN THE RIGHT PLACE\nFRED FILM RADIO IS YOUR RADIO !\nThe idea is to allow all those who cannot be at film festivals to share in the experience as if they were, and to offer more in-depth information and targeted entertainment to those actually there. If English is your language, or a language you understand, THIS IS YOUR CHANNEL."
+    },
+    {
+        "section": "국제영화라디오",
+        "title": "FRED EXTRA",
+        "subTitle": "영화, 외국어방송",
         "imageURL": "https://fredassets.s3.eu-west-1.amazonaws.com/uploads/sites/5/2014/11/extras.png",
-        "name": "FRED EXTRA",
-        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradioec/stream/"
+        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradioec/stream/",
+        "detail": "Welcome to FRED’s channel\nFRED EXTRA in an informative channel used to broadcast press conferences, seminars, workshops, master classes, etc.\nThis channel is available to all film festivals, all film markets or film related events, interested in making their contents available in remote for those who cannot take part personally."
     },
     {
+        "section": "국제영화라디오",
+        "title": "FRED ENTERTAINMENT",
+        "subTitle": "영화, 외국어방송",
         "imageURL": "https://www.fred.fm/enter/wp-content/uploads/sites/14/2014/11/enter242x87.png",
-        "name": "FRED ENTERTAINMENT",
-        "streamURL": "https://s10.webradio-hosting.com/proxy/fredenter/stream/"
+        "streamURL": "https://s10.webradio-hosting.com/proxy/fredenter/stream/",
+        "detail": "FRED ENTERTAINMENT broadcasts music and live shows from film festivals."
     },
     {
+        "section": "국제영화라디오",
+        "title": "FRED INDUSTRY",
+        "subTitle": "영화, 외국어방송",
         "imageURL": "https://www.fred.fm/industry/wp-content/uploads/sites/29/2014/11/industry.png",
-        "name": "FRED INDUSTRY",
-        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradioind/stream/"
+        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradioind/stream/",
+        "detail": "FRED‘s mission has always been that of being a film festival radio. So as an obvious consequence, FRED’s focus is and will always be the promotion of art-house and independent cinema.\nWith this idea in mind, we could not help but adding some film market insights to complete our coverage of the major film festivals through the years. At some point we realized that we could actually fill a gap by dedicating a channel entirely to the film industry and industry professionals, thus becoming “The Festival Insider” also with an industry perspective.\nFRED INDUSTRY was launched in August 2014.\nIt provides complete coverage of the markets, with news, insights and interviews with the key figures in the film business along with debates and in-depth information about what is happening behind the scenes of both the festival and the cinema industry.\nFRED INDUSTRY is a channel dedicated to industry professionals, a new tool for film professionals who could easily listen to updates on what happens at the film markets, using the FRED app on their smartphones or downloading the same contents in podcast.\nFRED INDUSTRY had already a number of positive experiences covering the European Film Market, the Cannes Film Market, Business Street in Rome, CineLink at Sarajevo Film Festival, Ventana Sur in Buenos Aires, but also co-production markets like When East Meets West in Trieste."
     },
     {
+        "section": "국제영화라디오",
+        "title": "FRED EDUCATION",
+        "subTitle": "영화, 외국어방송",
         "imageURL": "https://www.fred.fm/edu/wp-content/uploads/sites/30/2014/11/education.png",
-        "name": "FRED EDUCATION",
-        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradioedu/stream/"
+        "streamURL": "https://s10.webradio-hosting.com/proxy/fredradioedu/stream/",
+        "detail": "FRED EDUCATION is the FRED Film Radio channel completely dedicated to film literacy: an audio-platform available to all organizations involved in film education.\nWe would like to promote film educational content, projects, seminars and events on the subject, offering a network to film literacy organisations interested in spreading content which, in different ways, tackles the subject of film education.\nThe content can be very diverse, such as education to film direction, cinematography or to the many professions in cinema, but, also to film classics, to film restoration, digitalisation, the use of films as a tool to teach other topics, etc.\nFRED EDUCATION is a platform available to any organisation interested in using this channel in order to promote their events, seminars, conferences, projects which can be broadcast in streaming, but will also remain available as podcasts (in the form of audio-clips that can be posted on different websites and social networks).\nFRED EDUCATION is also the main channel to promote FRED AT SCHOOL, the film literacy project launched by FRED with 13 European partners, co-financed by Creative Europe."
     },
     {
+        "section": "미군방송",
+        "title": "AFN COUNTRY",
+        "subTitle": "미군방송, 외국어방송, 영어, AFN",
         "imageURL": "https://afngo.net/static/media/AFN_Country.56ad370b2464065a0e44.png",
-        "name": "AFN COUNTRY",
-        "streamURL": "https://16643.live.streamtheworld.com/AFN_CTYPAAC.aac"
+        "streamURL": "https://16643.live.streamtheworld.com/AFN_CTYPAAC.aac",
+        "detail": "American Forces Network, 약칭 AFN의 주한미군 지부 방송이다. 예전의 명칭은 AFKN(American Forces Korean Network)이고, 지금도 이 명칭으로 아는 사람도 많지만, 지금의 명칭은 AFN Korea이다. 현재의 명칭으로 바뀐 건 2001년 4월이며, TV방송이 개국된 건 1957년이다.\nAFN Country는 Country music 방송이다."
     },
     {
+        "section": "미군방송",
+        "title": "AFN FREEDOM ROCK",
+        "subTitle": "미군방송, 외국어방송, 영어, AFN",
         "imageURL": "https://afngo.net/static/media/AFN_Freedom.8da961a4fcf34e9e3849.png",
-        "name": "AFN FREEDOM ROCK",
-        "streamURL": "https://17793.live.streamtheworld.com/AFN_FREPAAC.aac"
+        "streamURL": "https://17793.live.streamtheworld.com/AFN_FREPAAC.aac",
+        "detail": "American Forces Network, 약칭 AFN의 주한미군 지부 방송이다. 예전의 명칭은 AFKN(American Forces Korean Network)이고, 지금도 이 명칭으로 아는 사람도 많지만, 지금의 명칭은 AFN Korea이다. 현재의 명칭으로 바뀐 건 2001년 4월이며, TV방송이 개국된 건 1957년이다.\nAFN Freedom Rock은 Alternative rock 방송이다."
     },
     {
+        "section": "미군방송",
+        "title": "AFN THE BLEND",
+        "subTitle": "미군방송, 외국어방송, 영어, AFN",
         "imageURL": "https://afngo.net/static/media/AFN-Blend.5ae0d0165c08b5d4181e.png",
-        "name": "AFN THE BLEND",
-        "streamURL": "https://15373.live.streamtheworld.com/AFN_HOTPAAC.aac"
+        "streamURL": "https://15373.live.streamtheworld.com/AFN_HOTPAAC.aac",
+        "detail": "American Forces Network, 약칭 AFN의 주한미군 지부 방송이다. 예전의 명칭은 AFKN(American Forces Korean Network)이고, 지금도 이 명칭으로 아는 사람도 많지만, 지금의 명칭은 AFN Korea이다. 현재의 명칭으로 바뀐 건 2001년 4월이며, TV방송이 개국된 건 1957년이다.\nAFN THE BLEND는 Hot Adult contemporary music 방송이다."
     },
     {
+        "section": "미군방송",
+        "title": "AFN JOE RADIO",
+        "subTitle": "미군방송, 외국어방송, 영어, AFN",
         "imageURL": "https://afngo.net/static/media/AFN_Joe.194d26d7cb7f4bd0f26b.png",
-        "name": "AFN JOE RADIO",
-        "streamURL": "https://20423.live.streamtheworld.com/AFN_JOEPAAC.aac"
+        "streamURL": "https://20423.live.streamtheworld.com/AFN_JOEPAAC.aac",
+        "detail": "American Forces Network, 약칭 AFN의 주한미군 지부 방송이다. 예전의 명칭은 AFKN(American Forces Korean Network)이고, 지금도 이 명칭으로 아는 사람도 많지만, 지금의 명칭은 AFN Korea이다. 현재의 명칭으로 바뀐 건 2001년 4월이며, TV방송이 개국된 건 1957년이다.\nAFN JOE RADIO는 Adult hits 방송이다."
     },
     {
+        "section": "미군방송",
+        "title": "AFN LEGACY",
+        "subTitle": "미군방송, 외국어방송, 영어, AFN",
         "imageURL": "https://afngo.net/static/media/AFN_Legacy.a1870450884dc7739a72.png",
-        "name": "AFN LEGACY",
-        "streamURL": "https://18683.live.streamtheworld.com/AFN_LGYPAAC.aac"
+        "streamURL": "https://18683.live.streamtheworld.com/AFN_LGYPAAC.aac",
+        "detail": "American Forces Network, 약칭 AFN의 주한미군 지부 방송이다. 예전의 명칭은 AFKN(American Forces Korean Network)이고, 지금도 이 명칭으로 아는 사람도 많지만, 지금의 명칭은 AFN Korea이다. 현재의 명칭으로 바뀐 건 2001년 4월이며, TV방송이 개국된 건 1957년이다.\nAFN LEGACY는 Mainstream rock 방송이다."
     },
     {
+        "section": "미군방송",
+        "title": "AFN FANS",
+        "subTitle": "미군방송, 외국어방송, 영어, AFN",
         "imageURL": "https://afngo.net/static/media/AFN_Fans.2e27091b5eb6faccc48a.png",
-        "name": "AFN FANS",
         "streamURL": "https://24413.live.streamtheworld.com/AFN_FANAAC.aac",
-        "like": false
+        "detail": "American Forces Network, 약칭 AFN의 주한미군 지부 방송이다. 예전의 명칭은 AFKN(American Forces Korean Network)이고, 지금도 이 명칭으로 아는 사람도 많지만, 지금의 명칭은 AFN Korea이다. 현재의 명칭으로 바뀐 건 2001년 4월이며, TV방송이 개국된 건 1957년이다.\nAFN FANS는 Sports radio (Fox Sports Radio plus The Jim Rome Show and Sports Overnight America) 방송이다."
     },
     {
+        "section": "미군방송",
+        "title": "AFN POWERTALK",
+        "subTitle": "미군방송, 외국어방송, 영어, AFN",
         "imageURL": "https://afngo.net/static/media/Power-Talk.d89d33dd8e37a30950bc.png",
-        "name": "AFN POWERTALK",
-        "streamURL": "https://26233.live.streamtheworld.com/AFN_PTKAAC.aac"
+        "streamURL": "https://26233.live.streamtheworld.com/AFN_PTKAAC.aac",
+        "detail": "American Forces Network, 약칭 AFN의 주한미군 지부 방송이다. 예전의 명칭은 AFKN(American Forces Korean Network)이고, 지금도 이 명칭으로 아는 사람도 많지만, 지금의 명칭은 AFN Korea이다. 현재의 명칭으로 바뀐 건 2001년 4월이며, TV방송이 개국된 건 1957년이다.\nAFN POWERTALK는 Politically driven talk radio, both conservative and progressive 방송이다."
     },
     {
+        "section": "미군방송",
+        "title": "AFN THE VOICE",
+        "subTitle": "미군방송, 외국어방송, 영어, AFN",
         "imageURL": "https://afngo.net/static/media/theVoice_logo.b873f90637110baec8a3.png",
-        "name": "AFN THE VOICE",
-        "streamURL": "https://18423.live.streamtheworld.com/AFN_VCEAAC.aac"
+        "streamURL": "https://18423.live.streamtheworld.com/AFN_VCEAAC.aac",
+        "detail": "American Forces Network, 약칭 AFN의 주한미군 지부 방송이다. 예전의 명칭은 AFKN(American Forces Korean Network)이고, 지금도 이 명칭으로 아는 사람도 많지만, 지금의 명칭은 AFN Korea이다. 현재의 명칭으로 바뀐 건 2001년 4월이며, TV방송이 개국된 건 1957년이다.\nAFN The voice는 Short-form news updates and timeshifts of Powertalk programs 방송이다."
+    },
+    {
+        "section": "BBC",
+        "title": "BBC Radio1",
+        "subTitle": "BBC, 외국어방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBC%20Radio1.jpeg?alt=media&token=658e4106-8b2c-4ff6-af6b-4a9fdf12c0c1",
+        "streamURL": "http://stream.live.vc.bbcmedia.co.uk/bbc_radio_one",
+        "detail": "BBC 라디오 1은 BBC의 라디오 방송 중 하나로, 청년층 대중 가요 및 토크 프로그램을 주로 방송한다. 대부분의 프로그램이 연속적으로 디제잉하듯 음악과 멘트를 보내는 것이 특징이다."
+    },
+    {
+        "section": "BBC",
+        "title": "BBC Radio1 Dance",
+        "subTitle": "BBC, 외국어방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBC%20Radio1%20Dance.png?alt=media&token=b2011e5a-566f-4f3d-87c2-30b52a20d8c0",
+        "streamURL": "https://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_one_dance/bbc_radio_one_dance.isml/bbc_radio_one_dance-audio%3d48000.m3u8",
+        "detail": "BBC Radio 1 Dance is a national digital radio station in the United Kingdom, owned and operated by the BBC and run as a spin-off from BBC Radio 1. The station plays a mix of back-to-back current, future and classic electronic dance music, and broadcasts exclusively on BBC Sounds."
+    },
+    {
+        "section": "BBC",
+        "title": "BBC Radio1 Relax",
+        "subTitle": "BBC, 외국어방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBC%20Radio1%20Relax.png?alt=media&token=0a121f82-c85b-40a8-88d9-d955336af6bb",
+        "streamURL": "https://as-hls-ww.live.cf.md.bbci.co.uk/pool_904/live/ww/bbc_radio_one_relax/bbc_radio_one_relax.isml/bbc_radio_one_relax-audio%3d48000.m3u8",
+        "detail": "BBC Radio 1 Relax is a national digital radio station in the United Kingdom, owned and operated by the BBC and run as a spin-off from BBC Radio 1. The station plays a selection of relaxation and well-being focussed shows, and broadcasts exclusively on BBC Sounds."
+    },
+    {
+        "section": "BBC",
+        "title": "BBC Radio1 Xtra",
+        "subTitle": "BBC, 외국어방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBC%20Radio1%20Xtra.jpeg?alt=media&token=032ef280-81c9-43e4-a76b-fa1048704cb0",
+        "streamURL": "http://stream.live.vc.bbcmedia.co.uk/bbc_1xtra",
+        "detail": "BBC Radio 1Xtra (also known simply as 1Xtra) is a British digital radio station owned and operated by the BBC, broadcasting black music, including hip hop and R&B. Launched at 6 PM on 16 August 2002, it had been code named Network X during the consultation period and is the sister station to BBC Radio 1. The station is broadcast from the 8th floor of Broadcasting House, shared with Radio 1 and the Asian Network. At the time, many electronic programming guides called the station ‘1 Xtra BBC’."
+    },
+    {
+        "section": "BBC",
+        "title": "BBC Radio2",
+        "subTitle": "BBC, 외국어방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBC%20Radio2.jpeg?alt=media&token=21883a51-aa5b-448a-b8aa-44ac36e27b3c",
+        "streamURL": "http://stream.live.vc.bbcmedia.co.uk/bbc_radio_two",
+        "detail": "BBC 라디오 2는 BBC의 라디오 방송 중 하나로, 중장년층 대중 가요 및 토크 프로그램을 주로 방송한다."
+    },
+    {
+        "section": "BBC",
+        "title": "BBC Radio3",
+        "subTitle": "BBC, 외국어방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBC%20Radio3.jpeg?alt=media&token=26d6a0fc-eb39-47d4-8c71-23d08ed5c021",
+        "streamURL": "http://stream.live.vc.bbcmedia.co.uk/bbc_radio_three",
+        "detail": "BC 라디오 3(BBC Radio 3)는 BBC의 라디오 방송 중 하나로, 클래식 음악을 주로 방송한다."
+    },
+    {
+        "section": "BBC",
+        "title": "BBC Radio4",
+        "subTitle": "BBC, 외국어방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBC%20Radio4.jpeg?alt=media&token=4d96de35-96fa-4a26-83d9-9cf1d9a48a1d",
+        "streamURL": "http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourfm",
+        "detail": "BBC 라디오 4는 BBC의 라디오 방송 중 하나로, 뉴스, 시사, 교양 프로그램을 주로 방송한다. 영국의 비상 시 국가 기간방송의 역할도 담당하고 있으며, 매 시간 정시마다 6초 비프음 시보와 빅 벤의 종소리 시보를 송출하는 것이 특징이다. 매일 01:00~05:20에는 BBC 월드 서비스를 재송출하며, BBC 라디오 4 - BBC 월드 서비스 전환시에는 영국 국가가 방송된다. 또 매주 일요일에는 성공회 예배 및 설교 방송을 방송하기도 한다."
+    },
+    {
+        "section": "BBC",
+        "title": "BBC Radio4 Extra",
+        "subTitle": "BBC, 외국어방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBC%20Radio4%20Extra.jpeg?alt=media&token=2e4065b9-7c68-44f8-817e-78157681bf34",
+        "streamURL": "http://stream.live.vc.bbcmedia.co.uk/bbc_radio_four_extra",
+        "detail": "BBC Radio 4 Extra (formerly BBC Radio 7) is a British digital radio station from the BBC, broadcasting archived repeats of comedy, drama and documentary programmes nationally, 24 hours a day. It is the sister station of BBC Radio 4 and the principal broadcaster of the BBC's spoken-word archive, and as a result the majority of its programming originates from that archive. It also broadcasts extended and companion programmes to those broadcast on Radio 4, and provides a 'catch-up' service for certain programmes."
+    },
+    {
+        "section": "BBC",
+        "title": "BBC Radio5 Live",
+        "subTitle": "BBC, 외국어방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBC%20Radio5%20Live.png?alt=media&token=b22a635a-f72f-4a22-8582-16452b54ab0b",
+        "streamURL": "http://stream.live.vc.bbcmedia.co.uk/bbc_radio_five_live",
+        "detail": "BBC 라디오 5 라이브는 BBC의 라디오 방송 중 하나로, 주 편성은 스포츠와 뉴스를 중심으로 하며, 긴급 시 뉴스 속보 프로그램도 방송한다."
+    },
+    {
+        "section": "BBC",
+        "title": "BBC Radio5 Sports Extra",
+        "subTitle": "BBC, 외국어방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBC%20Radio5%20Sports%20Extra.jpeg?alt=media&token=d2b89879-3a20-4018-aa76-df0fd5e59ab0",
+        "streamURL": "http://stream.live.vc.bbcmedia.co.uk/bbc_radio_five_live_sports_extra",
+        "detail": "BBC Radio 5 Sports Extra (formerly BBC Radio 5 Live Sports Extra) is a national digital radio station in the United Kingdom, operated by the BBC, and specialising in extended live sports coverage. It is a sister station to BBC Radio 5 Live and shares facilities, presenters and management, and is a department of the BBC North Group division. If a news story breaks during the live sport broadcasts on 5 Live, the sports coverage will be redirected and continued on 5 Sports Extra, whilst 5 Live switches to live news."
+    },
+    {
+        "section": "BBC",
+        "title": "BBC Radio6 Music",
+        "subTitle": "BBC, 외국어방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBC%20Radio6%20Music.png?alt=media&token=dd6a369e-9ecb-450e-bb3c-87d891ba9f08",
+        "streamURL": "http://stream.live.vc.bbcmedia.co.uk/bbc_6music",
+        "detail": "BBC Radio 6 Music (also known as BBC 6 Music or 6 Music) is a British digital radio station owned and operated by the BBC, specialising primarily in alternative music. BBC 6 Music was the first national music radio station to be launched by the BBC in 32 years. It is available only on digital media: DAB radio, BBC Sounds, digital television, and throughout northern and western Europe through the Astra 2B satellite."
+    },
+    {
+        "section": "BBC",
+        "title": "BBC Asian Network",
+        "subTitle": "BBC, 외국어방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBC%20Asian%20Network.png?alt=media&token=fe8761aa-a87a-44aa-a133-86cd9b2780f3",
+        "streamURL": "http://stream.live.vc.bbcmedia.co.uk/bbc_asian_network",
+        "detail": "BBC Asian Network (often stylised as BBC Radio Asian Network) is a British Asian radio station owned and operated by the BBC. The station's target audience is people 'with an interest in British Asian lifestyles', especially British Asians between the ages of 18 and 34. The station has production centres in London (Broadcasting House) and Birmingham (The Mailbox)."
+    },
+    {
+        "section": "BBC",
+        "title": "BBC World Service",
+        "subTitle": "BBC, 외국어방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBC%20World%20Service.jpeg?alt=media&token=7c8b98f8-0d3d-4591-a548-6802176f265f",
+        "imageColor": "red",
+        "streamURL": "http://stream.live.vc.bbcmedia.co.uk/bbc_world_service",
+        "detail": "BBC World News is an international English-language pay television network, operated under the BBC Global News Limited division of the BBC, which is a public corporation of the UK government's Department for Digital, Culture, Media and Sport. According to its corporate PR, the combined 7 channels of the Global News operations have the largest audience market share among all of its rivals, with an estimated 99 million viewers weekly in 2016/2017, part of the estimated 121 million weekly audience of all its operations."
+    },
+    {
+        "section": "CBS",
+        "title": "CBS 표준FM",
+        "subTitle": "기독교, 종교, CBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FCBS%20BasicFM.jpeg?alt=media&token=ce375d14-690f-4132-b7de-4145621db1ae",
+        "streamURL": "http://aac.cbs.co.kr/cbs981/cbs981.stream/playlist.m3u8",
+        "detail": "CBS 표준FM은 시사, 뉴스, 선교 전문 라디오 채널로, CBS의 역사 그 자체라 할 수 있다."
+    },
+    {
+        "section": "CBS",
+        "title": "CBS 음악FM",
+        "subTitle": "기독교, 종교, 음악, CBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FCBS%20BasicFM.jpeg?alt=media&token=ce375d14-690f-4132-b7de-4145621db1ae",
+        "streamURL": "http://aac.cbs.co.kr/cbs939/cbs939.stream/playlist.m3u8",
+        "detail": "CBS 음악FM은 대한민국의 방송국 CBS기독교방송의 라디오 채널 중 하나이다. 선교와 교양 중심의 CBS 표준FM과 달리 종교 음악보다 대중음악을 선곡하여 방송한다. 또한, 프로그램 오프닝곡 선곡 이후에는 여러 차례의 광고가 송출되고, 프로그램 클로징곡 이전에도 여러 차례의 광고가 송출된다."
+    },
+    {
+        "section": "CBS",
+        "title": "CBS JOY4U",
+        "subTitle": "기독교, 종교, 음악, CBS",
+        "imageURL": "http://img.cbs.co.kr/cmc/common/img_logo160315.jpg",
+        "streamURL": "http://aac.cbs.co.kr/cbscmc/cbscmc_96k.stream/playlist.m3u8",
+        "detail": "CBS JOY4U는 대한민국의 방송국 CBS기독교방송의 인터넷 크리스천 음악방송으로 2015년 9월 14일부터 개국하였다."
+    },
+    {
+        "section": "CBS",
+        "title": "부산 CBS 표준FM",
+        "subTitle": "기독교, 종교, 지역, CBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBusan%20CBS%20BasicFM.png?alt=media&token=43bfda3c-bbbb-4113-898f-7b78dffef88c",
+        "streamURL": "https://aac.cbs.co.kr/busan939/_definst_/busan939.stream/chunklist_w314226120.m3u8",
+        "detail": "부산CBS는 개신교계 방송 중 하나로서, 대한민국 부산·경남 일부 지역의 민영 방송이다. 교회를 섬기며 지역복음화를 위하여 빛과 소금으로서 하나님의 사명과 역할 또한 최선을 다해 감당하는 부산CBS."
+    },
+    {
+        "section": "CBS",
+        "title": "부산 CBS 음악FM",
+        "subTitle": "기독교, 종교, 지역, 음악, CBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBusan%20CBS%20MusicFM.png?alt=media&token=cfcf3d16-43d5-44eb-aff6-ba6b88191fe9",
+        "streamURL": "https://aac.cbs.co.kr/busan981/_definst_/busan981.stream/chunklist_w1551281584.m3u8",
+        "detail": "부산CBS는 개신교계 방송 중 하나로서, 대한민국 부산·경남 일부 지역의 민영 방송이다. 교회를 섬기며 지역복음화를 위하여 빛과 소금으로서 하나님의 사명과 역할 또한 최선을 다해 감당하는 부산CBS."
+    },
+    {
+        "section": "CBS",
+        "title": "부산 CBS JOY4U",
+        "subTitle": "기독교, 종교, 부산, 지역, 음악, CBS",
+        "imageURL": "http://img.cbs.co.kr/cmc/common/img_logo160315.jpg",
+        "streamURL": "https://aac.cbs.co.kr/cbscmc/_definst_/cbscmc_96k.stream/chunklist_w1040521582.m3u8",
+        "detail": "부산CBS는 개신교계 방송 중 하나로서, 대한민국 부산·경남 일부 지역의 민영 방송이다. 교회를 섬기며 지역복음화를 위하여 빛과 소금으로서 하나님의 사명과 역할 또한 최선을 다해 감당하는 부산CBS."
+    },
+    {
+        "section": "CBS",
+        "title": "광주 CBS 표준FM",
+        "subTitle": "기독교, 종교, 광주, 지역, 음악, CBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FGwangju%20CBS%20BasicFM.png?alt=media&token=b2d5fc3c-af09-4f34-b07d-ee4265b9af63",
+        "streamURL": "http://aac.cbs.co.kr/gwangju/_definst_/gwangju.stream/chunklist_w320363375.m3u8",
+        "detail": "광주 CBS는 개신교계 방송 중 하나로서, 대한민국 광주·전남 지역의 민영 방송이다."
+    },
+    {
+        "section": "CBS",
+        "title": "광주 CBS 표준FM",
+        "subTitle": "기독교, 종교, 광주, 지역, 음악, CBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FGwangju%20CBS%20MusicFM.png?alt=media&token=4f3e56f2-565b-4dee-90d4-b1ec96e3e41f",
+        "streamURL": "https://aac.cbs.co.kr/gwangju/_definst_/gwangju.stream/chunklist_w425295931.m3u8",
+        "detail": "광주 CBS는 개신교계 방송 중 하나로서, 대한민국 광주·전남 지역의 민영 방송이다."
+    },
+    {
+        "section": "CBS",
+        "title": "광주 CBS JOY4U",
+        "subTitle": "기독교, 종교, 광주, 지역, 음악, CBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FGwangju%20CBS%20JOY4U.png?alt=media&token=74350f63-4618-45d0-aac7-1cf4ffa2bb51",
+        "streamURL": "https://aac.cbs.co.kr/cbscmc/_definst_/cbscmc_96k.stream/chunklist_w580071519.m3u8",
+        "detail": "광주 CBS는 개신교계 방송 중 하나로서, 대한민국 광주·전남 지역의 민영 방송이다."
+    },
+    {
+        "section": "CBS",
+        "title": "대전 CBS 표준FM",
+        "subTitle": "기독교, 종교, 대전, 지역, CBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FDaejeon%20CBS%20BasicFM.png?alt=media&token=f1f802b2-f01e-494b-9c82-2711a546e478",
+        "streamURL": "http://aac.cbs.co.kr/daejeon/_definst_/daejeon.stream/playlist.m3u8",
+        "detail": "대전 CBS는 개신교계 방송 중 하나로서, 대한민국 대전·세종·충남 지역의 민영 방송이다."
+    },
+    {
+        "section": "CBS",
+        "title": "대전 CBS 음악FM",
+        "subTitle": "기독교, 종교, 대전, 지역, 음악, CBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FDaejeon%20CBS%20MusicFM.png?alt=media&token=979ac39e-abc4-4285-bc11-b668d6f0c2a4",
+        "streamURL": "http://aac.cbs.co.kr/cbs939/_definst_/cbs939.stream/playlist.m3u8",
+        "detail": "대전 CBS는 개신교계 방송 중 하나로서, 대한민국 대전·세종·충남 지역의 민영 방송이다."
+    },
+    {
+        "section": "CBS",
+        "title": "대전 CBS JOY4U",
+        "subTitle": "기독교, 종교, 대전, 지역, 음악, CBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FDaejeon%20CBS%20JOY4U.png?alt=media&token=58baf816-5d81-4703-bdc6-f6c35fa00869",
+        "streamURL": "http://aac.cbs.co.kr/cbscmc/_definst_/cbscmc_96k.stream/playlist.m3u8",
+        "detail": "대전 CBS는 개신교계 방송 중 하나로서, 대한민국 대전·세종·충남 지역의 민영 방송이다."
+    },
+    {
+        "section": "CBS",
+        "title": "제주 CBS 표준FM",
+        "subTitle": "기독교, 종교, 제주, 지역, CBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FJeju%20CBS%20BasicFM.png?alt=media&token=9278357f-29fb-458e-adbe-22bc7b8b30e8",
+        "streamURL": "http://aac.cbs.co.kr/jeju/_definst_/jeju.stream/playlist.m3u8",
+        "detail": "제주 CBS는 진실과 정의를 전하는 '정도 언론', 약자를 감싸 안는 '따뜻한 방송', 사회와 소통하는 '스마트 미디어'를 표방하는 1954년 개국한 최초의 민영방송 CBS의 제주지역 방송입니다."
+    },
+    {
+        "section": "CBS",
+        "title": "전남 CBS 표준FM",
+        "subTitle": "기독교, 종교, 전남, 지역, CBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FJeonnam%20CBS%20BasicFM.png?alt=media&token=92d37a86-bdcf-4c15-b9d6-a5221a17bde6",
+        "streamURL": "https://aac.cbs.co.kr/jeonnam/_definst_/jeonnam.stream/playlist.m3u8",
+        "detail": "전남 CBS는 개신교계 방송 중 하나로서, 대한민국 전남 동부 지역의 민영 방송이다."
+    },
+    {
+        "section": "BBS",
+        "title": "BBS 불교방송",
+        "subTitle": "불교, 종교, 불교방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBS.jpeg?alt=media&token=a8dfed6f-38bd-47bd-94df-62e5bef55622",
+        "streamURL": "https://bbslive.clouducs.com/bbsradio-live/livestream/chunklist_w493920031.m3u8",
+        "detail": "BBS 불교방송은 불교계 방송 중 하나로서, 대한민국 최초의 영상선교방송국이다."
+    },
+    {
+        "section": "BBS",
+        "title": "BBS 대구불교방송",
+        "subTitle": "불교, 종교, 지역, 불교방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBS%20Daegu.png?alt=media&token=858240b9-ec13-4eb8-aa13-80123eb405c5",
+        "streamURL": "https://bbslive.goldenday.kr:446/hls/dgbbs.m3u8",
+        "detail": "대구불교방송은 대한민국의 BBS불교방송 네트워크권 대구, 경북지역 라디오 방송국이다."
+    },
+    {
+        "section": "BBS",
+        "title": "BBS 울산불교방송",
+        "subTitle": "불교, 종교, 지역, 불교방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBS%20Ulsan.png?alt=media&token=646d9c2d-bb0a-4b45-8a88-e76b5c4627bd",
+        "streamURL": "https://bbslive.clouducs.com/bbsradio-live/livestream/playlist.m3u8",
+        "detail": "울산불교방송은 대한민국의 BBS불교방송 네트워크권 울산지역의 라디오 방송국이다."
+    },
+    {
+        "section": "BBS",
+        "title": "BBS 광주",
+        "subTitle": "불교, 종교, 지역, 불교방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBS%20Gwangju.png?alt=media&token=ddc08c11-601a-4226-8929-ea6ae9df3beb",
+        "streamURL": "http://live.cdn.smilecdn.com:1935/kjbbs1_live/live/chunklist_w1331167591.m3u8",
+        "detail": "광주불교방송은 대한민국의 BBS불교방송 네트워크권 광주, 전남지역 라디오 방송국이다."
+    },
+    {
+        "section": "BBS",
+        "title": "BBS 부산불교방송",
+        "subTitle": "불교, 종교, 지역, 불교방송",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FBBS%20Busan.png?alt=media&token=eb3bd308-6152-4ceb-8c32-8f5289241d93",
+        "streamURL": "http://live.cdn.smilecdn.com:1935/bbsfm_live/live.sdp/chunklist_w1513092252_tkd293emF0b2tlbnN0YXJ0dGltZT0xNjUwMTgzNjE3Jndvd3phdG9rZW5lbmR0aW1lPTE2NTAyNzAwMTcmd293emF0b2tlbkN1c3RvbVBhcmFtZXRlcj13b3d6YXRva2VuJndvd3phdG9rZW5oYXNoPVlLaDRXSzdjZW1zZnpEX3Z3R3J3bTBCeGptUy11TW1qY2FicXlNUGl0Q1E9.m3u8",
+        "detail": "부산불교방송은 대한민국의 BBS불교방송 네트워크권 부산, 경남지역 라디오 방송국이다."
+    },
+    {
+        "section": "BBS",
+        "title": "BBS 불교라디오",
+        "subTitle": "불교, 불교방송",
+        "imageURL": "http://www.btn.co.kr/images/top/2021_logo_web.jpg",
+        "streamURL": "http://btn.nowcdn.co.kr/btnaudio/btnliveaudio/chunklist_w1931301413.m3u8",
+        "detail": "BTN 불교라디오 방송은 불교계 방송 중 하나로서, 대한민국 최초의 영상선교방송국이다."
+    },
+    {
+        "section": "극동방송",
+        "title": "서울극동방송 FM",
+        "subTitle": "기독교, 극동방송, 서울",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://mlive2.febc.net:1935/live/seoulfm/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "극동방송",
+        "title": "서울극동방송 AM",
+        "subTitle": "기독교, 극동방송, 서울",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://mlive2.febc.net:1935/live/seoulam/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "극동방송",
+        "title": "제주극동방송 FM",
+        "subTitle": "기독교, 극동, 제주, 지역",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://mlive2.febc.net:1935/live/jejufm/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "극동방송",
+        "title": "제주극동방송 AM",
+        "subTitle": "기독교, 극동방송, 제주, 지역",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://mlive2.febc.net:1935/live/jejuam/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "극동방송",
+        "title": "대전극동방송 FM",
+        "subTitle": "기독교, 극동방송, 대전, 지역",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://mlive2.febc.net:1935/live/djlive/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "극동방송",
+        "title": "창원극동방송 FM",
+        "subTitle": "기독교, 극동방송, 창원, 지역",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://mlive2.febc.net:1935/live/cwlive/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "극동방송",
+        "title": "목포극동방송 FM",
+        "subTitle": "기독교, 극동방송, 목포, 지역",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://mlive2.febc.net:1935/live/mplive/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "극동방송",
+        "title": "목포극동방송 FM",
+        "subTitle": "기독교, 극동방송, 영동, 지역",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://mlive2.febc.net:1935/live/ydlive/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "극동방송",
+        "title": "포항극동방송 FM",
+        "subTitle": "기독교, 극동방송, 포항, 지역",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://mlive2.febc.net:1935/live/phlive/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "극동방송",
+        "title": "울산극동방송 FM",
+        "subTitle": "기독교, 극동방송, 울산, 지역",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://mlive2.febc.net:1935/live/uslive/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "극동방송",
+        "title": "부산극동방송 FM",
+        "subTitle": "기독교, 극동방송, 부산, 지역",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://mlive2.febc.net:1935/live/bsfebc/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "극동방송",
+        "title": "대구극동방송 FM",
+        "subTitle": "기독교, 극동방송, 대구, 지역",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://220.73.173.216:1935/live/daegulive/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "극동방송",
+        "title": "광주극동방송 FM",
+        "subTitle": "기독교, 극동방송, 광주, 지역",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://mlive2.febc.net:1935/live/gjlive/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "극동방송",
+        "title": "전남동부극동방송 FM",
+        "subTitle": "기독교, 극동방송, 전남, 지역",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://mlive2.febc.net:1935/live/jndblive/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "극동방송",
+        "title": "전북극동방송 FM",
+        "subTitle": "기독교, 극동방송, 전북, 지역",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://mlive2.febc.net:1935/live/jblive/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "극동방송",
+        "title": "미주극동방송 FM",
+        "subTitle": "기독교, 극동방송, 미주, 해외",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FFEBC.png?alt=media&token=899f14d0-8d90-430e-9c1a-4d2a087214d5",
+        "streamURL": "http://1.245.74.5/radiolive/radio_64k/playlist.m3u8",
+        "detail": "극동방송(Far East Broadcasting Company, 약칭 FEBC)은 세계 각국에 퍼져 있는 필리핀의 개신교계 국제 방송국이다. 국기인 대한민국뿐만 아니라, 영국, 오스트레일리아, 캐나다, 일본, 미국, 뉴질랜드, 필리핀, 태국, 러시아, 몽골 등에 방송국을 두고 있다."
+    },
+    {
+        "section": "기타종교",
+        "title": "cpbc 가톨릭평화방송",
+        "subTitle": "천주교, cpbc",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2Fcpbc.png?alt=media&token=52b99c72-52df-4aea-9055-8c212e9bbda6",
+        "streamURL": "https://onair1.cpbc.co.kr:8888/live/Instreamer.stream_aac/playlist.m3u8",
+        "detail": "가톨릭평화방송은 천주교 서울대교구에서 직영하는 대한민국의 로마 가톨릭교회 계통 케이블 텔레비전·위성방송 및 FM 라디오 방송국이다."
+    },
+    {
+        "section": "기타종교",
+        "title": "cpbc 대구가톨릭평화방송",
+        "subTitle": "천주교, 대구, 지역, cpbc",
+        "imageURL": "http://www.dgpbc.co.kr/images/common/logo.png",
+        "streamURL": "http://live.dgpbc.co.kr/cdnlive-hls/dgpbclive/_definst_/liveevent/livestream.m3u8",
+        "detail": "대구가톨릭평화방송은 가톨릭평화방송 대구경북권 네트워크이다. 천주교 대구대교구에서 직영하는 대한민국의 천주교 계통 FM 라디오 방송국이다."
+    },
+    {
+        "section": "기타종교",
+        "title": "WBS 서울원음방송",
+        "subTitle": "원불교, 종교, WBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FWBS.png?alt=media&token=a9200f1e-074a-4046-ad35-d4e1dd28b6c4",
+        "streamURL": "http://141.164.60.206:8000/wbs-smok",
+        "detail": "원음방송은 대한민국의 FM 라디오 방송국 및 TV 방송국이다. 원불교의 주도로 설립된 재단법인 원음방송이 운영한다."
+    },
+    {
+        "section": "기타종교",
+        "title": "WBS 부산원음방송",
+        "subTitle": "원불교, 종교, 지역, 부산, WBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FWBS.png?alt=media&token=a9200f1e-074a-4046-ad35-d4e1dd28b6c4",
+        "streamURL": "http://141.164.60.206:8000/wbs-b",
+        "detail": "원음방송은 대한민국의 원음방송 부산, 울산, 경남지역 네트워크권의 FM 라디오 방송국과 TV 방송국이다. 원불교의 주도로 설립된 재단법인 원음방송이 운영한다."
+    },
+    {
+        "section": "기타종교",
+        "title": "WBS 대구",
+        "subTitle": "원불교, 종교, 지역, 대구, WBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FWBS.png?alt=media&token=a9200f1e-074a-4046-ad35-d4e1dd28b6c4",
+        "streamURL": "http://141.164.60.206:8000/wbs-d",
+        "detail": "원음방송은 대한민국의 원음방송 대구경북지역 네트워크권의 FM 라디오 방송국과 TV 방송국이다. 원불교의 주도로 설립된 재단법인 원음방송이 운영한다."
+    },
+    {
+        "section": "기타종교",
+        "title": "WBS 광주원음방송",
+        "subTitle": "원불교, 종교, 지역, 광주, WBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FWBS.png?alt=media&token=a9200f1e-074a-4046-ad35-d4e1dd28b6c4",
+        "streamURL": "http://141.164.60.206:8000/wbs-g",
+        "detail": "원음방송은 대한민국의 원음방송 광주전남지역 네트워크권의 FM 라디오 방송국과 TV 방송국이다. 원불교의 주도로 설립된 재단법인 원음방송이 운영한다."
+    },
+    {
+        "section": "기타종교",
+        "title": "WBS 전북원음방송",
+        "subTitle": "원불교, 종교, 지역, 전북, WBS",
+        "imageURL": "https://firebasestorage.googleapis.com/v0/b/ddara-fa50b.appspot.com/o/%EB%9D%BC%EB%94%94%EC%98%A4%20%EC%9D%B4%EB%AF%B8%EC%A7%80%2FWBS.png?alt=media&token=a9200f1e-074a-4046-ad35-d4e1dd28b6c4",
+        "streamURL": "http://49.247.3.32:8000/wbs-j",
+        "detail": "원음방송은 대한민국의 WBS원음방송 전라북도 전지역 네트워크권의 FM 라디오 방송국과 TV 방송국이다. 원불교의 주도로 설립된 재단법인 원음방송이 운영한다."
+    },
+    {
+        "section": "교통방송",
+        "title": "TBN 부산",
+        "subTitle": "도로, 교통, 부산, 지역",
+        "imageURL": "https://www.tbn.or.kr/images/common/logo_1.png",
+        "streamURL": "http://radio2.tbn.or.kr:1935/busan/myStream/playlist.m3u8",
+        "detail": "TBN 한국교통방송은 도로교통공단에서 운영하는 교통정보 전문 FM 방송이다.\n부산교통방송은 TBN 계열의 방송국 중의 하나이며, 1997년 12월 23일 개국되었다. 방송국은 부산광역시 남구 용소로 68(대연3동)에 있다."
+    },
+    {
+        "section": "교통방송",
+        "title": "TBN 광주",
+        "subTitle": "도로, 교통, 광주, 지역",
+        "imageURL": "https://www.tbn.or.kr/images/common/logo_1.png",
+        "streamURL": "http://radio2.tbn.or.kr:1935/gwangju/myStream/playlist.m3u8",
+        "detail": "TBN 한국교통방송은 도로교통공단에서 운영하는 교통정보 전문 FM 방송이다.\n광주교통방송은 TBN 계열의 방송국 중의 하나이며, 1997년 12월 20일 개국되었다. 방송국은 광주광역시 광산구 첨단중앙로182번길 40(쌍암동)에 있다."
+    },
+    {
+        "section": "교통방송",
+        "title": "TBN 대구",
+        "subTitle": "도로, 교통, 대구, 지역",
+        "imageURL": "https://www.tbn.or.kr/images/common/logo_1.png",
+        "streamURL": "http://radio2.tbn.or.kr:1935/daegu/myStream/playlist.m3u8",
+        "detail": "TBN 한국교통방송은 도로교통공단에서 운영하는 교통정보 전문 FM 방송이다.\n대구교통방송은 TBN 계열의 방송국 중의 하나이며, 1999년 7월 30일 개국되었다. 방송국은 대구광역시 남구 대명5동에 있으며, 대구 도시철도 1호선 현충로역의 1번 출구 근처에 있다."
+    },
+    {
+        "section": "교통방송",
+        "title": "TBN 대전",
+        "subTitle": "도로, 교통, 대전, 지역",
+        "imageURL": "https://www.tbn.or.kr/images/common/logo_1.png",
+        "streamURL": "http://radio2.tbn.or.kr:1935/daejeon/myStream/playlist.m3u8",
+        "detail": "TBN 한국교통방송은 도로교통공단에서 운영하는 교통정보 전문 FM 방송이다.\n대전교통방송은 TBN 계열의 방송국 중의 하나이며, 1999년 7월 14일 개국하였다. 대전광역시, 세종특별자치시, 충청남도, 충청북도 주민들의 안전하고 편리한 선진 도로교통환경 문화를 조성하고자 설립되었다. 방송국은 대전광역시 서구 내동에 있다."
+    },
+    {
+        "section": "교통방송",
+        "title": "TBN 경인",
+        "subTitle": "도로, 교통, 경인, 지역",
+        "imageURL": "https://www.tbn.or.kr/images/common/logo_1.png",
+        "streamURL": "http://radio2.tbn.or.kr:1935/gyeongin/myStream/playlist.m3u8",
+        "detail": "TBN 한국교통방송은 도로교통공단에서 운영하는 교통정보 전문 FM 방송이다.\n경인교통방송은 인천광역시, 수도권 서부, 북서부와 서울 일부를 가시청권으로 하는 TBN 계열의 방송국 중의 하나이며, 2001년 11월 30일 개국되었다. 방송국은 인천광역시 미추홀구 매소홀로 251 (학익1동 401-74)에 위치하고 있다."
+    },
+    {
+        "section": "교통방송",
+        "title": "TBN 강원",
+        "subTitle": "도로, 교통, 강원, 지역",
+        "imageURL": "https://www.tbn.or.kr/images/common/logo_1.png",
+        "streamURL": "http://radio2.tbn.or.kr:1935/gangwon/myStream/playlist.m3u8",
+        "detail": "TBN 한국교통방송은 도로교통공단에서 운영하는 교통정보 전문 FM 방송이다.\n강원교통방송은 도로교통공단의 TBN 교통방송국 중의 하나이며, 2001년 11월 13일 개국하였다. 방송국은 강원도 원주시 반곡동에 있다. 개국 초기에는 방송국 명칭이 원주교통방송이였으나, 2003년 7월 1일에 강원교통방송으로 변경되었다."
+    },
+    {
+        "section": "교통방송",
+        "title": "TBN 전북",
+        "subTitle": "도로, 교통, 전북, 지역",
+        "imageURL": "https://www.tbn.or.kr/images/common/logo_1.png",
+        "streamURL": "http://radio2.tbn.or.kr:1935/jeonbuk/myStream/playlist.m3u8",
+        "detail": "TBN 한국교통방송은 도로교통공단에서 운영하는 교통정보 전문 FM 방송이다.\n전북교통방송은 TBN 계열의 방송국 중의 하나이며, 2002년 5월 15일 개국되었다. 방송국은 전주시 덕진구 정여립로 1097-10(만성동)에 있다. 2002년 월드컵경기는 전주성(전주월드컵경기장)에서 경기가 진행될 예정이였으며 이때 전주권의 교통난의 어려움의 해결책으로 교통정보를 제공하기 위해 경찰청에서 전주교통방송 개국을 추진을 하였다. 월드컵경기가 열리기 전 개국하였다. 개국 초기에는 송신소가 전북일보 빌딩 옥상에 있었으나 가청권 확대를 위해 2003년 7월에 송신소를 모악산으로 이전하였다. 이때 주파수를 102.7㎒에서 102.5㎒로 변경하였다. 2017년 10월 전주교통방송은 전북의 동부 산악권으로의 가청권 확대를 위해 장수 팔공산에 중계소설치를 허가받았다. 2018년 하반기 팔공산 중계소가 개국하면 전북 동부산악지역(진안 장수 무주 남원)의 주민들이 깨끗한 전주교통방송을 청취할 수 있으며 이지역을 통과하는 대전-통영고속도로와 대구-광주 고속도로 운전자들에게 교통상황, 자연재해, 날씨정보 등을 제공하여 안전한 운전에 도움을 줄 예정이다"
+    },
+    {
+        "section": "교통방송",
+        "title": "TBN 울산",
+        "subTitle": "도로, 교통, 울산, 지역",
+        "imageURL": "https://www.tbn.or.kr/images/common/logo_1.png",
+        "streamURL": "http://radio2.tbn.or.kr:1935/ulsan/myStream/playlist.m3u8",
+        "detail": "TBN 한국교통방송은 도로교통공단에서 운영하는 교통정보 전문 FM 방송이다.\n울산교통방송은 TBN 계열의 방송국 중의 하나이며, 2012년 7월 23일 개국되었다. 방송국은 울산광역시 중구 함월7길 11(성안동)에 있다."
+    },
+    {
+        "section": "교통방송",
+        "title": "TBN 경남",
+        "subTitle": "도로, 교통, 경남, 지역",
+        "imageURL": "https://www.tbn.or.kr/images/common/logo_1.png",
+        "streamURL": "http://radio2.tbn.or.kr:1935/gyeongnam/myStream/playlist.m3u8",
+        "detail": "TBN 한국교통방송은 도로교통공단에서 운영하는 교통정보 전문 FM 방송이다.\n경남교통방송은 TBN 계열의 방송국 중의 하나이며, 도로교통공단의 관할에 있다. 2013년 8월 26일에 개국하였다. 사옥은 창원컨벤션센터(CECO) 맞은편의 경상남도 창원시 의창구 창원천로94번길 82-4에 위치하고 있으며, 2013년 12월 13일 완공하였으며, 2016년 8월 1일 송신소를 천주산으로부터 불모산으로 이설한 이후 경상남도 전역에서 방송을 청취 할 수 있게 되었고, 2018년 1월 1일 창원교통방송에서 경남교통방송으로 사명을 변경하였다."
+    },
+    {
+        "section": "교통방송",
+        "title": "TBN 경북",
+        "subTitle": "도로, 교통, 경북, 지역",
+        "imageURL": "https://www.tbn.or.kr/images/common/logo_1.png",
+        "streamURL": "http://radio2.tbn.or.kr:1935/kyungbuk/myStream/playlist.m3u8",
+        "detail": "TBN 한국교통방송은 도로교통공단에서 운영하는 교통정보 전문 FM 방송이다.\n경북교통방송은 경상북도 동해안권을 권역으로 하는 TBN 계열의 방송국 중의 하나이며, 도로교통공단의 관할에 있다. 2014년 7월 9일 개국 당시에는 포항시 북구 삼흥로 KT북포항지사 4,5층을 임대하여 개국하였다. 이후 현재의 포항시 북구 침촌마을길 39에 청사를 신축하여 위치하고 있으며, 2016년 11월 13일 준공하였다."
+    },
+    {
+        "section": "교통방송",
+        "title": "TBN 제주",
+        "subTitle": "도로, 교통, 제주, 지역",
+        "imageURL": "https://www.tbn.or.kr/images/common/logo_1.png",
+        "streamURL": "http://radio2.tbn.or.kr:1935/jeju/myStream/playlist.m3u8",
+        "detail": "TBN 한국교통방송은 도로교통공단에서 운영하는 교통정보 전문 FM 방송이다.\n제주교통방송은 제주특별자치도 권역으로 TBN 계열의 방송국 중의 하나이며, 도로교통공단의 관할에 있다. 제주시 FM 105.5㎒, 서귀포시 FM 105.9㎒로 2016년 8월 18일에 개국하였다."
+    },
+    {
+        "section": "교통방송",
+        "title": "TBN 충북",
+        "subTitle": "도로, 교통, 충북, 지역",
+        "imageURL": "https://www.tbn.or.kr/images/common/logo_1.png",
+        "streamURL": "http://radio2.tbn.or.kr:1935/chungbuk/myStream/playlist.m3u8",
+        "detail": "TBN 한국교통방송은 도로교통공단에서 운영하는 교통정보 전문 FM 방송이다.\n충북교통방송 TBN(Traffic Broadcasting Network)은 충청북도 권역으로 도로교통공단의 관할에 있으며, 2020년 11월 24일에 개국하였다. 임시로 사용되는 방송국 위치는 충청북도 청주시 흥덕구 비하동에 위치하며, 2022년 7월에 주중동 밀레니엄타운 내에 이전할 예정이다."
     }
 ]

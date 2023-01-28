@@ -6,47 +6,119 @@
 //
 
 import RxSwift
-import RxCocoa
 import Foundation
 import AVFoundation
+import MediaPlayer
 
-final class PlayStatusViewModel {
-    private let disposeBag = DisposeBag()
+final class PlayStatusViewModel: ViewModel {
+    let model: MainModel
+    let disposeBag = DisposeBag()
+    let errorMessage = PublishSubject<Alert?>()
+    let audioSession = AVAudioSession.sharedInstance()
+    let player = AVPlayer()
     
-    private let network = StationNetwork()
+    struct Input {
+        let playButtonTapped: Observable<Bool>
+    }
     
-    let playStart = PublishRelay<Void>()
-    let stationSelected = PublishRelay<StationCellData>()
+    struct Output {
+        let playButtonTapped: Observable<Bool>
+    }
     
-    let stationInfo: Driver<StationCellData>
-    let streamURL: Observable<URL?>
+    struct PlayInput {
+        let stationInfo: Observable<StationCellData>
+        let alertActionTapped: Observable<AlertAction>
+    }
     
-    private let player = AVPlayer()
+    struct PlayOutput {
+        let stationInfo: Observable<StationCellData>
+        let errorMessage: Observable<Alert?>
+        let alertActionTapped: Observable<AlertAction>
+    }
     
-    init() {
-        stationInfo = stationSelected
-            .asDriver(onErrorJustReturn: StationCellData(name: "", imageURL: "", streamURL: "", like: false))
+    init(model: MainModel) {
+        self.model = model
+    }
+    
+    func transform(input: Input) -> Output {
+        let playButtonTapped = input.playButtonTapped
+            .filter { [weak self] _ in self?.player.status == .readyToPlay }
+            .share()
         
-        streamURL = stationSelected
-            .map { station -> URL? in
-                return URL(string: station.streamURL)
-            }
-        
-        streamURL
-            .subscribe(onNext: { [weak self] url in
-                guard let url = url else { return }
-                let item = AVPlayerItem(url: url)
-                self?.player.replaceCurrentItem(with: item)
+        playButtonTapped
+            .bind(onNext: { [weak self] bool in
+                if false == bool {
+                    self?.play()
+                } else {
+                    self?.pause()
+                }
             })
             .disposed(by: disposeBag)
+        
+        return PlayStatusViewModel.Output(
+            playButtonTapped: playButtonTapped
+        )
+    }
+    
+    func transform(input: PlayInput) -> PlayOutput {
+        let validStreamURL = input.alertActionTapped
+            .filter{ $0 == .play }
+            .do ( onNext: { [weak self] _ in
+                self?.stop()
+            })
+            .withLatestFrom(input.stationInfo)
+            .flatMapLatest(model.getStreamUrl)
+            .share()
+        
+        validStreamURL
+            .map(model.getStreamUrlValue)
+            .bind(onNext: { [weak self] url in
+                if let url = url {
+                    let item = AVPlayerItem(url: url)
+                    self?.player.replaceCurrentItem(with: item)
+                    self?.play()
+                } else {
+                    self?.stop()
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        let validInfo = validStreamURL
+            .withLatestFrom(input.stationInfo)
+            .share()
+        
+        let errorMessage = validStreamURL
+            .map(model.getStreamUrlError)
+            .share()
+        
+        return PlayOutput(stationInfo: validInfo,
+                          errorMessage: errorMessage,
+                          alertActionTapped: input.alertActionTapped)
     }
     
     func play() {
         guard player.currentItem != nil else { return }
         player.play()
+        setBackgoundPlay()
     }
     
     func pause() {
         player.pause()
+    }
+    
+    func stop() {
+        player.pause()
+        player.replaceCurrentItem(with: nil)
+    }
+    
+    func setBackgoundPlay() {
+        do {
+            try audioSession.setCategory(.playback)
+            try audioSession.setActive(true)
+        } catch {
+#if DEBUG
+            print("백그라운드 재생 오류")
+#endif
+        }
     }
 }

@@ -6,47 +6,53 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, GADFullScreenContentDelegate {
+    
     var window: UIWindow?
-
+    var appFlowCoordinator: AppFlowCoordinator?
+    var appOpenAd: GADAppOpenAd?
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
         self.window = UIWindow(windowScene: windowScene)
+        
         let rootViewController = MainTabBarController()
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
+        
+        appFlowCoordinator = AppFlowCoordinator(mainTabBarController: rootViewController)
+        appFlowCoordinator?.start()
     }
-
-    func sceneDidDisconnect(_ scene: UIScene) {
-        // Called as the scene is being released by the system.
-        // This occurs shortly after the scene enters the background, or when its session is discarded.
-        // Release any resources associated with this scene that can be re-created the next time the scene connects.
-        // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
-    }
-
+    
     func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        requestAppOpenAd()
     }
-
-    func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
+    
+    func requestAppOpenAd() {
+        let request = GADRequest()
+        GADAppOpenAd.load(withAdUnitID: Constants.GoogleAds.openAdKey,
+                          request: request,
+                          orientation: UIInterfaceOrientation.portrait,
+                          completionHandler: { (appOpenAdIn, _) in
+            self.appOpenAd = appOpenAdIn
+            guard let firstScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+                return
+            }
+            guard let firstWindow = firstScene.windows.first else {
+                return
+            }
+            guard let topViewController = firstWindow.rootViewController else {
+                return
+            }
+            guard let gOpenAd = self.appOpenAd else {
+                return
+            }
+            gOpenAd.present(fromRootViewController: topViewController)
+            self.appOpenAd?.fullScreenContentDelegate = self
+            print("Ad is ready")
+        })
     }
-
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
-    }
-
-    func sceneDidEnterBackground(_ scene: UIScene) {
-        // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
-    }
-
-
 }
 

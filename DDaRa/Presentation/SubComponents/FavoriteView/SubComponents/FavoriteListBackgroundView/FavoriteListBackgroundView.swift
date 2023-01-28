@@ -10,33 +10,38 @@ import RxSwift
 import RxCocoa
 
 class FavoriteListBackgroundView: UIView {
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
+    var viewModel: FavoriteListBackgroundViewModel!
+    
     let statusLabel = UILabel()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    convenience init(viewModel: FavoriteListBackgroundViewModel) {
+        self.init()
+        self.viewModel = viewModel
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setupAttribute()
+        setupLayout()
+    }
+    
+    func bind(input: Observable<[StationCellData]>) {
+        let input = FavoriteListBackgroundViewModel.Input(favoriteList: input)
+        let output = viewModel.transform(input: input)
         
-        attribute()
-        layout()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func bind(_ viewModel: FavoriteListBackgroundViewModel) {
-        viewModel.isStatusLabelHidden
-            .emit(to: statusLabel.rx.isHidden)
+        output.isPlaceHolderHidden
+            .bind(to: statusLabel.rx.isHidden)
             .disposed(by: disposeBag)
     }
     
-    private func attribute() {
+    private func setupAttribute() {
         backgroundColor = .white
         statusLabel.text = PlaceHolder.favoriteList.rawValue
         statusLabel.textAlignment = .center
     }
     
-    private func layout() {
+    private func setupLayout() {
         addSubview(statusLabel)
         
         statusLabel.snp.makeConstraints {

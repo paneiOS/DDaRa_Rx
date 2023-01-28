@@ -11,8 +11,20 @@ import Stubber
 
 @testable import DDaRa
 
-class StationNetworkStub: StationNetwork {
-    override func getStationList(_ fileName: String) -> Single<Result<StationList, NetworkError>> {
-        return Stubber.invoke(getStationList, args: fileName)
+class StationNetworkStub: NetworkService {
+    override func getStationList() -> Single<Result<StationList, NetworkError>> {
+        return Stubber.invoke(getStationList, args: nil)
+    }
+    
+    override func getJsonToUrl(of urlString: String) -> Single<Result<URL?, NetworkError>> {
+        return Stubber.invoke(getJsonToUrl, args: urlString)
+    }
+    
+    override func getStringToUrl(of urlString: String) -> Single<Result<URL?, NetworkError>> {
+        return Stubber.invoke(getStringToUrl, args: urlString)
+    }
+    
+    override func validStreamURL(of urlString: String) -> Single<Result<URL?, NetworkError>> {
+        return Stubber.invoke(validStreamURL, args: urlString)
     }
 }
