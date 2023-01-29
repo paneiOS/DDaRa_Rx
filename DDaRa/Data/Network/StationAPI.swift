@@ -39,6 +39,18 @@ extension StationAPI: TargetType {
         }
     }
     
+    var sampleData: Data {
+            switch self {
+            case .getStations:
+                guard let data = Dummy.data(fileName: "networkDummy") else {
+                    return Data()
+                }
+                return data
+            case .getJsonToUrl, .getStringToUrl:
+                return Data()
+            }
+        }
+    
     var task: Task {
         switch self {
         case .getStations, .getJsonToUrl, .getStringToUrl:

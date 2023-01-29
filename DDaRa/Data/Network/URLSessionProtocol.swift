@@ -8,16 +8,12 @@
 import Foundation
 import RxSwift
 
-// Protocol for MOCK/Real
 protocol URLSessionProtocol {
     func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
 }
 
-//MARK: Conform the protocol
 extension URLSession: URLSessionProtocol {
     func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
         return dataTask(with: url, completionHandler: completionHandler) as URLSessionDataTask
-            
     }
 }
-

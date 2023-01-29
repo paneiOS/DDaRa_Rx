@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Moya
 import Nimble
 
 @testable import DDaRa
@@ -18,7 +19,9 @@ final class MainModelTests: XCTestCase {
 
     override func setUp() {
         self.model = MainModel(network: stubNetwork)
-        self.stationList = stations
+        let sampleData = StationAPI.getStations.sampleData
+        let expectedStationList: [Station] = Dummy().load(sampleData)
+        self.stationList = expectedStationList
     }
     
     func test_SectionOfCellData() {

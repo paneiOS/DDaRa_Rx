@@ -8,10 +8,10 @@
 import Foundation
 import RxSwift
 
-struct MainModel: SearchStationsUseCase {
-    let network: NetworkService
+struct MainModel {
+    let network: NetworkProvider
     
-    init(network: NetworkService) {
+    init(network: NetworkProvider) {
         self.network = network
     }
     

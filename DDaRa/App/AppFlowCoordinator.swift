@@ -16,7 +16,7 @@ final class AppFlowCoordinator {
     private var settingViewController: SettingViewController!
     private var settingNavigationController: UINavigationController!
     
-    private let networkService = NetworkService()
+    private let networkService = NetworkProvider()
     private let sleepSettingViewController = SleepSettingViewController(timer: RepeatingTimer())
     
     init(mainTabBarController: MainTabBarController) {

@@ -16,14 +16,13 @@ protocol SearchStationsUseCase {
     func validStreamURL(of urlString: String) -> Single<Result<URL?, NetworkError>>
 }
 
-class NetworkService: SearchStationsUseCase {
-    private let provider = MoyaProvider<StationAPI>()
-    private let session: URLSession
+class NetworkProvider: SearchStationsUseCase {
     private let disposeBag = DisposeBag()
     
-    init(session: URLSession = .shared) {
-        self.session = session
-    }
+    let provider: MoyaProvider<StationAPI>
+       init(provider: MoyaProvider<StationAPI> = .init()) {
+           self.provider = provider
+       }
     
     public func getStationList() -> Single<Result<StationList.Response, NetworkError>> {
         return provider.rx.request(.getStations)

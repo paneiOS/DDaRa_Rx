@@ -8,10 +8,11 @@
 import Foundation
 import RxSwift
 import Stubber
+import Moya
 
 @testable import DDaRa
 
-class StationNetworkStub: NetworkService {
+class StationNetworkStub: NetworkProvider {
     override func getStationList() -> Single<Result<StationList.Response, NetworkError>> {
         return Stubber.invoke(getStationList, args: nil)
     }

@@ -22,7 +22,9 @@ final class MainViewModelTests: XCTestCase {
 
     override func setUp() {
         self.model = MainModel(network: stubNetwork)
-        self.stationList = stations
+        let sampleData = StationAPI.getStations.sampleData
+        let expectedStationList: [Station] = Dummy().load(sampleData)
+        self.stationList = expectedStationList
     }
     
     func testPlayStreamUrl() {
