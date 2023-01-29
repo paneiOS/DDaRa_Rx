@@ -47,6 +47,9 @@ PODS:
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
+  - Moya/RxSwift (15.0.0):
+    - Moya/Core
+    - RxSwift (~> 6.0)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -75,6 +78,7 @@ DEPENDENCIES:
   - Google-Mobile-Ads-SDK
   - Kingfisher
   - Moya
+  - Moya/RxSwift
   - Nimble
   - RxBlocking
   - RxCocoa
@@ -127,6 +131,6 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   Stubber: 3ea4080870feeaf5b1637314a92245eef9b8c8e7
 
-PODFILE CHECKSUM: 0589de10f489d6986da95b19e7073b0b03610af7
+PODFILE CHECKSUM: 5dbf9176f86b1e7d0c22a35ec6e930a1f9505a53
 
 COCOAPODS: 1.11.3

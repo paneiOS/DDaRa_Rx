@@ -13,6 +13,7 @@ target 'DDaRa' do
   pod 'RxDataSources', '~> 5.0'
   pod 'Google-Mobile-Ads-SDK'
   pod 'Moya'
+  pod 'Moya/RxSwift'
   
   target 'DDaRaTests' do
     inherit! :search_paths
