@@ -29,7 +29,7 @@ final class MainViewModelTests: XCTestCase {
         let scheduler = TestScheduler(initialClock: 0)
         
         let dummyDataEvent = scheduler.createHotObservable([
-            .next(0, model.listToCellData(stationList))
+            .next(0, model.listToSampleCellData(stationList))
         ])
         
         let stationListData = PublishSubject<[StationCellData]>()
@@ -55,7 +55,7 @@ final class MainViewModelTests: XCTestCase {
             .disposed(by: disposeBag)
 
         scheduler.start()
-        let selectFirstStation = model.listToCellData(stationList)[0]
+        let selectFirstStation = model.listToSampleCellData(stationList)[0]
         
         expect(selectedStationObserver.events).to(
             equal([

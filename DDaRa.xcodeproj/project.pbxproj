@@ -266,14 +266,14 @@
 			path = FavoriteView;
 			sourceTree = "<group>";
 		};
-		39357B4F295D54E7000D7524 /* Protocol */ = {
+		39357B4F295D54E7000D7524 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				39357B50295D54F3000D7524 /* ViewModel.swift */,
 				39C1A60B29536EAE00A5625F /* AlertActionConvertible.swift */,
 				3976B0F3296E0C7800B4365D /* AlertController.swift */,
 			);
-			path = Protocol;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		3976B0E029655E1A00B4365D /* ActionSheetView */ = {
@@ -372,7 +372,7 @@
 		39A1BEC72952FB110007C524 /* DDaRa */ = {
 			isa = PBXGroup;
 			children = (
-				39357B4F295D54E7000D7524 /* Protocol */,
+				39357B4F295D54E7000D7524 /* Common */,
 				3929B642295C08D000A1CBD0 /* App */,
 				3976B0E52968156000B4365D /* Data */,
 				3976B0E62968159A00B4365D /* Domain */,
