@@ -15,10 +15,10 @@ final class MainModelTests: XCTestCase {
     private let stubNetwork = StationNetworkStub()
     
     private var stationList: [Station]!
-    private var model: MainModel!
+    private var model: DefaultStationsUseCase!
 
     override func setUp() {
-        self.model = MainModel(network: stubNetwork)
+        self.model = DefaultStationsUseCase(network: stubNetwork)
         let sampleData = StationAPI.getStations.sampleData
         let expectedStationList: [Station] = Dummy().load(sampleData)
         self.stationList = expectedStationList

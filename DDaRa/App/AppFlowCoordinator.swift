@@ -24,7 +24,7 @@ final class AppFlowCoordinator {
     }
     
     func start() {
-        let mainModel = MainModel(network: networkService)
+        let mainModel = DefaultStationsUseCase(network: networkService)
         playStatusViewModel = PlayStatusViewModel(model: mainModel)
         playStatusView = PlayStatusView(viewModel: playStatusViewModel,
                                             topViewController: mainTabBarController)

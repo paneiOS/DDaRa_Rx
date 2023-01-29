@@ -9,14 +9,7 @@ import Foundation
 import Moya
 import RxSwift
 
-protocol SearchStationsUseCase {
-    func getStationList() -> Single<Result<StationList.Response, NetworkError>>
-    func getJsonToUrl(of urlString: String) -> Single<Result<URL?, NetworkError>>
-    func getStringToUrl(of urlString: String) -> Single<Result<URL?, NetworkError>>
-    func validStreamURL(of urlString: String) -> Single<Result<URL?, NetworkError>>
-}
-
-class NetworkProvider: SearchStationsUseCase {
+class NetworkProvider: StationsUseCase {
     private let disposeBag = DisposeBag()
     
     let provider: MoyaProvider<StationAPI>

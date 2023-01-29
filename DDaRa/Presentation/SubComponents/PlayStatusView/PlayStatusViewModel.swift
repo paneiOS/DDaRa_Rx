@@ -11,7 +11,7 @@ import AVFoundation
 import MediaPlayer
 
 final class PlayStatusViewModel: ViewModel {
-    let model: MainModel
+    let model: DefaultStationsUseCase
     let disposeBag = DisposeBag()
     let errorMessage = PublishSubject<Alert?>()
     let audioSession = AVAudioSession.sharedInstance()
@@ -36,7 +36,7 @@ final class PlayStatusViewModel: ViewModel {
         let alertActionTapped: Observable<AlertAction>
     }
     
-    init(model: MainModel) {
+    init(model: DefaultStationsUseCase) {
         self.model = model
     }
     

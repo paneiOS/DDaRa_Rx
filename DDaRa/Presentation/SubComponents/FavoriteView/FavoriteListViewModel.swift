@@ -8,7 +8,7 @@
 import RxSwift
 
 struct FavoriteListViewModel: ViewModel {
-    let model: MainModel
+    let model: DefaultStationsUseCase
     private let disposeBag = DisposeBag()
     
     struct Input {
@@ -23,7 +23,7 @@ struct FavoriteListViewModel: ViewModel {
         let errorMessage: Observable<Alert?>
     }
     
-    init(model: MainModel) {
+    init(model: DefaultStationsUseCase) {
         self.model = model
     }
 

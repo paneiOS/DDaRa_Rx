@@ -1,5 +1,5 @@
 //
-//  MainModel.swift
+//  DefaultStationsUseCase.swift
 //  DDaRa
 //
 //  Created by 이정환 on 2022/12/21.
@@ -8,7 +8,14 @@
 import Foundation
 import RxSwift
 
-struct MainModel {
+protocol StationsUseCase {
+    func getStationList() -> Single<Result<StationList.Response, NetworkError>>
+    func getJsonToUrl(of urlString: String) -> Single<Result<URL?, NetworkError>>
+    func getStringToUrl(of urlString: String) -> Single<Result<URL?, NetworkError>>
+    func validStreamURL(of urlString: String) -> Single<Result<URL?, NetworkError>>
+}
+
+struct DefaultStationsUseCase: StationsUseCase {
     let network: NetworkProvider
     
     init(network: NetworkProvider) {
