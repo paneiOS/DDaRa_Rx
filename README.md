@@ -22,7 +22,7 @@
 `MainTabBar`로 3가지화면(설정화면을 포함하여)을 묶고 1개의 `PlayStatusView`를 공유하고있습니다.
 라디오의 상세데이터는 `ActionSheet`로 보여주며 설정화면은 `ViewController`로 보여줍니다.
 
-`MVVM-C`를 적용했습니다.
+`MVVM-C` 및 `CleanArchiTecture` 를 적용했습니다.
 사용한 라이브러리: `RxSwift`, `RxCocoa`, `RxDataSources`, `Moya`, `Moya/RxSwift`, `SnapKit`, `Kingfisher`
 
    
@@ -43,8 +43,8 @@
 │   ├── App
 │   ├── Data
 │   │   ├── Network
-│   │   ├── Entites
 │   ├── Domain
+│   │   ├── Entites
 │   ├── Presentation
 │   │   ├── MainTabBarView
 │   │   ├── SubComponents
