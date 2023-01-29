@@ -5,14 +5,9 @@
 //  Created by 이정환 on 2022/12/27.
 //
 
-//import Foundation
 import RxDataSources
 
-//struct MultiSection {
-//    typealias StationSectionModel = SectionModel<Section, StationCellData>
-//}
-
-enum Section: String, Equatable, Decodable, CaseIterable, Hashable {//}, Identifiable {
+enum Section: String, Equatable, Decodable, CaseIterable, Hashable {
     case 지상파
     case 지역방송
     case 전문방송
@@ -24,7 +19,7 @@ enum Section: String, Equatable, Decodable, CaseIterable, Hashable {//}, Identif
     case CBS
     case BBS
     case 극동방송
-    case 기타종교 //= "WBS/cpbc"
+    case 기타종교
     case 교통방송
     
     var id: String {
@@ -76,7 +71,6 @@ struct StationCellData: Equatable {
 
 struct SectionOfStations {
     var header: String?
-//    var footer: String?
     var items: [Item]
 }
 
@@ -88,24 +82,3 @@ extension SectionOfStations: SectionModelType {
     self.items = items
   }
 }
-
-/*
-struct SectionOfAnimatedData {
-    var header: String
-    var items: [Item]
-}
-
-extension SectionOfAnimatedData: AnimatableSectionModelType {
-    typealias Item = AnimatedData
-    typealias Identity = String
-
-    var identity: String {
-        return header
-    }
-
-    init(original: SectionOfAnimatedData, items: [Item]) {
-        self = original
-        self.items = items
-    }
-}
-*/

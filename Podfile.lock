@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.5.0)
   - Differentiator (5.0.0)
   - Google-Mobile-Ads-SDK (9.14.0):
     - GoogleAppMeasurement (< 11.0, >= 7.0)
@@ -42,6 +43,13 @@ PODS:
   - GoogleUtilities/Reachability (7.7.0):
     - GoogleUtilities/Logger
   - Kingfisher (7.2.0)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (15.0.0):
+    - Moya/Core
+    - RxSwift (~> 6.0)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -69,6 +77,8 @@ PODS:
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK
   - Kingfisher
+  - Moya
+  - Moya/RxSwift
   - Nimble
   - RxBlocking
   - RxCocoa
@@ -80,12 +90,14 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Differentiator
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUserMessagingPlatform
     - GoogleUtilities
     - Kingfisher
+    - Moya
     - nanopb
     - Nimble
     - PromisesObjC
@@ -99,12 +111,14 @@ SPEC REPOS:
     - Stubber
 
 SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   Google-Mobile-Ads-SDK: 4fe6304b771f8467d29978cb790ec1e56e646946
   GoogleAppMeasurement: 71156240babd3cc6ced03e0d54816f01a880c730
   GoogleUserMessagingPlatform: 5f8b30daf181805317b6b985bb51c1ff3beca054
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
@@ -117,6 +131,6 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   Stubber: 3ea4080870feeaf5b1637314a92245eef9b8c8e7
 
-PODFILE CHECKSUM: 234b146cf136769243c5a74d6bd15c808bcc079b
+PODFILE CHECKSUM: 5dbf9176f86b1e7d0c22a35ec6e930a1f9505a53
 
 COCOAPODS: 1.11.3

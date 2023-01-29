@@ -8,5 +8,9 @@
 import Foundation
 
 struct StationList: Decodable {
-    let stationList: [Station]
+    public let stationList: [Station]
+
+    public struct Response: Decodable {
+        public let stationList: [Station]
+    }
 }
