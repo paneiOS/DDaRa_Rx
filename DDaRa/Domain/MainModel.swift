@@ -15,25 +15,25 @@ struct MainModel: SearchStationsUseCase {
         self.network = network
     }
     
-    func getStationList() -> Single<Result<StationList, NetworkError>> {
+    func getStationList() -> Single<Result<StationList.Response, NetworkError>> {
         return network.getStationList()
     }
     
-    func getSectionOfStationValue(_ result: Result<StationList, NetworkError>) -> [Station]? {
+    func getSectionOfStationValue(_ result: Result<StationList.Response, NetworkError>) -> [Station]? {
         guard case let .success(value) = result else {
             return nil
         }
         return value.stationList
     }
     
-    func getStationValue(_ result: Result<StationList, NetworkError>) -> [Station]? {
+    func getStationValue(_ result: Result<StationList.Response, NetworkError>) -> [Station]? {
         guard case let .success(value) = result else {
             return nil
         }
         return value.stationList
     }
     
-    func getStationError(_ result: Result<StationList, NetworkError>) -> Alert? {
+    func getStationError(_ result: Result<StationList.Response, NetworkError>) -> Alert? {
         guard case .failure(let error) = result else {
             return nil
         }
@@ -73,6 +73,25 @@ struct MainModel: SearchStationsUseCase {
         
         return data
             .filter { UserDefaults.standard.bool(forKey: $0.title) }
+            .map {
+                StationCellData(section: $0.section,
+                                title: $0.title,
+                                subTitle: $0.subTitle,
+                                stationType: $0.stationType ?? 0,
+                                imageURL: $0.imageURL,
+                                imageColor: $0.imageColor ?? "white",
+                                streamURL: $0.streamURL,
+                                detail: $0.detail,
+                                like: true)
+            }
+    }
+    
+    func listToSampleCellData(_ data: [Station]?) -> [StationCellData] {
+        guard let data = data else {
+            return []
+        }
+        
+        return data
             .map {
                 StationCellData(section: $0.section,
                                 title: $0.title,

@@ -12,7 +12,7 @@ import Stubber
 @testable import DDaRa
 
 class StationNetworkStub: NetworkService {
-    override func getStationList() -> Single<Result<StationList, NetworkError>> {
+    override func getStationList() -> Single<Result<StationList.Response, NetworkError>> {
         return Stubber.invoke(getStationList, args: nil)
     }
     
