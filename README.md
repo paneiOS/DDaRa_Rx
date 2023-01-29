@@ -1,4 +1,4 @@
-# MVVM/Rx를 적용한 오픈마켓 프로젝트
+# MVVM/Rx를 적용한 라디오 프로젝트
 
 ## 목차
 - [🛒 프로젝트 소개](#-프로젝트-소개)
@@ -22,15 +22,17 @@
 `MainTabBar`로 3가지화면(설정화면을 포함하여)을 묶고 1개의 `PlayStatusView`를 공유하고있습니다.
 라디오의 상세데이터는 `ActionSheet`로 보여주며 설정화면은 `ViewController`로 보여줍니다.
 
-`MVVM-C` 및 `RxSwift`를 적용했습니다.ㅊ
+`MVVM-C`를 적용했습니다.
+사용한 라이브러리: `RxSwift`, `RxCocoa`, `RxDataSources`, `Moya`, `Moya/RxSwift`, `SnapKit`, `Kingfisher`
+
    
 - 참여자 : Pane @kazamajinz (1명)
 
 <br/>
    
-|1. MenuBar|2. 목록 스크롤|3. 다음 목록 업데이트|4. 신상품 추가 알림|5. 상품 상세|
+|1. MenuBar|2. 목록 스크롤|3. 재생화면|4. 외부제어|5. 자동종료화면|
 |-|-|-|-|-|
-|<img width="200" src="https://user-images.githubusercontent.com/90880660/168954925-72b87ded-3bde-48f9-b8ca-d1912f77cdc1.gif">|<img width="200" src="https://user-images.githubusercontent.com/90880660/168954948-93e03109-6721-42dc-b6ca-2fb40548795c.gif">|<img width="200" src="https://user-images.githubusercontent.com/90880660/168954930-64d8a698-a983-496b-85b7-3803b60d1869.gif">|<img width="200" src="https://i.imgur.com/ej6Iw9R.gif">|<img width="200" src="https://user-images.githubusercontent.com/90880660/168954936-fdc34d74-6d4f-4d40-86f0-5b20861f2c75.gif">|
+|<img width="200" src="https://user-images.githubusercontent.com/62927862/215344785-e03c1daf-c2cc-43c7-a89c-b07d17a59bb7.gif">|<img width="200" src="https://user-images.githubusercontent.com/62927862/215344951-c713a26b-db36-4860-aa5d-7bff9878ab24.gif">|<img width="200" src="https://user-images.githubusercontent.com/62927862/215344984-8952ab61-461e-4052-87b1-5a29188273cb.gif">|<img width="200" src="https://user-images.githubusercontent.com/62927862/215345007-87e497b5-3feb-41aa-9ee7-99a2db5fd7d2.gif">|<img width="200" src="https://user-images.githubusercontent.com/62927862/215345045-7d19e4ec-e5c0-4a30-aa16-a1463efd56d3.gif">|
 
 ## 🛒 Architecture
 ![image](https://user-images.githubusercontent.com/70856586/168956710-3186bbf6-7521-433b-a184-fb83dd3e25bb.png)
