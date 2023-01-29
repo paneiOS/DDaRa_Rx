@@ -19,9 +19,10 @@
 
 ## 🛒 프로젝트 소개
 `Network` 통신으로 서버에서 데이터를 받아 `CollectionView`로 라디오화면을 만들고 `TableView`로 즐겨찾기화면을 만듭니다.
-`MainTabBar`로 3가지 화면을 묶고 1개의 `PlayStatusView`를 공유하고있습니다.
+`MainTabBar`로 3가지화면(설정화면을 포함하여)을 묶고 1개의 `PlayStatusView`를 공유하고있습니다.
 라디오의 상세데이터는 `ActionSheet`로 보여주며 설정화면은 `ViewController`로 보여줍니다.
-`MVVM-C` 및 `RxSwift`를 적용했습니다.
+
+`MVVM-C` 및 `RxSwift`를 적용했습니다.ㅊ
    
 - 참여자 : Pane @kazamajinz (1명)
 
