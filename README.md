@@ -1,29 +1,29 @@
-# MVVM/Rx를 적용한 라디오 프로젝트
+# MVVM-C/Rx를 적용한 라디오 프로젝트
 
 ## 목차
-- [🛒 프로젝트 소개](#-프로젝트-소개)
-- [🛒 Architecture](#-architecture)
-- [🛒 Foldering](#-foldering)
-- [🛒 Feature-1. 네트워크 구현](#-feature-1-네트워크-구현)
+- [📻 프로젝트 소개](#-프로젝트-소개)
+- [📻 Architecture](#-architecture)
+- [📻 Foldering](#-foldering)
+- [📻 Feature-1. 네트워크 구현](#-feature-1-네트워크-구현)
     + [고민한 점](#1-1-고민한-점) 
     + [Trouble Shooting](#1-2-trouble-shooting)
     + [키워드](#1-3-키워드)
-- [🛒 Feature-2. 상품 목록 화면 구현](#-feature-2-상품-목록화면-구현)
+- [📻 Feature-2. 상품 목록 화면 구현](#-feature-2-상품-목록화면-구현)
     + [고민한 점](#2-1-고민한-점)
     + [Trouble Shooting](#2-2-trouble-shooting)
     + [키워드](#2-3-키워드)
-- [🛒 Feature-3. 상품 상세화면 구현](#-feature-3-상품-상세화면-구현)
+- [📻 Feature-3. 상품 상세화면 구현](#-feature-3-상품-상세화면-구현)
     + [고민한 점](#3-1-고민한-점) 
     + [Trouble Shooting](#3-2-trouble-shooting)
     + [키워드](#3-3-키워드)
 
-## 🛒 프로젝트 소개
+## 📻 프로젝트 소개
 `Network` 통신으로 서버에서 데이터를 받아 `CollectionView`로 라디오화면을 만들고 `TableView`로 즐겨찾기화면을 만듭니다.
 `MainTabBar`로 3가지화면(설정화면을 포함하여)을 묶고 1개의 `PlayStatusView`를 공유하고있습니다.
 라디오의 상세데이터는 `ActionSheet`로 보여주며 설정화면은 `ViewController`로 보여줍니다.
 
 `MVVM-C` 및 `CleanArchiTecture` 를 적용했습니다.
-사용한 라이브러리: `RxSwift`, `RxCocoa`, `RxDataSources`, `Moya`, `Moya/RxSwift`, `SnapKit`, `Kingfisher`
+사용한 라이브러리: `RxSwift`, `RxCocoa`, `RxDataSources`, `SnapKit`, `Kingfisher`
 
    
 - 참여자 : Pane @kazamajinz (1명)
@@ -34,10 +34,10 @@
 |-|-|-|-|-|
 |<img width="200" src="https://user-images.githubusercontent.com/62927862/215344785-e03c1daf-c2cc-43c7-a89c-b07d17a59bb7.gif">|<img width="200" src="https://user-images.githubusercontent.com/62927862/215344951-c713a26b-db36-4860-aa5d-7bff9878ab24.gif">|<img width="200" src="https://user-images.githubusercontent.com/62927862/215344984-8952ab61-461e-4052-87b1-5a29188273cb.gif">|<img width="200" src="https://user-images.githubusercontent.com/62927862/215345007-87e497b5-3feb-41aa-9ee7-99a2db5fd7d2.gif">|<img width="200" src="https://user-images.githubusercontent.com/62927862/215345045-7d19e4ec-e5c0-4a30-aa16-a1463efd56d3.gif">|
 
-## 🛒 Architecture
+## 📻 Architecture
 ![image]([https://user-images.githubusercontent.com/62927862/215374327-2a8e0441-fc72-4b4e-8dc8-b505bdd85461.png](https://user-images.githubusercontent.com/62927862/215428069-d825be4a-2828-4e37-a425-3a1ca325a9af.png))
 
-## 🛒 Foldering
+## 📻 Foldering
 ```
 ├── DDaRa
 │   ├── App
@@ -75,42 +75,40 @@
 
 ```
 
-## 🛒 Feature-1. 네트워크 구현
-### 1-1 고민한 점
-#### 1️⃣ Unit Test
-아래의 목적을 위해 `MockURLSession`을 구현했습니다.
-- 실제 서버와 통신할 경우 테스트의 속도가 느려짐
-- 인터넷 연결상태에 따라 테스트 결과가 달라지므로 테스트 신뢰도가 떨어짐
-- 실제 서버와 통신을 하며 서버에 테스트 데이터가 불필요하게 업로드되는 Side-Effect가 발생함
+## 📻 Feature-1. Architecture에 대한 고민
+### 1-1 고민한 점 
+#### MVVM-C, Clean Architecture + MVVM 적용
+명확한 계층분리를 위해 MVVM 구조에서 Coordinator를 view들의 계층을 관리하며 의존성을 주입합니다.
+NetworkProvider에서 서버와의 통신에서는 URLSession을 주입하여 작동하지만 Test시에는 MockURLSession을 주입하여 작동합니다.
+간단한 로직을 구현하는데 상당히 많은 양의 클래스가 필요했습니다. 이를위해 필요없는 요소를 축약하고 통합하였습니다.
 
-또한 향후 테스트 대상 파일이 늘어날 것에 대비하여 Mock 데이터로 JSON 파일을 추가하고, `Bundle(for: type(of: self))`로 데이터에 접근했습니다.
+## Feature-2. 네트워크 구현
+### 2-1 고민한 점
+#### 1️⃣ Unit Test
+`MockURLSession`을 구현한 이유
+1. 실제 서버와 통신할 경우 테스트의 속도가 느려짐
+2. 인터넷 연결상태에 따라 테스트 결과가 달라지므로 테스트 신뢰도가 떨어짐
+3. 실제 데이터와 테스트를 통신을 하게 되면 불필요하게 업로드가 되는 Side-Effect를 방지할 수 있음.
+4. JSON파일로 추가함으로 데이터를 추가하기가 용이함.
 
 #### 2️⃣ API 추상화
-API를 열거형으로 관리하는 경우, API를 추가할 때마다 새로운 case를 생성하여 열거형이 비대해지고, 열거형 관련 switch문을 매번 수정해야 하는 번거로움이 있었습니다.
-따라서 API마다 독립적인 구조체 타입으로 관리되도록 변경하고, URL 프로퍼티 외에도 HttpMethod 프로퍼티를 추가한 `APIProtocol` 타입을 채택하도록 개선했습니다. 이로써 코드유지 보수가 용이하며, 협업 시 각자 담당한 API 구조체 타입만 관리하면 되기 때문에 충돌을 방지할 수 있습니다.
+배민의 기술블로그에서는 Alamofire를 한번 더 추상화하여 구현된 라이브러리인 `Moya`를 이용하여 UnitTest를 사용하고 `Quick/Nimble`을 사용하면 더 편하다고 언급하고 있습니다.
+이전 프로젝트에서 MoYa를 이용해서 열거형으로 만들었었으나 API추가할때마다 case가 늘어나고 switch문을 매번 수정하는게 생각보다 불편하여 아래와 같이 수정하였습니다.
+1. API마다 독립적인 구조체 타입으로 관리되도록 만듬.(ex `StationListAPI`, `StreamingAPI`)
+2. URL 프로퍼티 외에도 HttpMethod 프로퍼티를 추가한 `APIProtocol`타입을 채택
+3. 현재 post타입은 사용하고 있지않지만 추가작업을 위해 추가해놓음.
+4. 협업시에 각자 담당한 API 구제초만 관리하면 되기 때문에 충돌을 막을 수 있음.
 
-### 1-2 Trouble Shooting
-#### 1️⃣ Mock 데이터 접근 시 Bundle에 접근하지 못하는 문제
+### 2-2 Trouble Shooting
+#### Mock 데이터 접근 시 Bundle에 접근하지 못하는 문제
 - 문제점 : `JSON Decoding` 테스트를 할 때, `Bundle.main.path`를 통해 Mock 데이터에 접근하도록 했는데, path에 nil이 반환되는 문제가 발생했습니다. LLDB 확인 결과 Mock 데이터 파일이 포함된 Bundle은 `OpenMarketTests.xctest`이며, 테스트 코드를 실행하는 주체는 `OpenMarket App Bundle`임을 파악했습니다. 
 - 해결방법 : 현재 executable의 Bundle 개체를 반환하는 `Bundle.main` (즉, App Bundle)이 아니라, 테스트 코드를 실행하는 주체를 가르키는 `Bundle(for: type(of: self))` (즉, XCTests Bundle)로 path를 수정하여 문제를 해결했습니다.
-이외에도 테스트 코드 내부에서 옵셔널 바인딩을 하는 경우 else문에 `XCTFail()`을 추가하여 예상 결과값이 반환되지 않았음에도 테스트를 Pass하는 오류를 방지했습니다.
 
-#### 2️⃣ Rx를 사용한 네트워크 처리 시 불필요한 Subscribe 삭제
-- 문제점 : 기존에는 `loadData()`, `request(api:)`, `fetchData(api:decodingType:)`으로 나누어 해당 메서드에서 전부 Observable을 create하고 순차적으로 `subscribe`를 하여 네트워크를 처리하는 방법을 사용했습니다. 이때 `subscribe`를 최소화하는 방향으로 개선하려 했으나, 단순히 `map`을 사용해 데이터를 가공하고 넘겨주는 경우 `onError`를 통해 발생하는 에러를 처리하지 못하는 문제가 존재했습니다.
-- 해결방법 : 서버에서 데이터를 받아오는 `fetchData(api:decodingType:)`와 데이터를 요청하는 `request(api:)`메서드로 분리하고, `dataTask(api:emitter:)`메서드에서 `URLSession`의 `dataTask` 메서드를 실행시켜 에러를 던지도록 개선했습니다.
-
-### 1-3 키워드
-- Network : 비동기 처리, URLSession, MultipartFormData, REST-ful API
-- TDD : MockURLSession, MockData
-- SPM : RxSwift/RxCocoa, SwiftLint
-- JSON Parsing, Generics
-- Cache, Notification, Alert
-
-## 🛒 Feature-2. 상품 목록화면 구현
+## 🛒 Feature-3. Station화면 구현
 ### 2-1 고민한 점 
-#### 1️⃣ DiffableDataSource 및 Snapshot 활용
-상품 목록은 크게 `Banner Section` 및 `List Section`으로 구분했습니다. `DiffableDataSource`를 활용하여 `CollectionView`에 나타낼 데이터 타입 (UniqueProduct)은 `Hashable`을 채택하도록 했습니다. 또한 `HeaderView`를 통해 각 Section의 타이틀을 나타냈고, `Banner Section`의 `FooterView`를 통해 배너 이미지의 `PageControl`을 보여주도록 했습니다.
-또한 RxSwift를 통해 ViewModel과 ViewController를 Binding 시켜서 역할을 분리했습니다. 예를 들어 상품 목록화면에서 스크롤을 최하단으로 내리면, ViewModel은 서버를 통해 상품 목록을 업데이트하고, ViewController는 Snapshot을 apply하여 화면을 다시 그리도록 했습니다.
+#### 1️⃣ RxDataSources 
+처음에는 DiffableDataSource를 사용하려고 하였으나 DiffableDataSource는 자주 사용해봤기 때문에 RxDataSources를 사용하였습니다.
+기본적으로 `CollectionView`에 나타낼 데이터 타입 (UniqueProduct)은 DiffableDataSource와 같이 `Hashable`을 채택하여 구분해야했습니다. Section에 `Hashable`를 채택하여 Dictionary로 재구성하였고 Section의 Value값으로 Section의 타이틀을 나타냈습니다.
 
 #### 2️⃣ CompositionalLayout 활용
 `CompositionalLayout`을 활용하여 Item/Group/Section 요소를 반응성 있게 배열했습니다. 또한 높이는 `estimatedHeight`, 너비는 `fractionalWidth`를 활용하여 Cell의 크기가 Device에 따라 유동적으로 조절됩니다. 특히 `estimatedHeight`를 사용하여 Cell의 높이를 고정하지 않고, Cell의 내부 구성에 따라 자동으로 산정하도록 했습니다.
