@@ -79,7 +79,7 @@
 ## 📻 Feature-1. Architecture에 대한 고민
 ### 1-1 고민한 점 
 #### 1️⃣ MVVM-C, Clean Architecture + MVVM 적용
-명확한 계층분리를 위해 MVVM 구조에서 Coordinator를 view들의 계층을 관리하며 의존성을 주입합니다.
+명확한 계층분리를 위해 `MVVM구조`에서 `Coordinator`를 통해 view들의 계층을 관리하며 `의존성`을 주입했습니다.
 UseCase에 networkService를 주입하고 UseCase는 ViewModel에 주입하고 ViewModel에서도 Input-Output을 이용하여 명확하게 Input값과 Output값을 분리하고있습니다.
 NetworkProvider에서 서버와의 통신에서는 URLSession을 주입하여 작동하지만 Test시에는 MockURLSession을 주입하여 작동합니다.
 간단한 로직을 구현하는데 상당히 많은 양의 클래스가 필요했습니다. 이를위해 필요없는 요소를 축약하고 통합하였습니다.
