@@ -189,9 +189,3 @@ DDaRa의 경우 아이패드의 경우는 고려하지 않았지만 작년에 �
 - 문제점: 아이패드로 실행시 ActionSheet가 Alert으로 팝업되었다. Alert로 팝업되면서 기본크기이기 떄문에 오른쪽 텍스트가 잘리는 현상이 구현되었습니다.
 - 해결방법: Alert으로 구현하지 않고 View를 커스텀하여 팝업창처럼 만들어 해결하고자하였습니다. 다만 법적문제를 해결할 방법이 없어 출시포기로 팝업창을 구현하지 않았습니다.
 
-```swift
-section.visibleItemsInvalidationHandler = { [weak self] _, contentOffset, environment in
-    let bannerIndex = Int(max(0, round(contentOffset.x / environment.container.contentSize.width)))
-    self?.imagePageControl.currentPage = bannerIndex
-}
-```
