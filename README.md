@@ -4,7 +4,7 @@
 - [📻 프로젝트 소개](#-프로젝트-소개)
 - [📻 Architecture](#-architecture)
 - [📻 Foldering](#-foldering)
-- [📻 Feature-1. Architectrue에 대한 고민](#-feature-1-architecture에)
+- [📻 Feature-1. Architectrue에 대한 고민](#-feature-1-architecture-대한)
 - [📻 Feature-1. 네트워크 구현](#-feature-1-architecture-대한)
     + [고민한 점](#1-1-고민한-점) 
     + [Trouble Shooting](#1-2-trouble-shooting)
