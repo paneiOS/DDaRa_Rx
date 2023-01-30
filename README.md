@@ -42,9 +42,10 @@
 ├── DDaRa
 │   ├── App
 │   ├── Data
-│   │   ├── Network
+│   │   ├── NetworkProvider
+│   │   ├── ServiceAPI
 │   ├── Domain
-│   │   ├── Entites
+│   │   ├── DefaultStationsUseCase
 │   ├── Presentation
 │   │   ├── MainTabBarView
 │   │   ├── SubComponents
