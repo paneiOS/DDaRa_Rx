@@ -172,6 +172,20 @@ Flow Coordinator에서 전달한 action을 통해서 위의 정지 기능을 클
 #### 3️⃣ Timer 백그라운드
 백그라운드에 진입했을때도 시간이 경과하면 작동이 되어야 하기때문에 `Timer()`의 scheduler를 사용하지 않고 `DispatchSourceTimer`를 활용하였습니다.
 
+
+## 📻 Feature-7. 심사리젝, 
+### 7-1 고민한점
+#### 1️⃣ 타사의 StreamURL을 사용
+심사를 받았으나 방송국의 Streaming 서비스를 이용하는 것은 법적으로 문제가 없음을 증명해야한다는 이유로 리젝되었습니다.
+추가적으로 알아본 결과 보통 방송국마다 라이센스가 필요하다고 합니다. 많은 방송사들이 들어있기 때문에 출시를 포기하였습니다.
+
+#### 2️⃣ 아이패드
+DDaRa의 경우 아이패드의 경우는 고려하지 않았지만 작년에 애플에서 아이패드를 사용하지 않는 어플이어도 정상작동해야한다고 하였다.
+
+### 7-2 Trouble Shooting
+- 문제점: 아이패드로 실행시 ActionSheet가 Alert으로 팝업되었다. Alert로 팝업되면서 기본크기이기 떄문에 오른쪽 텍스트가 잘리는 현상이 구현되었습니다.
+- 해결방법: Alert으로 구현하지 않고 View를 커스텀하여 팝업창처럼 만들어 해결하고자하였습니다. 다만 법적문제를 해결할 방법이 없어 출시포기로 팝업창을 구현하지 않았습니다.
+
 ```swift
 section.visibleItemsInvalidationHandler = { [weak self] _, contentOffset, environment in
     let bannerIndex = Int(max(0, round(contentOffset.x / environment.container.contentSize.width)))
