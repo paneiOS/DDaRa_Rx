@@ -77,12 +77,17 @@
 
 ## 📻 Feature-1. Architecture에 대한 고민
 ### 1-1 고민한 점 
-#### MVVM-C, Clean Architecture + MVVM 적용
+#### 1️⃣ MVVM-C, Clean Architecture + MVVM 적용
 명확한 계층분리를 위해 MVVM 구조에서 Coordinator를 view들의 계층을 관리하며 의존성을 주입합니다.
+UseCase에 networkService를 주입하고 UseCase는 ViewModel에 주입하고 ViewModel에서도 Input-Output을 이용하여 명확하게 Input값과 Output값을 분리하고있습니다.
 NetworkProvider에서 서버와의 통신에서는 URLSession을 주입하여 작동하지만 Test시에는 MockURLSession을 주입하여 작동합니다.
 간단한 로직을 구현하는데 상당히 많은 양의 클래스가 필요했습니다. 이를위해 필요없는 요소를 축약하고 통합하였습니다.
 
-## Feature-2. 네트워크 구현
+#### 2️⃣ ViewModel에서 RxCocoa를 쓰면 안티패턴인가
+ViewModel에서 RxCocoa를 import하고 있는데 RxCocoa를 import를 하고 있는게 안티패턴인가는 생각이 들었는데 많은 스타를 받은 다른분들의 MVVM의 아키텍처를 보면 ViewModel에서 input, output를 Driver로 전달하고 있는 예제들이 많이 있었습니다. 개인적인 생각은 써서 문제가 있다기보다는 필요성이 있을때 쓴다면 문제가 없는것 같은데 ViewModel에서 UI작업을 위한 메인스레드 작업할 일이 있는 경우가 당장 생각나진 않않습니다.
+
+
+## 📻 Feature-2. 네트워크 구현
 ### 2-1 고민한 점
 #### 1️⃣ Unit Test
 `MockURLSession`을 구현한 이유
@@ -100,58 +105,71 @@ NetworkProvider에서 서버와의 통신에서는 URLSession을 주입하여 �
 4. 협업시에 각자 담당한 API 구제초만 관리하면 되기 때문에 충돌을 막을 수 있음.
 
 ### 2-2 Trouble Shooting
-#### Mock 데이터 접근 시 Bundle에 접근하지 못하는 문제
+#### 1️⃣ Mock 데이터 접근 시 Bundle에 접근하지 못하는 문제
 - 문제점 : `JSON Decoding` 테스트를 할 때, `Bundle.main.path`를 통해 Mock 데이터에 접근하도록 했는데, path에 nil이 반환되는 문제가 발생했습니다. LLDB 확인 결과 Mock 데이터 파일이 포함된 Bundle은 `OpenMarketTests.xctest`이며, 테스트 코드를 실행하는 주체는 `OpenMarket App Bundle`임을 파악했습니다. 
 - 해결방법 : 현재 executable의 Bundle 개체를 반환하는 `Bundle.main` (즉, App Bundle)이 아니라, 테스트 코드를 실행하는 주체를 가르키는 `Bundle(for: type(of: self))` (즉, XCTests Bundle)로 path를 수정하여 문제를 해결했습니다.
 
-## 🛒 Feature-3. Station화면 구현
-### 2-1 고민한 점 
-#### 1️⃣ RxDataSources 
+
+## 📻 Feature-3. PlayStatusView 구현
+### 3-1 고민한 점
+#### 1️⃣ PlayStatusView 공유
+일반적인 Music앱들을 보면 하단의 재생창을 공유하고있다. 그렇기에 뷰의 계층안에서는 `PlayStatusView`가 가장 위에 있게 하는것이 목표였다.
+단순하게 View를 취상위로 올리는것만 아니라 다른 View(StationView와 FavoriteView)에서 음악을 재생하였을때 PlayStatusView에서도 음악재생에 맞는 기능이 작동해야헀다.
+StationView와 FavoriteView에서 음악을 재생하면 PlayStatusVie로 전달된다.
+전달받으면 PlayStatusView에서는 커버이미지, 제목, 재생애니메이션, 상단의 상태창(`MPNowPlayingInfoCenter`)을 업데이트하고 PlayStatusViewModel에서는 AVPlayer를 통해 재생과 정지 작업을 한다.
+
+### 3-2 Trouble Shooting
+#### 1️⃣ Mock PlayStatusView를 여러곳에서 bind하기 때문에 생기는 중복 스트림 방출
+- 문제점 : 즐겨찾기에서 재생시에 2번 재생버튼이 눌리며 노래가 재생후 바로 일시정지하는 상태가 발생했습니다. .debug()를 통해 중복 스트림이 발생하는 것을 확인했습니다.
+- 해결방법 : .share()를 추가하여 1번만 발생하도록 수정하였습니다.
+
+
+## 📻 Feature-4. StationView 구현
+### 4-1 고민한 점 
+#### 1️⃣ RxDataSources 사용
 처음에는 DiffableDataSource를 사용하려고 하였으나 DiffableDataSource는 자주 사용해봤기 때문에 RxDataSources를 사용하였습니다.
 기본적으로 `CollectionView`에 나타낼 데이터 타입 (UniqueProduct)은 DiffableDataSource와 같이 `Hashable`을 채택하여 구분해야했습니다. Section에 `Hashable`를 채택하여 Dictionary로 재구성하였고 Section의 Value값으로 Section의 타이틀을 나타냈습니다.
 
-#### 2️⃣ CompositionalLayout 활용
-`CompositionalLayout`을 활용하여 Item/Group/Section 요소를 반응성 있게 배열했습니다. 또한 높이는 `estimatedHeight`, 너비는 `fractionalWidth`를 활용하여 Cell의 크기가 Device에 따라 유동적으로 조절됩니다. 특히 `estimatedHeight`를 사용하여 Cell의 높이를 고정하지 않고, Cell의 내부 구성에 따라 자동으로 산정하도록 했습니다.
-또한 현재 Layout 스타일이 Grid인지, Table인지에 따라 `CollectionView`의 `columnCount`를 바뀌도록 구현했습니다.
-
-#### 3️⃣ Observable Subscribe 최소화 
-Stream이 발생하는 경우, Observable을 최종 사용하는 위치에서만 `Subscribe`하여 Stream이 끊기지 않도록 구현했습니다. 따라서 Observable을 생성하고 이를 처리하는 중간 단계에서는 `flatmap`, `map`, `filter` 등을 사용하여 필요한 형태로 변경만 해준 뒤 Observable 타입을 반환하도록 구현했습니다.
-
-#### 4️⃣ Flow Coordinator 활용
+#### 2️⃣ PlayStatuView의 위치
 Coordinator에서 모든 화면의 ViewController 및 ViewModel을 초기화하여 의존성을 관리하고, 화면 전환을 담당하도록 구현했습니다. 이때 화면 전환에 필요한 작업은 Coordinator에서 정의하여 클로저 타입의 변수로 구성된 action에 저장해두고, ViewModel에서 해당 action에 접근하여 클로저를 실행하도록 했습니다.
 
-#### 5️⃣ UnderlinedMenuBar 구현
-최근 상용앱에서 흔히 사용하는 Custom MenuBar를 구현했습니다. Custom Component이므로 `SegmentedControl` 보다는 `Button`을 활용하여 자유롭게 기능을 구현할 수 있도록 했습니다.
-Grid 및 Table의 2개 `Button`으로 구성하고, 각 버튼을 탭하면 CollectionView의 Layout이 변경되도록 했습니다. 또한 UIView로 Button 하단에 Underline을 표현하고, animate 메서드를 통해 Underline이 이동하는 애니메이션 효과를 적용했습니다. 이때 Underline의 위치를 변경하기 위해 기존 constraint를 deactivate하고, frame origin을 각 Button의 frame origin으로 할당했습니다.
-UnderlinedMenuBar 위치는 기존에는 NavigationBar의 `titleView`로 배치했지만, 화면 전환 시 시스템이 `titleView`의 크기를 재조정하는 문제가 발생하여 NavigationBar 대신 SafeArea 상단에 위치하도록 개선했습니다.
+#### 3️⃣ Observable Subscribe 최소화 
+Stream이 발생하는 경우, Observable을 최종 사용하는 위치에서만 `Subscribe`하여 Stream이 끊기지 않도록 구현했습니다. 따라서 Observable을 생성하고 이를 처리하는 중간 단계에서는 `flatmap`, `map`, `filter`, `compactMap` 등을 사용하여 필요한 형태로 변경만 해준 뒤 Observable 타입을 반환하도록 구현했습니다.
 
-#### 6️⃣ 새로운 상품이 등록되는 경우 Banner 변경
-앱을 사용하던 도중 새로운 할인상품이 등록되는 경우 Banner의 Item도 변경을 해야 할 지에 대해 고민했습니다. 대부분의 상용앱은 배너가 자주 변경되지 않기 때문에, 앱을 사용하는 도중에 배너가 바뀌지 않도록 구현했습니다.
+#### 4️⃣ Flow Coordinator 활용
+Coordinator에서 모든 화면의 ViewController 및 ViewModel을 초기화하여 의존성을 관리하고, 화면 전환을 담당하도록 구현했습니다.
+
+
+## 📻 Feature-5. FavoriteView, 상세화면 구현
+### 5-1 고민한 점 
+#### 1️⃣ TableView 사용
+즐겨찾기 화면의 경우 이용자는 듣는게 우선적인 목표이기에 단순하고 간단하게 만들기 위해 TableView를 사용하였습니다.
+
+#### 2️⃣ 상세화면은 ActionSheet 활용
+ActionSheet에 재생과 좋아요를 넣어 모든것을 조작할 수 있도록 구현했습니다.
+ActionSheet를 사용한 이유는 라디오를 실행할때 상세화면으로 한번 더 진입하는것이 유저에게는 불편할 수 있기때문에 ActionSheet를 활용하였습니다.
 
 ### 2-2 Trouble Shooting
-#### 1️⃣ UniqueProduct 타입을 추가하여 Hashable Item 생성
-- 문제점 : `Banner`에 `List`의 전체 상품 중에서 할인이 적용된 최근 5개 상품이 나타나도록 구현했습니다. 그 과정에서 `Banner` 및`List`에 동일한 ID의 상품을 적용해야 했는데, DiffableDataSource의 Item이 Unique하지 않아서 일부 상품이 화면에 그려지지 않았습니다.
-- 해결방법 : 기존 `Product` 타입에 UUID 타입의 프로퍼티를 추가한 `UniqueProduct` 타입을 추가하고, 서버에서 받은 상품 정보를 `Banner`와 `List`에 전달하기 전에 UniqueProduct 타입으로 변환시켜서 Item이 충돌하지 않도록 개선했습니다.
+#### 1️⃣ 초기화면 설정
+- 문제점 : 테스터가 초기 이용자입장에서는 데이터가 많은 StationView가 좋지만 즐겨찾기를 이용하는 이용자입장에서는 한번 이동해야하는 번거로움이 있다는 이야기를 전달받았습니다.
+- 해결방법 : FolwCoordinator로 관리하기 때문에 즐겨찾기의 유무로 초기화면을 바뀌도록 구현했습니다.
 
-#### 2️⃣ CollectionView Layout을 Table 및 Grid 스타일로 변경
-- 문제점 : `UnderlinedMenuBar`를 탭해서 CollectionView의 Layout을 변경할 때, 기존에 화면에 보이던 Cell은 스타일이 변하지 않고 유지되는 문제가 있었습니다. 
-- 해결방법 : MenuBar를 탭할 경우 각 스타일에 해당하는 Layout을 생성 및 적용하고, `reloadData` 메서드를 호출했습니다.
+#### 2️⃣ TableView와 ActionSheet의 좋아요버튼
+- 문제점 : 좋아요 버튼을 누를때 ActionSheet의 좋아요가 눌리면 TableView의 좋아요 버튼이 업데이트가 되어야 했습니다.
+- 해결방법 : TableView의 전체 리로드를 피하기 위해 ActionSheet가 나온 cell의 index만 업데이트하였습니다.
 
-### 2-3 키워드
-- CollectionView : DiffableDataSource, CompositionalLayout/estimatedHeight, Header/Footer
-- Architecture : MVVM-C, FlowCoordinator
-- UI : Build UI Programmatically, Deactivate Layout, Custom MenuBar
 
-## 🛒 Feature-3. 상품 상세화면 구현
-### 3-1 고민한 점 
-#### 1️⃣ orthogonalScrollingBehavior를 활용한 Pagination
-Section 마다 Scroll Direction을 다르게 지정하기 위해 고민했습니다. CollectionView의 main layout axis와 반대 방향으로 Scroll 되도록 설정할 수 있는 `orthogonalScrollingBehavior`을 활용했습니다.
-또한 상품 이미지를 나타낼 때, Pagination을 구현하여 화면 양 끝에 다른 이미지들의 일부가 보이도록 했습니다. 
+## 📻 Feature-6. 설정화면, 
+### 6-1 고민한 점 
+#### 1️⃣ Flow Coordinator 활용(화면전환, 자동꺼짐 설정)
+화면 전환에 필요한 작업과 자동꺼짐에 필요한 작업 2가지를 Coordinator에서 정의하여 클로저 타입의 변수로 구성된 SleepSettingAction 저장해두고, ViewController에서 해당 action에 접근하여 클로저를 실행하도록 했습니다.
 
-### 3-2 Trouble Shooting
-#### 1️⃣ Horizontal Scroll 시 현재 페이지를 PageControl에 반영
-- 문제점 : 상품 이미지를 CollectionView Pagination으로 나타내고, Horizontal Scroll을 할 때마다 현재 페이지가 PageControl에 반영되도록 구현했습니다. 기존에는 `collectionView(:willDisplay:forItemAt:)`와 `collectionView(:didEndDisplaying:forItemAt:`의 indexPath.row를 비교하여 둘이 다른 경우에 스크롤이 되었다고 판단하여 현재 페이지를 계산하는 로직을 사용했습니다. 하지만 이 경우 Horizontal Scroll을 부정확하게 인식하는 문제가 있었습니다. 
-- 해결방법 : section의 `visibleItemsInvalidationHandler` 클로저를 활용해 현재 페이지를 파악하도록 개선했습니다.
+#### 2️⃣ 자동꺼짐 설정
+Flow Coordinator에서 전달한 action을 통해서 위의 정지 기능을 클로저로 실행합니다.
+자동으로 꺼지기 위해서는 `PlayStatusView`의 UI 정지상태 업데이트, `PlayStatusViewModel`의 AVPlayer 정지, 외부 Controller 정지가 필요합니다.
+
+#### 3️⃣ Timer 백그라운드
+백그라운드에 진입했을때도 시간이 경과하면 작동이 되어야 하기때문에 `Timer()`의 scheduler를 사용하지 않고 `DispatchSourceTimer`를 활용하였습니다.
 
 ```swift
 section.visibleItemsInvalidationHandler = { [weak self] _, contentOffset, environment in
@@ -159,8 +177,3 @@ section.visibleItemsInvalidationHandler = { [weak self] _, contentOffset, enviro
     self?.imagePageControl.currentPage = bannerIndex
 }
 ```
-
-### 3-3 키워드
-- CollectionView : Pagination, OrthogonalScrollingBehavior
-- PageControl
-- AttributedString
