@@ -23,7 +23,7 @@
 라디오의 상세데이터는 `ActionSheet`로 보여주며 설정화면은 `ViewController`로 보여줍니다.
 
 `MVVM-C` 및 `CleanArchiTecture` 를 적용했습니다.
-사용한 라이브러리: `RxSwift`, `RxCocoa`, `RxDataSources`, `SnapKit`, `Kingfisher`
+사용한 라이브러리: `RxSwift`, `RxCocoa`, `RxDataSources`, `SnapKit`, `Kingfisher`, Nimble
 
    
 - 참여자 : Pane @kazamajinz (1명)
@@ -80,8 +80,8 @@
 ### 1-1 고민한 점 
 #### 1️⃣ MVVM-C, Clean Architecture + MVVM 적용
 명확한 계층분리를 위해 `MVVM구조`에서 `Coordinator`를 통해 view들의 계층을 관리하며 `의존성`을 주입했습니다.
-UseCase에 networkService를 주입하고 UseCase는 ViewModel에 주입하고 ViewModel에서도 Input-Output을 이용하여 명확하게 Input값과 Output값을 분리하고있습니다.
-NetworkProvider에서 서버와의 통신에서는 URLSession을 주입하여 작동하지만 Test시에는 MockURLSession을 주입하여 작동합니다.
+`UseCase`에 `NetworkService`를 주입하고 ViewModel은 `UseCase`를 주입하고 가독성과 유지보수를 위해 `프로토콜 ViewModel`을 채택하여 `Input/Output`을 적용하였습니다.
+`NetworkProvider`에서 서버와의 통신에서는 `URLSession`을 주입하여 작동하지만 `Test`시에는 `MockURLSession`을 주입하여 작동합니다.
 간단한 로직을 구현하는데 상당히 많은 양의 클래스가 필요했습니다. 이를위해 필요없는 요소를 축약하고 통합하였습니다.
 
 #### 2️⃣ ViewModel에서 RxCocoa를 쓰면 안티패턴인가
@@ -94,20 +94,22 @@ ViewModel에서 RxCocoa를 import하고 있는데 RxCocoa를 import를 하고 �
 `MockURLSession`을 구현한 이유
 1. 실제 서버와 통신할 경우 테스트의 속도가 느려짐
 2. 인터넷 연결상태에 따라 테스트 결과가 달라지므로 테스트 신뢰도가 떨어짐
-3. 실제 데이터와 테스트를 통신을 하게 되면 불필요하게 업로드가 되는 Side-Effect를 방지할 수 있음.
+3. 실제 데이터와 테스트를 통신을 하게 되면 불필요하게 업로드가 되는 `Side-Effect`를 방지할 수 있음.
 4. JSON파일로 추가함으로 데이터를 추가하기가 용이함.
 
 #### 2️⃣ API 추상화
-배민의 기술블로그에서는 Alamofire를 한번 더 추상화하여 구현된 라이브러리인 `Moya`를 이용하여 UnitTest를 사용하고 `Quick/Nimble`을 사용하면 더 편하다고 언급하고 있습니다.
-이전 프로젝트에서 MoYa를 이용해서 열거형으로 만들었었으나 API추가할때마다 case가 늘어나고 switch문을 매번 수정하는게 생각보다 불편하여 아래와 같이 수정하였습니다.
+`배민의 기술블로그`에서는 Alamofire를 한번 더 추상화하여 구현된 라이브러리인 `Moya`를 이용하여 `UnitTest`를 사용하고 `Quick/Nimble`을 사용하면 더 편하다고 언급하고 있습니다.
+DDaRa에서는 Nimble은 사용하고있지만 Moya는 사용하고 있지 않습니다.
+이전 프로젝트에서 MoYa를 이용해서 열거형으로 만들었었으나 API추가할때마다 case가 늘어나고 switch문을 매번 수정하는게 생각보다 불편하여 이번에는 URLSession을 직접 만들고 불편한 부분을 개선해보았습니다.
 1. API마다 독립적인 구조체 타입으로 관리되도록 만듬.(ex `StationListAPI`, `StreamingAPI`)
-2. URL 프로퍼티 외에도 HttpMethod 프로퍼티를 추가한 `APIProtocol`타입을 채택
-3. 현재 post타입은 사용하고 있지않지만 추가작업을 위해 추가해놓음.
-4. 협업시에 각자 담당한 API 구제초만 관리하면 되기 때문에 충돌을 막을 수 있음.
+2. URL 프로퍼티 외에도 `HttpMethod` 프로퍼티를 추가한 `APIProtocol`타입을 채택
+3. 협업시에 각자 담당한 API 구제초만 관리하면 되기 때문에 충돌을 막을 수 있음.
+4. 현재 post타입은 사용하고 있지않지만 추가작업을 위해 추가해놓음.
+
 
 ### 2-2 Trouble Shooting
 #### 1️⃣ Mock 데이터 접근 시 Bundle에 접근하지 못하는 문제
-- 문제점 : `JSON Decoding` 테스트를 할 때, `Bundle.main.path`를 통해 Mock 데이터에 접근하도록 했는데, path에 nil이 반환되는 문제가 발생했습니다. LLDB 확인 결과 Mock 데이터 파일이 포함된 Bundle은 `OpenMarketTests.xctest`이며, 테스트 코드를 실행하는 주체는 `OpenMarket App Bundle`임을 파악했습니다. 
+- 문제점 : `JSON Decoding` 테스트를 할 때, `Bundle.main.path`를 통해 Mock 데이터에 접근하도록 했는데, path에 nil이 반환되는 문제가 발생했습니다. LLDB 확인 결과 Mock 데이터 파일이 포함된 Bundle은 `DDaRaTests.xctest`이며, 테스트 코드를 실행하는 주체는 `DDaRa App Bundle`임을 파악했습니다. 
 - 해결방법 : 현재 executable의 Bundle 개체를 반환하는 `Bundle.main` (즉, App Bundle)이 아니라, 테스트 코드를 실행하는 주체를 가르키는 `Bundle(for: type(of: self))` (즉, XCTests Bundle)로 path를 수정하여 문제를 해결했습니다.
 
 
@@ -115,21 +117,21 @@ ViewModel에서 RxCocoa를 import하고 있는데 RxCocoa를 import를 하고 �
 ### 3-1 고민한 점
 #### 1️⃣ PlayStatusView 공유
 일반적인 Music앱들을 보면 하단의 재생창을 공유하고있다. 그렇기에 뷰의 계층안에서는 `PlayStatusView`가 가장 위에 있게 하는것이 목표였다.
-단순하게 View를 취상위로 올리는것만 아니라 다른 View(StationView와 FavoriteView)에서 음악을 재생하였을때 PlayStatusView에서도 음악재생에 맞는 기능이 작동해야헀다.
-StationView와 FavoriteView에서 음악을 재생하면 PlayStatusVie로 전달된다.
-전달받으면 PlayStatusView에서는 커버이미지, 제목, 재생애니메이션, 상단의 상태창(`MPNowPlayingInfoCenter`)을 업데이트하고 PlayStatusViewModel에서는 AVPlayer를 통해 재생과 정지 작업을 한다.
+단순하게 View를 `최상위`로 올리는것만 아니라 다른 `View(StationView, FavoriteView, SettingViewController)`에서 음악을 재생하였을때 `PlayStatusView`에서도 음악재생에 맞는 기능이 작동해야됩니다.
+1. StationView와 FavoriteView에서 음악을 재생하면 `PlayStatusVie`로 전달되야합니다.
+2. 전달받으면 `PlayStatusView`에서는 커버이미지, 제목, 재생애니메이션, 상단의 상태창(`MPNowPlayingInfoCenter`)을 업데이트하고 `PlayStatusViewModel`에서는 `AVPlayer`를 통해 재생과 정지 작업을 한다.
 
 ### 3-2 Trouble Shooting
 #### 1️⃣ Mock PlayStatusView를 여러곳에서 bind하기 때문에 생기는 중복 스트림 방출
-- 문제점 : 즐겨찾기에서 재생시에 2번 재생버튼이 눌리며 노래가 재생후 바로 일시정지하는 상태가 발생했습니다. .debug()를 통해 중복 스트림이 발생하는 것을 확인했습니다.
-- 해결방법 : .share()를 추가하여 1번만 발생하도록 수정하였습니다.
+- 문제점 : 즐겨찾기에서 재생시에 2번 재생버튼이 눌리며 노래가 재생후 바로 일시정지하는 상태가 발생했습니다. `.debug()`를 통해 중복 스트림이 발생하는 것을 확인했습니다.
+- 해결방법 : `.share()`를 추가하여 1번만 발생하도록 수정하였습니다.
 
 
 ## 📻 Feature-4. StationView 구현
 ### 4-1 고민한 점 
 #### 1️⃣ RxDataSources 사용
-처음에는 DiffableDataSource를 사용하려고 하였으나 DiffableDataSource는 자주 사용해봤기 때문에 RxDataSources를 사용하였습니다.
-기본적으로 `CollectionView`에 나타낼 데이터 타입 (UniqueProduct)은 DiffableDataSource와 같이 `Hashable`을 채택하여 구분해야했습니다. Section에 `Hashable`를 채택하여 Dictionary로 재구성하였고 Section의 Value값으로 Section의 타이틀을 나타냈습니다.
+처음에는 `DiffableDataSource`를 사용하려고 하였으나 `DiffableDataSource`는 다른프로젝트에서 많이 사용해봤기 때문에 이번에는 `RxDataSources`를 사용하였습니다.
+기본적으로 `CollectionView`에 나타낼 데이터 타입은 `DiffableDataSource`와 같이 `Hashable`을 채택하여 구분해야했습니다. `Section`에 `Hashable`를 채택하여 `Dictionary`로 재구성하였고 Section의 Value값으로 Section의 타이틀을 나타냈습니다.
 
 #### 2️⃣ PlayStatuView의 위치
 Coordinator에서 모든 화면의 ViewController 및 ViewModel을 초기화하여 의존성을 관리하고, 화면 전환을 담당하도록 구현했습니다. 이때 화면 전환에 필요한 작업은 Coordinator에서 정의하여 클로저 타입의 변수로 구성된 action에 저장해두고, ViewModel에서 해당 action에 접근하여 클로저를 실행하도록 했습니다.
