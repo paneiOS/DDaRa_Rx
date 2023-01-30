@@ -9,17 +9,17 @@
 - [📻 Feature-2. 네트워크 구현](#-feature-2-네트워크-구현)
     + [고민한 점](#2-1-고민한-점)
     + [Trouble Shooting](#2-2-trouble-shooting)
-- [📻 Feature-3. 재생상태하단바 구현](#-feature-3-재생상태하단바-구현)
+- [📻 Feature-3. 재생상태 하단바 구현](#-feature-3-재생상태-하단바-구현)
     + [고민한 점](#3-1-고민한-점) 
     + [Trouble Shooting](#3-2-trouble-shooting)
 - [📻 Feature-4. 방송국화면 구현](#-feature-4-방송국화면-구현)
     + [고민한 점](#4-1-고민한-점) 
-- [📻 Feature-5. 즐겨찾기화면, 상세화면 구현](#-feature-5-즐겨찾기화면-상세화면-구현)
+- [📻 Feature-5. 즐겨찾기화면, 방송상세화면 구현](#-feature-5-즐겨찾기화면-방송상세화면-구현)
     + [고민한 점](#5-1-고민한-점) 
     + [Trouble Shooting](#5-2-trouble-shooting)
 - [📻 Feature-6. 설정하면 구현](#-feature-6-설정화면-구현)
     + [고민한 점](#6-1-고민한-점) 
-- [📻 Feature-7. 심사상태(리젝) 구현](#-feature-7-심사상태리젝-구현)
+- [📻 Feature-7. 심사상태(리젝)](#-feature-7-심사상태리젝)
     + [고민한 점](#7-1-고민한-점) 
     + [Trouble Shooting](#7-2-trouble-shooting)
 
@@ -120,7 +120,7 @@ DDaRa에서는 Nimble은 사용하고있지만 Moya는 사용하고 있지 않�
 - 해결방법 : 현재 executable의 Bundle 개체를 반환하는 `Bundle.main` (즉, App Bundle)이 아니라, 테스트 코드를 실행하는 주체를 가르키는 `Bundle(for: type(of: self))` (즉, XCTests Bundle)로 path를 수정하여 문제를 해결했습니다.
 
 
-## 📻 Feature-3. 재생상태하단바 구현
+## 📻 Feature-3. 재생상태 하단바 구현
 ### 3-1 고민한 점
 #### 1️⃣ PlayStatusView 공유
 일반적인 Music앱들을 보면 하단의 재생창을 공유하고있다. 그렇기에 뷰의 계층안에서는 `PlayStatusView`가 가장 위에 있게 하는것이 목표였다.
@@ -134,7 +134,7 @@ DDaRa에서는 Nimble은 사용하고있지만 Moya는 사용하고 있지 않�
 - 해결방법 : `.share()`를 추가하여 1번만 발생하도록 수정하였습니다.
 
 
-## 📻 Feature-4. StationView 구현
+## 📻 Feature-4. 방송국화면 구현
 ### 4-1 고민한 점 
 #### 1️⃣ RxDataSources 사용
 처음에는 `DiffableDataSource`를 사용하려고 하였으나 `DiffableDataSource`는 다른프로젝트에서 많이 사용해봤기 때문에 이번에는 `RxDataSources`를 사용하였습니다.
@@ -150,7 +150,7 @@ DDaRa에서는 Nimble은 사용하고있지만 Moya는 사용하고 있지 않�
 `Coordinator`에서 모든 화면의 `ViewController` 및 `ViewModel`을 초기화하여 의존성을 관리하고, 화면 전환을 담당하도록 구현했습니다.
 
 
-## 📻 Feature-5. FavoriteView, 상세화면 구현
+## 📻 Feature-5. 즐겨찾기화면, 방송상세화면 구현
 ### 5-1 고민한 점 
 #### 1️⃣ TableView 사용
 `즐겨찾기 화면`의 경우 이용자는 듣는게 우선적인 목표이기에 단순하고 간단하게 만들기 위해 `TableView`를 사용하였습니다.
@@ -160,7 +160,7 @@ DDaRa에서는 Nimble은 사용하고있지만 Moya는 사용하고 있지 않�
 `ActionSheet`를 사용한 이유는 라디오를 실행할때 상세화면으로 한번 더 진입하는것이 유저에게는 불편할 수 있기때문에 `ActionSheet`를 활용하였습니다.
 `화면창을 커스텀하여 팝업하는 방법`도 있지만 `ActionSheet`에 `View`를 넣어보고싶어서 `ActionSheet`로 진행해보았습니다.
 
-### 2-2 Trouble Shooting
+### 5-2 Trouble Shooting
 #### 1️⃣ 초기화면 설정
 - 문제점 : 테스트과정에서 초기 이용자입장에서는 데이터가 많은 `StationView`가 좋지만 즐겨찾기를 이용하는 이용자입장에서는 한번 이동해야하는 번거로움이 있다는 피드백을 받았습니다.
 - 해결방법 : `FolwCoordinator`로 관리하기 때문에 `FlowCoordinator`에서 즐겨찾기의 유무로 초기화면을 바뀌도록 구현했습니다.
@@ -170,7 +170,7 @@ DDaRa에서는 Nimble은 사용하고있지만 Moya는 사용하고 있지 않�
 - 해결방법 : `TableView`의 전체 리로드를 피하기 위해 `ActionSheet`가 나온 `cell`의 `index`만 리로드하여 업데이트하였습니다.
 
 
-## 📻 Feature-6. 설정화면, 
+## 📻 Feature-6. 설정화면 구현 
 ### 6-1 고민한 점 
 #### 1️⃣ Flow Coordinator 활용(화면전환, 자동꺼짐 설정)
 화면 전환에 필요한 작업과 자동꺼짐에 필요한 작업 2가지를 `Coordinator`에서 정의하여 클로저 타입의 변수로 구성된 `SleepSettingAction` 저장해두고, `ViewController`에서 해당 `action`에 접근하여 클로저를 실행하도록 했습니다.
@@ -183,7 +183,7 @@ Flow Coordinator에서 전달한 action을 통해서 위의 정지 기능을 클
 백그라운드에 진입했을때도 시간이 경과하면 작동이 되어야 하기때문에 `Timer()`의 scheduler를 사용하지 않고 `DispatchSourceTimer`를 활용하였습니다.
 
 
-## 📻 Feature-7. 심사리젝, 
+## 📻 Feature-7. 심사리젝(리젝)
 ### 7-1 고민한점
 #### 1️⃣ 타사의 StreamURL을 사용
 심사를 받았으나 방송국의 Streaming 서비스를 이용하는 것은 법적으로 문제가 없음을 증명해야한다는 이유로 리젝되었습니다.
