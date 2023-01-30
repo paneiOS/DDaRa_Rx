@@ -19,6 +19,7 @@
     + [Trouble Shooting](#5-2-trouble-shooting)
 - [📻 Feature-6. 설정하면 구현](#-feature-6-설정화면-구현)
     + [고민한 점](#6-1-고민한-점) 
+    + [Trouble Shooting](#6-2-trouble-shooting)
 - [📻 Feature-7. 심사상태(리젝)](#-feature-7-심사상태리젝)
     + [고민한 점](#7-1-고민한-점) 
     + [Trouble Shooting](#7-2-trouble-shooting)
@@ -179,8 +180,10 @@ DDaRa에서는 Nimble은 사용하고있지만 Moya는 사용하고 있지 않�
 Flow Coordinator에서 전달한 action을 통해서 위의 정지 기능을 클로저로 실행합니다.
 자동으로 꺼지기 위해서는 `PlayStatusView`의 UI 정지상태 업데이트, `PlayStatusViewModel`의 AVPlayer 정지, 외부 Controller 정지가 필요합니다.
 
-#### 3️⃣ Timer 백그라운드
-백그라운드에 진입했을때도 시간이 경과하면 작동이 되어야 하기때문에 `Timer()`의 scheduler를 사용하지 않고 `DispatchSourceTimer`를 활용하였습니다.
+### 6-2 Trouble Shooting
+#### 1️⃣ Timer 백그라운드
+- 문제점: `Timer()`의 scheduler를 이용하여 타이머를 만들어서 백그라운드로 이동할경우 정상적으로 방송이 멈추지 않았습니다.
+- 해결방법: `Timer()`의 scheduler를 사용하지 않고 `DispatchSourceTimer`를 사용하여 해결하였습니다.
 
 
 ## 📻 Feature-7. 심사상태(리젝)
