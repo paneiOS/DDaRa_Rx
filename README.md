@@ -6,16 +6,23 @@
 - [📻 Foldering](#-foldering)
 - [📻 Feature-1. Architecture에 대한 고민](#-feature-1-architecture에-대한-고민)
     + [고민한 점](#1-1-고민한-점) 
-    + [Trouble Shooting](#1-2-trouble-shooting)
-    + [키워드](#1-3-키워드)
-- [📻 Feature-2. 상품 목록 화면 구현](#-feature-2-상품-목록화면-구현)
+- [📻 Feature-2. 네트워크 구현](#-feature-2-네트워크-구현)
     + [고민한 점](#2-1-고민한-점)
     + [Trouble Shooting](#2-2-trouble-shooting)
-    + [키워드](#2-3-키워드)
-- [📻 Feature-3. 상품 상세화면 구현](#-feature-3-상품-상세화면-구현)
+- [📻 Feature-3. 재생상태하단바 구현](#-feature-3-재생상태하단바-구현)
     + [고민한 점](#3-1-고민한-점) 
     + [Trouble Shooting](#3-2-trouble-shooting)
-    + [키워드](#3-3-키워드)
+- [📻 Feature-4. 방송국화면 구현](#-feature-4-방송국화면-구현)
+    + [고민한 점](#4-1-고민한-점) 
+- [📻 Feature-5. 즐겨찾기화면, 상세화면 구현](#-feature-5-즐겨찾기화면-상세화면-구현)
+    + [고민한 점](#5-1-고민한-점) 
+    + [Trouble Shooting](#5-2-trouble-shooting)
+- [📻 Feature-6. 설정하면 구현](#-feature-6-설정화면-구현)
+    + [고민한 점](#6-1-고민한-점) 
+- [📻 Feature-7. 심사상태(리젝) 구현](#-feature-7-심사상태리젝-구현)
+    + [고민한 점](#7-1-고민한-점) 
+    + [Trouble Shooting](#7-2-trouble-shooting)
+
 
 ## 📻 프로젝트 소개
 `Network` 통신으로 서버에서 데이터를 받아 `CollectionView`로 라디오화면을 만들고 `TableView`로 즐겨찾기화면을 만듭니다.
@@ -113,7 +120,7 @@ DDaRa에서는 Nimble은 사용하고있지만 Moya는 사용하고 있지 않�
 - 해결방법 : 현재 executable의 Bundle 개체를 반환하는 `Bundle.main` (즉, App Bundle)이 아니라, 테스트 코드를 실행하는 주체를 가르키는 `Bundle(for: type(of: self))` (즉, XCTests Bundle)로 path를 수정하여 문제를 해결했습니다.
 
 
-## 📻 Feature-3. PlayStatusView 구현
+## 📻 Feature-3. 재생상태하단바 구현
 ### 3-1 고민한 점
 #### 1️⃣ PlayStatusView 공유
 일반적인 Music앱들을 보면 하단의 재생창을 공유하고있다. 그렇기에 뷰의 계층안에서는 `PlayStatusView`가 가장 위에 있게 하는것이 목표였다.
