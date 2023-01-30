@@ -35,7 +35,7 @@
 |<img width="200" src="https://user-images.githubusercontent.com/62927862/215344785-e03c1daf-c2cc-43c7-a89c-b07d17a59bb7.gif">|<img width="200" src="https://user-images.githubusercontent.com/62927862/215344951-c713a26b-db36-4860-aa5d-7bff9878ab24.gif">|<img width="200" src="https://user-images.githubusercontent.com/62927862/215344984-8952ab61-461e-4052-87b1-5a29188273cb.gif">|<img width="200" src="https://user-images.githubusercontent.com/62927862/215345007-87e497b5-3feb-41aa-9ee7-99a2db5fd7d2.gif">|<img width="200" src="https://user-images.githubusercontent.com/62927862/215345045-7d19e4ec-e5c0-4a30-aa16-a1463efd56d3.gif">|
 
 ## 🛒 Architecture
-![image](https://user-images.githubusercontent.com/70856586/168956710-3186bbf6-7521-433b-a184-fb83dd3e25bb.png)
+![image](https://user-images.githubusercontent.com/62927862/215374327-2a8e0441-fc72-4b4e-8dc8-b505bdd85461.png)
 
 ## 🛒 Foldering
 ```
