@@ -5,7 +5,7 @@
 - [📻 Architecture](#-architecture)
 - [📻 Foldering](#-foldering)
 - [📻 Feature-1. Architectrue에 대한 고민](#-feature-1-architecture에)
-- [📻 Feature-1. 네트워크 구현](#-feature-1-architecture-에-대한-고민)
+- [📻 Feature-1. 네트워크 구현](#-feature-1-architecture-대한)
     + [고민한 점](#1-1-고민한-점) 
     + [Trouble Shooting](#1-2-trouble-shooting)
     + [키워드](#1-3-키워드)
@@ -77,7 +77,7 @@
 
 ```
 
-## 📻 Feature-1. Architectrue에
+## 📻 Feature-1. Architectrue 
 ### 1-1 고민한 점 
 #### 1️⃣ MVVM-C, Clean Architecture + MVVM 적용
 명확한 계층분리를 위해 `MVVM구조`에서 `Coordinator`를 통해 view들의 계층을 관리하며 `의존성`을 주입했습니다.
