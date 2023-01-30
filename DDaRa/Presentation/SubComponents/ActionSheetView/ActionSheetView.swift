@@ -137,7 +137,7 @@ extension ActionSheetView {
         
     }
     
-    @objc private func updateButton() {
+    private func updateButton() {
         guard let name = label.text else { return }
         likeButton.isSelected = !likeButton.isSelected
         UserDefaults.standard.set(likeButton.isSelected, forKey: name)

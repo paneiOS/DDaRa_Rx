@@ -23,8 +23,8 @@ struct FavoriteListViewModel: ViewModel {
         let errorMessage: Observable<Alert?>
     }
     
-    init(model: DefaultStationsUseCase) {
-        self.model = model
+    init(useCase: DefaultStationsUseCase) {
+        self.model = useCase
     }
 
     func transform(input: Input) -> Output {

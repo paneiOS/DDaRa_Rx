@@ -24,19 +24,19 @@ final class AppFlowCoordinator {
     }
     
     func start() {
-        let mainModel = DefaultStationsUseCase(network: networkService)
-        playStatusViewModel = PlayStatusViewModel(model: mainModel)
+        let useCase = DefaultStationsUseCase(network: networkService)
+        playStatusViewModel = PlayStatusViewModel(useCase: useCase)
         playStatusView = PlayStatusView(viewModel: playStatusViewModel,
                                             topViewController: mainTabBarController)
         stationView = StationView(playStatusView: playStatusView,
-                                      viewModel: StationViewModel(model: mainModel),
+                                      viewModel: StationViewModel(useCase: useCase),
                                       backgroundView: StationBackgroundView(viewModel: StationBackgroundViewModel()))
         favoriteView = FavoriteListView(playStatusView: playStatusView,
-                                            viewModel: FavoriteListViewModel(model: mainModel),
+                                            viewModel: FavoriteListViewModel(useCase: useCase),
                                             backgroundView: FavoriteListBackgroundView(viewModel: FavoriteListBackgroundViewModel()))
-        let showSleepSettingAction = SleepSettingAction(showSleepSettingViewController: showSleepSetting)
+        let sleepSettingAction = SleepSettingAction(showSleepSettingViewController: showSleepSetting)
         settingViewController = SettingViewController(playStatusView: playStatusView,
-                                                      actions: showSleepSettingAction)
+                                                      actions: sleepSettingAction)
         
         let stationNavigationController = UINavigationController(rootViewController: stationView)
         stationNavigationController.tabBarItem = UITabBarItem(title: "따뜻한 라디오", image: UIImage(systemName: "radio"), tag: 0)

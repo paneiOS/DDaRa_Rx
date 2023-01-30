@@ -36,8 +36,8 @@ final class PlayStatusViewModel: ViewModel {
         let alertActionTapped: Observable<AlertAction>
     }
     
-    init(model: DefaultStationsUseCase) {
-        self.model = model
+    init(useCase: DefaultStationsUseCase) {
+        self.model = useCase
     }
     
     func transform(input: Input) -> Output {

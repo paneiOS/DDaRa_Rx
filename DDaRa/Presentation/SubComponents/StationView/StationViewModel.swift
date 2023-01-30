@@ -8,7 +8,7 @@
 import RxSwift
 
 struct StationViewModel: ViewModel {
-    let model: DefaultStationsUseCase
+    let useCase: DefaultStationsUseCase
     private let disposeBag = DisposeBag()
     
     struct Input {
@@ -23,21 +23,21 @@ struct StationViewModel: ViewModel {
         let errorMessage: Observable<Alert?>
     }
 
-    init(model: DefaultStationsUseCase) {
-        self.model = model
+    init(useCase: DefaultStationsUseCase) {
+        self.useCase = useCase
     }
     
     func transform(input: Input) -> Output {
         let fetching = input.viewWillAppear
-            .flatMapLatest(model.getStationList)
+            .flatMapLatest(useCase.getStationList)
             .share()
         
         let stations = fetching
-            .map(model.getSectionOfStationValue)
-            .map(model.sectionOfCellData)
+            .map(useCase.getSectionOfStationValue)
+            .map(useCase.sectionOfCellData)
         
         let errorMessage = fetching
-            .map(model.getStationError)
+            .map(useCase.getStationError)
 
         let alertSheet = input.cellSelected
             .map { data -> AlertSheet in
