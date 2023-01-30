@@ -7,7 +7,7 @@
 
 import RxDataSources
 
-enum Section: String, Equatable, Decodable, CaseIterable, Hashable {
+enum Section: String, Equatable, Codable, CaseIterable, Hashable {
     case 지상파
     case 지역방송
     case 전문방송

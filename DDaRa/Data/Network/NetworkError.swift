@@ -8,6 +8,7 @@
 import Foundation
 
 enum NetworkError: Error {
+    case statusCodeError
     case invalidURL
     case invalidStreamURL
     case invalidJSON
@@ -16,6 +17,8 @@ enum NetworkError: Error {
     
     var message: String {
         switch self {
+        case .statusCodeError:
+            return "정상적인 StatusCode가 아닙니다."
         case .apiError:
             return "서버에 문제가 생겼습니다.\n잠시후 다시 시도해주세요."
         case .invalidURL:
@@ -31,6 +34,8 @@ enum NetworkError: Error {
     
     var title: String {
         switch self {
+        case .statusCodeError:
+            return "StatusCodeError"
         case .apiError:
             return "ApiError"
         case .invalidURL:

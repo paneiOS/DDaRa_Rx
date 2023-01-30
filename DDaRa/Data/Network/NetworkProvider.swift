@@ -6,26 +6,82 @@
 //
 
 import Foundation
-import Moya
 import RxSwift
 
-class NetworkProvider: StationsUseCase {
+
+
+struct NetworkProvider {
+    private let session: URLSessionProtocol
     private let disposeBag = DisposeBag()
     
-    let provider: MoyaProvider<StationAPI>
-       init(provider: MoyaProvider<StationAPI> = .init()) {
-           self.provider = provider
-       }
+    init(session: URLSessionProtocol = URLSession.shared) {
+        self.session = session
+    }
     
-    public func getStationList() -> Single<Result<StationList.Response, NetworkError>> {
-        return provider.rx.request(.getStations)
-            .map(StationList.Response.self)
+    func fetchData<T: Codable>(stationType: Int, api: Gettable, decodingType: T.Type) -> Observable<T> {
+        return Observable.create { emitter in
+            guard let task = dataTask(stationType: stationType, api: api, emitter: emitter) else {
+                return Disposables.create()
+            }
+            task.resume()
+            
+            return Disposables.create {
+                task.cancel()
+            }
+        }
+    }
+    
+    private func dataTask<T: Codable>(stationType: Int, api: APIProtocol, emitter: AnyObserver<T>) -> URLSessionDataTask? {
+        guard let urlRequest = URLRequest(api: api) else {
+            emitter.onError(NetworkError.invalidURL)
+            return nil
+        }
+        
+        let task = session.dataTask(with: urlRequest) { data, response, _ in
+            let successStatusCode = 200..<300
+            guard let httpResponse = response as? HTTPURLResponse,
+                  successStatusCode.contains(httpResponse.statusCode) else {
+                emitter.onError(NetworkError.statusCodeError)
+                return
+            }
+            
+            switch api {
+            case is Gettable:
+                if let data = data {
+                    switch stationType {
+                    case 1:
+                        if let data = data as? T {
+                            emitter.onNext(data)
+                        }
+                    default:
+                        guard let decodedData = JSONParser<T>().decode(from: data) else {
+                            emitter.onError(JSONParserError.decodingFail)
+                            return
+                        }
+                        
+                        emitter.onNext(decodedData)
+                    }
+                }
+            
+            default:
+                return
+            }
+            
+            emitter.onCompleted()
+        }
+        
+        return task
+    }
+    
+    public func getStationList() -> Single<Result<StationList, NetworkError>> {
+        return self.fetchData(stationType: 0, api: StationListAPI(), decodingType: StationList.self)
             .map { data in
                 return .success(data)
             }
             .catch { _ in
                 return .just(Result.failure(NetworkError.networkError))
             }
+            .asSingle()
     }
     
     func getJsonToUrl(of urlString: String) -> Single<Result<URL?, NetworkError>> {
@@ -33,8 +89,7 @@ class NetworkProvider: StationsUseCase {
             return .just(.failure(NetworkError.invalidURL))
         }
         
-        return provider.rx.request(.getJsonToUrl(of: url))
-            .map(TerrestrialApi.self)
+        return self.fetchData(stationType: 2, api: StreamingAPI(of: url), decodingType: TerrestrialApi.self)
             .map { terrestrialURL in
                 guard let urlString = terrestrialURL.channelItem.first?.serviceUrl else {
                     return .failure(NetworkError.invalidJSON)
@@ -42,18 +97,20 @@ class NetworkProvider: StationsUseCase {
                 return .success(URL(string: urlString))
             }
             .catch { _ in
-                return .just(Result.failure(NetworkError.apiError))
+                return .just(Result<URL?, NetworkError>.failure(NetworkError.apiError))
             }
+            .asSingle()
     }
+    
     
     func getStringToUrl(of urlString: String) -> Single<Result<URL?, NetworkError>> {
         guard let url = URL(string: urlString) else {
             return .just(.failure(NetworkError.invalidURL))
         }
         
-        return provider.rx.request(.getJsonToUrl(of: url))
-            .map { response in
-                let convertValue = String(decoding: response.data, as: UTF8.self).split(whereSeparator: \.isNewline)
+        return self.fetchData(stationType: 1, api: StreamingAPI(of: url), decodingType: Data.self)
+            .map { data in
+                let convertValue = String(decoding: data, as: UTF8.self).split(whereSeparator: \.isNewline)
                 for i in 0..<convertValue.count {
                     if convertValue[i].contains("File1=") {
                         let urlString = convertValue[1].components(separatedBy: "File1=").joined()
@@ -65,6 +122,7 @@ class NetworkProvider: StationsUseCase {
             .catch { _ in
                 return .just(Result.failure(NetworkError.apiError))
             }
+            .asSingle()
     }
     
     func validStreamURL(of urlString: String) -> Single<Result<URL?, NetworkError>> {

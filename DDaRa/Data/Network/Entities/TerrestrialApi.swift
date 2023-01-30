@@ -7,7 +7,7 @@
 
 //import Foundation
 
-struct TerrestrialApi: Decodable {
+struct TerrestrialApi: Codable {
     let channelItem: [ServiceUrl]
     
     enum CodingKeys: String, CodingKey {
@@ -15,7 +15,7 @@ struct TerrestrialApi: Decodable {
     }
 }
 
-struct ServiceUrl: Decodable {
+struct ServiceUrl: Codable {
     let serviceUrl: String
     
     enum CodingKeys: String, CodingKey {

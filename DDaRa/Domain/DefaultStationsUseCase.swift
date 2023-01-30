@@ -8,39 +8,32 @@
 import Foundation
 import RxSwift
 
-protocol StationsUseCase {
-    func getStationList() -> Single<Result<StationList.Response, NetworkError>>
-    func getJsonToUrl(of urlString: String) -> Single<Result<URL?, NetworkError>>
-    func getStringToUrl(of urlString: String) -> Single<Result<URL?, NetworkError>>
-    func validStreamURL(of urlString: String) -> Single<Result<URL?, NetworkError>>
-}
-
-struct DefaultStationsUseCase: StationsUseCase {
+struct DefaultStationsUseCase {
     let network: NetworkProvider
     
     init(network: NetworkProvider) {
         self.network = network
     }
     
-    func getStationList() -> Single<Result<StationList.Response, NetworkError>> {
+    func getStationList() -> Single<Result<StationList, NetworkError>> {
         return network.getStationList()
     }
     
-    func getSectionOfStationValue(_ result: Result<StationList.Response, NetworkError>) -> [Station]? {
+    func getSectionOfStationValue(_ result: Result<StationList, NetworkError>) -> [Station]? {
         guard case let .success(value) = result else {
             return nil
         }
         return value.stationList
     }
     
-    func getStationValue(_ result: Result<StationList.Response, NetworkError>) -> [Station]? {
+    func getStationValue(_ result: Result<StationList, NetworkError>) -> [Station]? {
         guard case let .success(value) = result else {
             return nil
         }
         return value.stationList
     }
     
-    func getStationError(_ result: Result<StationList.Response, NetworkError>) -> Alert? {
+    func getStationError(_ result: Result<StationList, NetworkError>) -> Alert? {
         guard case .failure(let error) = result else {
             return nil
         }

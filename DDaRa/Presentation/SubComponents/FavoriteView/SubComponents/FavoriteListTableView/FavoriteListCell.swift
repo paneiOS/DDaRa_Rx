@@ -78,6 +78,9 @@ final class FavoriteListCell: UITableViewCell {
         if likeButton.isSelected {
             let count = UserDefaults.standard.integer(forKey: "favoriteCount")
             UserDefaults.standard.set(count + 1, forKey: "favoriteCount")
+        } else {
+            let count = UserDefaults.standard.integer(forKey: "favoriteCount")
+            UserDefaults.standard.set(count - 1, forKey: "favoriteCount")
         }
     }
     

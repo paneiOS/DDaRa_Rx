@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Station: Decodable, Equatable {
+struct Station: Codable, Equatable {
     let section: Section
     let title: String
     let subTitle: String
