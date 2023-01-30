@@ -27,12 +27,15 @@
 
 ## 📻 프로젝트 소개
 다양한 방송국을 보유하고있는 라디오앱입니다.
+
 `네트워크`통신으로 서버에서 데이터를 받아 `CollectionView`로 라디오화면을 만들고 `TableView`
 로 즐겨찾기화면을 만들었습니다.
+
 `MainTabBar`로 3가지화면(설정화면을 포함하여)을 묶고 1개의 `PlayStatusView`를 공유하고있습니다. 
 
 `MVVM-C` 및 `CleanArchiTecture` 를 적용했습니다.
-사용한 라이브러리: `RxSwift`, `RxCocoa`, `RxDataSources`, `SnapKit`, `Kingfisher`, Nimble
+
+사용한 라이브러리: `RxSwift`, `RxCocoa`, `RxDataSources`, `SnapKit`, `Kingfisher`, `Nimble`
 
    
 - 참여자 : Pane @kazamajinz (1명)
