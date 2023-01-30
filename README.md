@@ -131,41 +131,42 @@ DDaRa에서는 Nimble은 사용하고있지만 Moya는 사용하고 있지 않�
 ### 4-1 고민한 점 
 #### 1️⃣ RxDataSources 사용
 처음에는 `DiffableDataSource`를 사용하려고 하였으나 `DiffableDataSource`는 다른프로젝트에서 많이 사용해봤기 때문에 이번에는 `RxDataSources`를 사용하였습니다.
-기본적으로 `CollectionView`에 나타낼 데이터 타입은 `DiffableDataSource`와 같이 `Hashable`을 채택하여 구분해야했습니다. `Section`에 `Hashable`를 채택하여 `Dictionary`로 재구성하였고 Section의 Value값으로 Section의 타이틀을 나타냈습니다.
+기본적으로 `CollectionView`에 나타낼 데이터 타입은 `DiffableDataSource`와 같이 `Hashable`을 채택하여 구분해야했습니다. `Section`에 `Hashable`를 채택하여 `Dictionary`로 재구성하였고 `Section`의 `Value`를 `Section`의 헤더 타이틀로 나타냈습니다.
 
 #### 2️⃣ PlayStatuView의 위치
-Coordinator에서 모든 화면의 ViewController 및 ViewModel을 초기화하여 의존성을 관리하고, 화면 전환을 담당하도록 구현했습니다. 이때 화면 전환에 필요한 작업은 Coordinator에서 정의하여 클로저 타입의 변수로 구성된 action에 저장해두고, ViewModel에서 해당 action에 접근하여 클로저를 실행하도록 했습니다.
+`Coordinator`에서 모든 화면의 `ViewController` 및 `ViewModel`을 초기화하여 의존성을 관리하고, 화면 전환을 담당하도록 구현했습니다. 이때 화면 전환에 필요한 작업은 `Coordinator`에서 정의하여 클로저 타입의 변수로 구성된 `action`에 저장해두고, `ViewModel`에서 해당 `action`에 접근하여 클로저를 실행하도록 했습니다.
 
 #### 3️⃣ Observable Subscribe 최소화 
-Stream이 발생하는 경우, Observable을 최종 사용하는 위치에서만 `Subscribe`하여 Stream이 끊기지 않도록 구현했습니다. 따라서 Observable을 생성하고 이를 처리하는 중간 단계에서는 `flatmap`, `map`, `filter`, `compactMap` 등을 사용하여 필요한 형태로 변경만 해준 뒤 Observable 타입을 반환하도록 구현했습니다.
+`Stream`이 발생하는 경우, `Observable`을 최종 사용하는 위치에서만 `Subscribe`하여 `Stream`이 끊기지 않도록 구현했습니다. 따라서 `Observable`을 생성하고 이를 처리하는 중간 단계에서는 `flatmap`, `map`, `filter`, `compactMap` 등을 사용하여 필요한 형태로 변경만 해준 뒤 `Observable` 타입을 반환하도록 구현했습니다.
 
 #### 4️⃣ Flow Coordinator 활용
-Coordinator에서 모든 화면의 ViewController 및 ViewModel을 초기화하여 의존성을 관리하고, 화면 전환을 담당하도록 구현했습니다.
+`Coordinator`에서 모든 화면의 `ViewController` 및 `ViewModel`을 초기화하여 의존성을 관리하고, 화면 전환을 담당하도록 구현했습니다.
 
 
 ## 📻 Feature-5. FavoriteView, 상세화면 구현
 ### 5-1 고민한 점 
 #### 1️⃣ TableView 사용
-즐겨찾기 화면의 경우 이용자는 듣는게 우선적인 목표이기에 단순하고 간단하게 만들기 위해 TableView를 사용하였습니다.
+`즐겨찾기 화면`의 경우 이용자는 듣는게 우선적인 목표이기에 단순하고 간단하게 만들기 위해 `TableView`를 사용하였습니다.
 
 #### 2️⃣ 상세화면은 ActionSheet 활용
-ActionSheet에 재생과 좋아요를 넣어 모든것을 조작할 수 있도록 구현했습니다.
-ActionSheet를 사용한 이유는 라디오를 실행할때 상세화면으로 한번 더 진입하는것이 유저에게는 불편할 수 있기때문에 ActionSheet를 활용하였습니다.
+`ActionSheet`에 재생과 좋아요를 넣어 모든것을 조작할 수 있도록 구현했습니다.
+`ActionSheet`를 사용한 이유는 라디오를 실행할때 상세화면으로 한번 더 진입하는것이 유저에게는 불편할 수 있기때문에 `ActionSheet`를 활용하였습니다.
+`화면창을 커스텀하여 팝업하는 방법`도 있지만 `ActionSheet`에 `View`를 넣어보고싶어서 `ActionSheet`로 진행해보았습니다.
 
 ### 2-2 Trouble Shooting
 #### 1️⃣ 초기화면 설정
-- 문제점 : 테스터가 초기 이용자입장에서는 데이터가 많은 StationView가 좋지만 즐겨찾기를 이용하는 이용자입장에서는 한번 이동해야하는 번거로움이 있다는 이야기를 전달받았습니다.
-- 해결방법 : FolwCoordinator로 관리하기 때문에 즐겨찾기의 유무로 초기화면을 바뀌도록 구현했습니다.
+- 문제점 : 테스트과정에서 초기 이용자입장에서는 데이터가 많은 `StationView`가 좋지만 즐겨찾기를 이용하는 이용자입장에서는 한번 이동해야하는 번거로움이 있다는 피드백을 받았습니다.
+- 해결방법 : `FolwCoordinator`로 관리하기 때문에 `FlowCoordinator`에서 즐겨찾기의 유무로 초기화면을 바뀌도록 구현했습니다.
 
 #### 2️⃣ TableView와 ActionSheet의 좋아요버튼
-- 문제점 : 좋아요 버튼을 누를때 ActionSheet의 좋아요가 눌리면 TableView의 좋아요 버튼이 업데이트가 되어야 했습니다.
-- 해결방법 : TableView의 전체 리로드를 피하기 위해 ActionSheet가 나온 cell의 index만 업데이트하였습니다.
+- 문제점 : 좋아요 버튼을 누를때 `ActionSheet`의 좋아요가 눌리면 `TableView`의 좋아요 버튼이 업데이트가 되어야 했습니다.
+- 해결방법 : `TableView`의 전체 리로드를 피하기 위해 `ActionSheet`가 나온 `cell`의 `index`만 리로드하여 업데이트하였습니다.
 
 
 ## 📻 Feature-6. 설정화면, 
 ### 6-1 고민한 점 
 #### 1️⃣ Flow Coordinator 활용(화면전환, 자동꺼짐 설정)
-화면 전환에 필요한 작업과 자동꺼짐에 필요한 작업 2가지를 Coordinator에서 정의하여 클로저 타입의 변수로 구성된 SleepSettingAction 저장해두고, ViewController에서 해당 action에 접근하여 클로저를 실행하도록 했습니다.
+화면 전환에 필요한 작업과 자동꺼짐에 필요한 작업 2가지를 `Coordinator`에서 정의하여 클로저 타입의 변수로 구성된 `SleepSettingAction` 저장해두고, `ViewController`에서 해당 `action`에 접근하여 클로저를 실행하도록 했습니다.
 
 #### 2️⃣ 자동꺼짐 설정
 Flow Coordinator에서 전달한 action을 통해서 위의 정지 기능을 클로저로 실행합니다.
