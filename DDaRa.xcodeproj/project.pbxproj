@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2CE2C202752E41657AEC4885 /* Pods_DDaRa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDA4CC55D4A6C5C6A070508 /* Pods_DDaRa.framework */; };
 		3929B623295B3BDD00A1CBD0 /* UITabBarController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929B622295B3BDD00A1CBD0 /* UITabBarController+Rx.swift */; };
 		3929B627295B4B5400A1CBD0 /* FavoriteListBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929B626295B4B5400A1CBD0 /* FavoriteListBackgroundView.swift */; };
 		3929B629295B4B7100A1CBD0 /* FavoriteListBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929B628295B4B7100A1CBD0 /* FavoriteListBackgroundViewModel.swift */; };
@@ -65,7 +64,8 @@
 		39F6294B2975127A00A709F4 /* CollectionViewBasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6294A2975127A00A709F4 /* CollectionViewBasicCell.swift */; };
 		39F6294F2975C32500A709F4 /* CollectionViewLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6294E2975C32500A709F4 /* CollectionViewLabelCell.swift */; };
 		39F629512975C5F200A709F4 /* CollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F629502975C5F200A709F4 /* CollectionViewFooter.swift */; };
-		A0EBCE4A41A0C74AD3FE2044 /* Pods_DDaRaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5BC5C8E294712335D17BD98 /* Pods_DDaRaTests.framework */; };
+		3DA50696629AA124FA7AC087 /* Pods_DDaRaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846587CE3226813FFA7B8700 /* Pods_DDaRaTests.framework */; };
+		D6E3AC21C4FA80541524A3FD /* Pods_DDaRa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6679BDFCCD64325FFAA2888F /* Pods_DDaRa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,8 +79,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		011795AD810477F0DE791F01 /* Pods-DDaRa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRa.release.xcconfig"; path = "Target Support Files/Pods-DDaRa/Pods-DDaRa.release.xcconfig"; sourceTree = "<group>"; };
-		2F491D6EBB867D16AB540BA6 /* Pods-DDaRaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRaTests.debug.xcconfig"; path = "Target Support Files/Pods-DDaRaTests/Pods-DDaRaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3929B622295B3BDD00A1CBD0 /* UITabBarController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Rx.swift"; sourceTree = "<group>"; };
 		3929B626295B4B5400A1CBD0 /* FavoriteListBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListBackgroundView.swift; sourceTree = "<group>"; };
 		3929B628295B4B7100A1CBD0 /* FavoriteListBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListBackgroundViewModel.swift; sourceTree = "<group>"; };
@@ -141,10 +139,12 @@
 		39F6294A2975127A00A709F4 /* CollectionViewBasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBasicCell.swift; sourceTree = "<group>"; };
 		39F6294E2975C32500A709F4 /* CollectionViewLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLabelCell.swift; sourceTree = "<group>"; };
 		39F629502975C5F200A709F4 /* CollectionViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFooter.swift; sourceTree = "<group>"; };
-		6658EB6F1A78D2C907A51CCE /* Pods-DDaRaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRaTests.release.xcconfig"; path = "Target Support Files/Pods-DDaRaTests/Pods-DDaRaTests.release.xcconfig"; sourceTree = "<group>"; };
-		8EDA4CC55D4A6C5C6A070508 /* Pods_DDaRa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDaRa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5A343DB8B8CCDD99C541A28 /* Pods-DDaRa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRa.debug.xcconfig"; path = "Target Support Files/Pods-DDaRa/Pods-DDaRa.debug.xcconfig"; sourceTree = "<group>"; };
-		D5BC5C8E294712335D17BD98 /* Pods_DDaRaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDaRaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6679BDFCCD64325FFAA2888F /* Pods_DDaRa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDaRa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		781C51F7F9AEFD830E005E82 /* Pods-DDaRa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRa.debug.xcconfig"; path = "Target Support Files/Pods-DDaRa/Pods-DDaRa.debug.xcconfig"; sourceTree = "<group>"; };
+		846587CE3226813FFA7B8700 /* Pods_DDaRaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDaRaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1D32C4D889340999024030 /* Pods-DDaRaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRaTests.debug.xcconfig"; path = "Target Support Files/Pods-DDaRaTests/Pods-DDaRaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1DFD6B2A13F2F202EFA19B3 /* Pods-DDaRaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRaTests.release.xcconfig"; path = "Target Support Files/Pods-DDaRaTests/Pods-DDaRaTests.release.xcconfig"; sourceTree = "<group>"; };
+		BA9AC9BE31C37E5C6B9C6163 /* Pods-DDaRa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRa.release.xcconfig"; path = "Target Support Files/Pods-DDaRa/Pods-DDaRa.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0EBCE4A41A0C74AD3FE2044 /* Pods_DDaRaTests.framework in Frameworks */,
+				3DA50696629AA124FA7AC087 /* Pods_DDaRaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CE2C202752E41657AEC4885 /* Pods_DDaRa.framework in Frameworks */,
+				D6E3AC21C4FA80541524A3FD /* Pods_DDaRa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,21 +170,12 @@
 		14FC0F1FB8B3331ACD1C2EE6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D5A343DB8B8CCDD99C541A28 /* Pods-DDaRa.debug.xcconfig */,
-				011795AD810477F0DE791F01 /* Pods-DDaRa.release.xcconfig */,
-				2F491D6EBB867D16AB540BA6 /* Pods-DDaRaTests.debug.xcconfig */,
-				6658EB6F1A78D2C907A51CCE /* Pods-DDaRaTests.release.xcconfig */,
+				781C51F7F9AEFD830E005E82 /* Pods-DDaRa.debug.xcconfig */,
+				BA9AC9BE31C37E5C6B9C6163 /* Pods-DDaRa.release.xcconfig */,
+				9C1D32C4D889340999024030 /* Pods-DDaRaTests.debug.xcconfig */,
+				A1DFD6B2A13F2F202EFA19B3 /* Pods-DDaRaTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		1A02199DAEDABCF97E33ED07 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8EDA4CC55D4A6C5C6A070508 /* Pods_DDaRa.framework */,
-				D5BC5C8E294712335D17BD98 /* Pods_DDaRaTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3929B624295B3BF100A1CBD0 /* Extension+Rx */ = {
@@ -365,7 +356,7 @@
 				3929B62F295BC5FD00A1CBD0 /* DDaRaTests */,
 				39A1BEC62952FB110007C524 /* Products */,
 				14FC0F1FB8B3331ACD1C2EE6 /* Pods */,
-				1A02199DAEDABCF97E33ED07 /* Frameworks */,
+				F7DAE51D6CCCBFD68C02E83D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -519,6 +510,15 @@
 			path = Dummy;
 			sourceTree = "<group>";
 		};
+		F7DAE51D6CCCBFD68C02E83D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6679BDFCCD64325FFAA2888F /* Pods_DDaRa.framework */,
+				846587CE3226813FFA7B8700 /* Pods_DDaRaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -526,11 +526,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3929B634295BC5FD00A1CBD0 /* Build configuration list for PBXNativeTarget "DDaRaTests" */;
 			buildPhases = (
-				4C27A4C5FAD6B52571E2E7A5 /* [CP] Check Pods Manifest.lock */,
+				F9B16B39A46F8295F044EB98 /* [CP] Check Pods Manifest.lock */,
 				3929B62A295BC5FD00A1CBD0 /* Sources */,
 				3929B62B295BC5FD00A1CBD0 /* Frameworks */,
 				3929B62C295BC5FD00A1CBD0 /* Resources */,
-				177A2EDDDC3EEA1A3CD8A93F /* [CP] Embed Pods Frameworks */,
+				6343A61B2DF570773018A2C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -546,11 +546,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39A1BED92952FB120007C524 /* Build configuration list for PBXNativeTarget "DDaRa" */;
 			buildPhases = (
-				4A323A7988168095664D536D /* [CP] Check Pods Manifest.lock */,
+				B9E3FCE0F6F150E62FCF6E2C /* [CP] Check Pods Manifest.lock */,
 				39A1BEC12952FB110007C524 /* Sources */,
 				39A1BEC22952FB110007C524 /* Frameworks */,
 				39A1BEC32952FB110007C524 /* Resources */,
-				C70E22D1271A20C313691740 /* [CP] Embed Pods Frameworks */,
+				57E9144E7C2F3AEBD2FC8C01 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -620,7 +620,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		177A2EDDDC3EEA1A3CD8A93F /* [CP] Embed Pods Frameworks */ = {
+		57E9144E7C2F3AEBD2FC8C01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DDaRa/Pods-DDaRa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DDaRa/Pods-DDaRa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DDaRa/Pods-DDaRa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6343A61B2DF570773018A2C6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -637,7 +654,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DDaRaTests/Pods-DDaRaTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4A323A7988168095664D536D /* [CP] Check Pods Manifest.lock */ = {
+		B9E3FCE0F6F150E62FCF6E2C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -659,7 +676,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4C27A4C5FAD6B52571E2E7A5 /* [CP] Check Pods Manifest.lock */ = {
+		F9B16B39A46F8295F044EB98 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -679,23 +696,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C70E22D1271A20C313691740 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DDaRa/Pods-DDaRa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DDaRa/Pods-DDaRa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DDaRa/Pods-DDaRa-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -793,7 +793,7 @@
 /* Begin XCBuildConfiguration section */
 		3929B635295BC5FD00A1CBD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F491D6EBB867D16AB540BA6 /* Pods-DDaRaTests.debug.xcconfig */;
+			baseConfigurationReference = 9C1D32C4D889340999024030 /* Pods-DDaRaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -812,7 +812,7 @@
 		};
 		3929B636295BC5FD00A1CBD0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6658EB6F1A78D2C907A51CCE /* Pods-DDaRaTests.release.xcconfig */;
+			baseConfigurationReference = A1DFD6B2A13F2F202EFA19B3 /* Pods-DDaRaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -945,7 +945,7 @@
 		};
 		39A1BEDA2952FB120007C524 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5A343DB8B8CCDD99C541A28 /* Pods-DDaRa.debug.xcconfig */;
+			baseConfigurationReference = 781C51F7F9AEFD830E005E82 /* Pods-DDaRa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -976,7 +976,7 @@
 		};
 		39A1BEDB2952FB120007C524 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 011795AD810477F0DE791F01 /* Pods-DDaRa.release.xcconfig */;
+			baseConfigurationReference = BA9AC9BE31C37E5C6B9C6163 /* Pods-DDaRa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
