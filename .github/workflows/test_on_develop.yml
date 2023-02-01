@@ -71,7 +71,7 @@ jobs:
 
     - name: Archive
       run: |
-        pod install --repo-update --clean-install --project-directory="$PROJECT_ROOT_PATH"/
+        pod install --repo-update --clean-install --project-directory="$PROJECT_ROOT_PATH" --podfile="$PROJECT_ROOT_PATH/Podfile.lock"
         xcodebuild clean archive -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -configuration release -archivePath "$XC_ARCHIVE"
         
     - name: Export for App Store
