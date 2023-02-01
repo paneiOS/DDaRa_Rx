@@ -45,7 +45,8 @@ jobs:
       
     - name: Run tests
       run: | 
-        xcodebuild test -project "$XC_PROJECT" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 13'
+        pod install --repo-update --clean-install --project-directory="$PROJECT_ROOT_PATH"/
+        xcodebuild clean test -workspace "$XC_PROJECT" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 13'
         
     - name: Configure Keychain 
       run: | 
