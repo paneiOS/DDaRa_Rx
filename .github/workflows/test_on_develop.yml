@@ -24,8 +24,8 @@ jobs:
       ENCRYPTED_CERTS_FILE_PATH: ${{ '.github/secrets/certs.p12.gpg' }}
       DECRYPTED_CERTS_FILE_PATH: ${{ '.github/secrets/certs.p12' }}
 
-      ENCRYPTED_PROVISION_FILE_PATH: ${{ '.github/secrets/ExGithubAction.mobileprovision.gpg' }}
-      DECRYPTED_PROVISION_FILE_PATH: ${{ '.github/secrets/ExGithubAction.mobileprovision' }}
+      ENCRYPTED_PROVISION_FILE_PATH: ${{ '.github/secrets/DDaRa.mobileprovision.gpg' }}
+      DECRYPTED_PROVISION_FILE_PATH: ${{ '.github/secrets/DDaRa.mobileprovision' }}
       
       CERTS_EXPORT_PWD: ${{ secrets.CERTS_EXPORT_PWD }}
       CERTS_ENCRYPTION_PWD: ${{ secrets.CERTS_ENCRYPTO_PWD }}
