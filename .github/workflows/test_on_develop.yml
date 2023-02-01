@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build Xcode
+    - name: Build
       run:
       pod install --repo-update --clean-install --project-directory=HappyChuseok/
       xcodebuild clean test -workspace DDaRa/DDaRa.xcworkspace -scheme DDaRa -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest'
