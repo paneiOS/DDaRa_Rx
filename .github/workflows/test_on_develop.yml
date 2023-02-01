@@ -15,7 +15,7 @@ jobs:
     runs-on: macos-latest
     env: 
       XC_VERSION: ${{ '14.2' }}
-      XC_PROJECT: ${{ 'DDaRa.xcodeproj' }}
+      XC_PROJECT: ${{ 'DDaRa/DDaRa.xcodeproj' }}
       XC_SCHEME: ${{ 'DDaRa' }}
       KEYCHAIN: ${{ 'test.keychain' }}
       
