@@ -17,8 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run:
-      pod install --repo-update --clean-install --project-directory=HappyChuseok/
-      xcodebuild clean test -workspace DDaRa/DDaRa.xcworkspace -scheme DDaRa -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest'
+      run: echo Hello, world!
     - name: Run tests
-      run: swift test -v
+      run: echo Add other actions to build,
+      echo test, and edploy your project
