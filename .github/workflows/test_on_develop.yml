@@ -5,9 +5,9 @@ name: Run Test
 
 on:
   push:
-    branches: [ "Pane" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "Pane" ]
+    branches: [ "main" ]
 
 jobs:
   build:
