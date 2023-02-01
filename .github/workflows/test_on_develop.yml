@@ -29,7 +29,7 @@ jobs:
       
       CERTS_EXPORT_PWD: ${{ secrets.CERTS_EXPORT_PWD }}
       CERTS_ENCRYPTION_PWD: ${{ secrets.CERTS_ENCRYPTO_PWD }}
-      PROFILES_ENCRYPTO_PWD: ${{ secrets.PROVISION_ENCRYPTO_PWD }}
+      PROFILES_ENCRYPTO_PWD: ${{ secrets.PROFILES_ENCRYPTO_PWD }}
 
       XC_ARCHIVE_PATH: ${{ 'DDaRa.xcarchive' }}
       XC_EXPORT_PATH: ${{ './artifacts' }}
