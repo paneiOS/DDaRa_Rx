@@ -71,8 +71,8 @@ jobs:
 
     - name: Archive
       run: |
-        pod install --repo-update --clean-install --project-directory="$PROJECT_ROOT_PATH"
-        xcodebuild clean archive -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -configuration release -archivePath "$XC_ARCHIVE"
+        pod install --repo-update --clean-install --project-directory=DDaRa/
+        xcodebuild clean archive -workspace DDaRa/DDaRa.xcworkspace -scheme "$XC_SCHEME" -configuration release -archivePath "$XC_ARCHIVE"
         
     - name: Export for App Store
       run: | 
