@@ -1,0 +1,24 @@
+# This workflow will build a Swift project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
+
+name: Run Test
+
+on:
+  push:
+    branches: [ "Pane" ]
+  pull_request:
+    branches: [ "Pane" ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build Xcode
+      run:
+      pod install --repo-update --clean-install --project-directory=HappyChuseok/
+      xcodebuild clean test -workspace DDaRa/DDaRa.xcworkspace -scheme DDaRa -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest'
+    - name: Run tests
+      run: swift test -v
