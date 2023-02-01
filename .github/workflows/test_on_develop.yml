@@ -15,7 +15,7 @@ jobs:
     runs-on: macos-latest
     env: 
       XC_VERSION: ${{ '14.2' }}
-      XC_PROJECT: ${{ 'DDaRa/DDaRa.xcodeproj' }}
+      XC_WORKSPACE: ${{ 'DDaRa.xcworkspace' }}
       XC_SCHEME: ${{ 'DDaRa' }}
       KEYCHAIN: ${{ 'test.keychain' }}
       
@@ -45,8 +45,7 @@ jobs:
       
     - name: Run tests
       run: | 
-        pod install --repo-update --clean-install --project-directory="$PROJECT_ROOT_PATH"/
-        xcodebuild clean test -workspace "$XC_PROJECT" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 13'
+        xcodebuild clean test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 13'
         
     - name: Configure Keychain 
       run: | 
