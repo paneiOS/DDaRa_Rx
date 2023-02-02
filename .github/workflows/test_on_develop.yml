@@ -95,10 +95,17 @@ jobs:
         mkdir -p ~/private_keys
         echo -n "$APPSTORE_API_PRIVATE_KEY" | base64 --decode --output ~/private_keys/AuthKey_$APPSTORE_API_KEY_ID.p8
         
-    - name: Upload app to TestFlight
-      run: |
-        cd DDaRa/$XC_EXPORT_PATH
-        xcrun altool --output-format xml --upload-app -f DDaRa.ipa -t ios --apiKey $APPSTORE_API_KEY_ID --apiIssuer $APPSTORE_ISSUER_ID
+    - uses: apple-actions/upload-testflight-build@v1
+      with: 
+        app-path: '"$XC_EXPORT_PATH"/DDaRa.ipa'
+        issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
+        api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
+        api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+        
+#    - name: Upload app to TestFlight
+#      run: |
+#        cd DDaRa/$XC_EXPORT_PATH
+#        xcrun altool --output-format xml --upload-app -f DDaRa.ipa -t ios --apiKey $APPSTORE_API_KEY_ID --apiIssuer $APPSTORE_ISSUER_ID
 
 #    오류가 발생할 수 있음.
 #    - name: Upload app to TestFlight
