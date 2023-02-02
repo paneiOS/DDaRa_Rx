@@ -93,7 +93,7 @@ jobs:
         APPSTORE_API_PRIVATE_KEY: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
         
       run: |
-        cd
+        cd /
         ls
         cd DDaRa
         ls
