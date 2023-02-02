@@ -98,7 +98,7 @@ jobs:
     - name: Upload app to TestFlight
       run: |
         cd DDaRa
-        xcrun altool --output-format xml --upload-app -f DDaRa.ipa -t ios --apiKey $APPSTORE_API_KEY_ID --apiIssuer $APPSTORE_ISSUER_ID
+        xcrun altool --output-format xml --upload-app -f "$XC_EXPORT_PATH"/DDaRa.ipa -t ios --apiKey $APPSTORE_API_KEY_ID --apiIssuer $APPSTORE_ISSUER_ID
 
 #    오류가 발생할 수 있음.
 #    - name: Upload app to TestFlight
