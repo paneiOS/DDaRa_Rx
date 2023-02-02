@@ -87,14 +87,14 @@ jobs:
       run: | 
         xcodebuild -exportArchive -archivePath "$XC_ARCHIVE_PATH" -exportOptionsPlist ExportOptions.plist -exportPath "$XC_EXPORT_PATH"
         
-#    - name: Install private API key p8
-#      env:
-#        APPSTORE_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
-#        IOS_EXPORT_PRODUCTION: ${{ secrets.IOS_EXPORT_PRODUCTION }}       
-#      run: |
-#        mkdir -p ~/private_keys
-#        echo -n "$IOS_EXPORT_PRODUCTION" | --output ~/private_keys/AuthKey_$APPSTORE_API_KEY_ID.p8
-#        ls
+    - name: Install private API key p8
+      env:
+        APPSTORE_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
+        IOS_EXPORT_PRODUCTION: ${{ secrets.IOS_EXPORT_PRODUCTION }}       
+      run: |
+        mkdir -p ~/private_keys
+        echo -n "$IOS_EXPORT_PRODUCTION" | --output ~/private_keys/AuthKey_$APPSTORE_API_KEY_ID.p8
+        ls
         
     - name: Upload app to TestFlight
       env:
