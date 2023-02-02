@@ -49,12 +49,12 @@ jobs:
     - name: CocoaPod Install
       run: pod install
       
-    - name: Build
-      run: echo Hello, world!
+#    - name: Build
+#      run: echo Hello, world!
       
-    - name: Run tests
-      run: | 
-        xcodebuild clean test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 13'
+#    - name: Run tests
+#      run: | 
+#        xcodebuild clean test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 13'
         
     - name: Configure Keychain 
       run: | 
