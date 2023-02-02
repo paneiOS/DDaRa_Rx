@@ -56,6 +56,13 @@ jobs:
     - name: Build
       run: echo Hello, world!
       
+    - name: Install private API key p8
+      run: |
+        mkdir -p ~/private_keys
+        echo -n "$APPSTORE_API_PRIVATE_KEY" | base64 --decode --output ~/private_keys/AuthKey_$APPSTORE_API_KEY_ID.p8
+        ls
+        
+      
     - name: Run tests
       run: | 
         xcodebuild clean test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 13'
