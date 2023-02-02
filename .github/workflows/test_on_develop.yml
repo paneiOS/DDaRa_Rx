@@ -90,7 +90,9 @@ jobs:
         
     - name: Export for App Store
       run: | 
-        xcodebuild -exportArchive -archivePath "$XC_ARCHIVE_PATH" -exportOptionsPlist ExportOptions.plist -exportPath "$XC_EXPORT_PATH"
+        xcodebuild -exportArchive -archivePath $XC_ARCHIVE_PATH -exportOptionsPlist ExportOptions.plist -exportPath . -allowProvisioningUpdates
+        
+#        xcodebuild -exportArchive -archivePath "$XC_ARCHIVE_PATH" -exportOptionsPlist ExportOptions.plist -exportPath "$XC_EXPORT_PATH"
         
 #    - name: Install private API key p8
 #      run: |
@@ -106,7 +108,7 @@ jobs:
         
     - uses: apple-actions/upload-testflight-build@v1
       with: 
-        app-path: '"$XC_EXPORT_PATH"/DDaRa.ipa'
+        app-path: 'DDaRa.ipa'
         issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
         api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
         api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
