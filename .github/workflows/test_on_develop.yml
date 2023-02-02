@@ -106,7 +106,6 @@ jobs:
         
     - name: Upload app to TestFlight
       run: |
-*        cd DDaRa
         ls
         xcrun altool --output-format xml --upload-app -f ./artifacts/DDaRa.ipa -t ios --apiKey $APPSTORE_API_KEY_ID --apiIssuer $APPSTORE_ISSUER_ID
 
