@@ -90,10 +90,11 @@ jobs:
       run: | 
         xcodebuild -exportArchive -archivePath "$XC_ARCHIVE_PATH" -exportOptionsPlist ExportOptions.plist -exportPath "$XC_EXPORT_PATH"
         
-    - name: Install private API key p8
-      run: |
-        mkdir -p ~/private_keys
-        echo -n "$APPSTORE_API_PRIVATE_KEY" | base64 --decode --output ~/private_keys/AuthKey_$APPSTORE_API_KEY_ID.p8
+#    - name: Install private API key p8
+#      run: |
+#        mkdir -p ~/private_keys
+#        echo -n "$APPSTORE_API_PRIVATE_KEY" | base64 --decode --output ~/private_keys/AuthKey_$APPSTORE_API_KEY_ID.p8
+#        ls
         
 #    - uses: apple-actions/upload-testflight-build@v1
 #      with: 
@@ -102,19 +103,20 @@ jobs:
 #        api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
 #        api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
         
-    - name: Upload app to TestFlight
-      run: |
-        cd DDaRa/$XC_EXPORT_PATH
-        xcrun altool --output-format xml --upload-app -f DDaRa.ipa -t ios --apiKey $APPSTORE_API_KEY_ID --apiIssuer $APPSTORE_ISSUER_ID
+#    - name: Upload app to TestFlight
+#      run: |
+#        cd DDaRa/$XC_EXPORT_PATH
+#        ls
+#        xcrun altool --output-format xml --upload-app -f DDaRa.ipa -t ios --apiKey $APPSTORE_API_KEY_ID --apiIssuer $APPSTORE_ISSUER_ID
 
 #    오류가 발생할 수 있음.
-#    - name: Upload app to TestFlight
-#      uses: apple-actions/upload-testflight-build@v1
-#      with:
-#          app-path: '"$XC_EXPORT_PATH"/DDaRa.ipa'
-#          issuer-id: "$APPSTORE_ISSUER_ID"
-#          api-key-id: "$APPSTORE_API_KEY_ID"
-#          api-private-key: "$APPSTORE_API_PRIVATE_KEY"
+    - name: Upload app to TestFlight
+      uses: apple-actions/upload-testflight-build@v1
+      with:
+          app-path: '"$XC_EXPORT_PATH"/DDaRa.ipa'
+          issuer-id: "$APPSTORE_ISSUER_ID"
+          api-key-id: "$APPSTORE_API_KEY_ID"
+          api-private-key: "$APPSTORE_API_PRIVATE_KEY"
 
 #    - name: Upload Artifact
 #      uses: actions/upload-artifact@v3
