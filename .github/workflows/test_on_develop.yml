@@ -45,6 +45,7 @@ jobs:
         key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
         restore-keys: |
           ${{ runner.os }}-pods-
+
     - name: CocoaPod Install
       run: pod install
       
@@ -84,12 +85,20 @@ jobs:
     - name: Export for App Store
       run: | 
         xcodebuild -exportArchive -archivePath "$XC_ARCHIVE_PATH" -exportOptionsPlist ExportOptions.plist -exportPath "$XC_EXPORT_PATH"
-
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v3
+        
+    - name: Upload app to TestFlight
+      uses: apple-actions/upload-testflight-build@v1
       with:
-        name: Artifacts
-        path: ./artifacts
+          app-path: 'DDaRa.ipa'
+          issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
+          api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
+          api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+
+#    - name: Upload Artifact
+#      uses: actions/upload-artifact@v3
+#      with:
+#        name: Artifacts
+#        path: ./artifacts
 
 
 
