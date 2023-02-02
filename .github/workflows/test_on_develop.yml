@@ -105,7 +105,7 @@ jobs:
         
     - name: Upload app to TestFlight
       run: |
-        cd usket_TID
+        cd DDaRa
         ls
         xcrun altool --output-format xml --upload-app -f "$XC_EXPORT_PATH"/DDaRa.ipa -t ios --apiKey "$APPSTORE_API_KEY_ID" --apiIssuer "$APPSTORE_ISSUER_ID"
 
