@@ -93,7 +93,7 @@ jobs:
     - name: Install private API key p8
       run: |
         mkdir -p ~/private_keys
-        echo -n "$APPSTORE_API_PRIVATE_KEY" | base64 --decode--output ~/private_keys/AuthKey_$APPSTORE_API_KEY_ID.p8
+        echo -n "$APPSTORE_API_PRIVATE_KEY" | base64 --decode --output ~/private_keys/AuthKey_$APPSTORE_API_KEY_ID.p8
         ls
         
     - name: Upload app to TestFlight
