@@ -356,34 +356,34 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "24A8620D-E6BA-47A7-B8E9-5BF355612204 - 2247e007cc71a1cb"
+                  uuid = "24A8620D-E6BA-47A7-B8E9-5BF355612204 - 9f65ed6599ee5a9f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DDaRa.NetworkProvider.dataTask&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(api: DDaRa.APIProtocol, emitter: RxSwift.AnyObserver&lt;&#x3c4;_0_0&gt;) -&gt; Swift.Optional&lt;__C.NSURLSessionDataTask&gt;"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DDaRa.NetworkProvider.dataTask&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(stationType: Swift.Int, api: DDaRa.APIProtocol, emitter: RxSwift.AnyObserver&lt;&#x3c4;_0_0&gt;) -&gt; Swift.Optional&lt;__C.NSURLSessionDataTask&gt;"
                   moduleName = "DDaRa"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pane/Desktop/DDaRa/DDaRa/Data/Network/NetworkProvider.swift"
+                  urlString = "file:///Users/pane/Downloads/DDaRa_Rx/DDaRa/Data/Network/NetworkProvider.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "776">
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "904">
                </Location>
                <Location
-                  uuid = "24A8620D-E6BA-47A7-B8E9-5BF355612204 - 2247e007cc71a1cb"
+                  uuid = "24A8620D-E6BA-47A7-B8E9-5BF355612204 - 9f65ed6599ee5a9f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DDaRa.NetworkProvider.dataTask&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(api: DDaRa.APIProtocol, emitter: RxSwift.AnyObserver&lt;&#x3c4;_0_0&gt;) -&gt; Swift.Optional&lt;__C.NSURLSessionDataTask&gt;"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DDaRa.NetworkProvider.dataTask&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(stationType: Swift.Int, api: DDaRa.APIProtocol, emitter: RxSwift.AnyObserver&lt;&#x3c4;_0_0&gt;) -&gt; Swift.Optional&lt;__C.NSURLSessionDataTask&gt;"
                   moduleName = "DDaRa"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pane/Desktop/DDaRa/DDaRa/Data/Network/NetworkProvider.swift"
+                  urlString = "file:///Users/pane/Downloads/DDaRa_Rx/DDaRa/Data/Network/NetworkProvider.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "824">
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "952">
                </Location>
             </Locations>
          </BreakpointContent>
