@@ -94,7 +94,7 @@ jobs:
         
       run: |
         mkdir -p ~/private_keys
-        echo -n "$APPSTORE_API_PRIVATE_KEY" | --decode --output ~/private_keys/AuthKey_$APPSTORE_API_KEY_ID.p8
+        echo -n "$APPSTORE_API_PRIVATE_KEY" | --output ~/private_keys/AuthKey_$APPSTORE_API_KEY_ID.p8
         ls
         
 #    - uses: apple-actions/upload-testflight-build@v1
