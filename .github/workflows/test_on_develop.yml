@@ -90,10 +90,10 @@ jobs:
       run: | 
         xcodebuild -exportArchive -archivePath "$XC_ARCHIVE_PATH" -exportOptionsPlist ExportOptions.plist -exportPath "$XC_EXPORT_PATH"
         
-    - name: Install private API key p8
-      run: |
-        mkdir -p ~/private_keys
-        echo -n "$APPSTORE_API_PRIVATE_KEY" | base64 --decode --output ~/private_keys/AuthKey_$APPSTORE_API_KEY_ID.p8
+#    - name: Install private API key p8
+#      run: |
+#        mkdir -p ~/private_keys
+#        echo -n "$APPSTORE_API_PRIVATE_KEY" | base64 --decode --output ~/private_keys/AuthKey_$APPSTORE_API_KEY_ID.p8
         
     - uses: apple-actions/upload-testflight-build@v1
       with: 
