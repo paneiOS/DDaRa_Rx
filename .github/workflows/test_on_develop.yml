@@ -101,6 +101,7 @@ jobs:
         APPSTORE_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
         PRIVATE_KEY_FILE_NAME: ${{ secrets.IOS_EXPORT_PRODUCTION }}
       run: |
+        cd artifacts
         xcrun altool --output-format xml --upload-app -f DDaRa.ipa -t ios --apiKey $APPSTORE_API_KEY_ID --apiIssuer ${{ secrets.APPSTORE_ISSUER_ID }} --private-key-file=$PRIVATE_KEY_FILE_NAME
 
 
