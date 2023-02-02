@@ -93,7 +93,7 @@ jobs:
     - name: Upload app to TestFlight
       uses: apple-actions/upload-testflight-build@v1
       with:
-          app-path: "$XC_EXPORT_PATH"/'DDaRa.ipa'
+          app-path: '"$XC_EXPORT_PATH"/DDaRa.ipa'
           issuer-id: "$APPSTORE_ISSUER_ID"
           api-key-id: "$APPSTORE_API_KEY_ID"
           api-private-key: "$APPSTORE_API_PRIVATE_KEY"
