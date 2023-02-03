@@ -34,11 +34,11 @@ final class CollectionViewLabelCell: UICollectionViewCell {
         contentView.layer.borderWidth = 0.5
         contentView.layer.borderColor = UIColor.lightGray.cgColor
         
-        contentView.layer.shadowColor = UIColor.black.cgColor // 색깔
-        contentView.layer.masksToBounds = false  // 내부에 속한 요소들이 UIView 밖을 벗어날 때, 잘라낼 것인지. 그림자는 밖에 그려지는 것이므로 false 로 설정
-        contentView.layer.shadowOffset = CGSize(width: 0, height: 4) // 위치조정
-        contentView.layer.shadowRadius = 5 // 반경
-        contentView.layer.shadowOpacity = 0.3 // alpha값
+        contentView.layer.shadowColor = UIColor.black.cgColor
+        contentView.layer.masksToBounds = false
+        contentView.layer.shadowOffset = CGSize(width: 0, height: 4)
+        contentView.layer.shadowRadius = 5
+        contentView.layer.shadowOpacity = 0.3
         
         contentView.backgroundColor = .white
         
