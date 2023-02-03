@@ -8,8 +8,6 @@
 import Foundation
 import RxSwift
 
-
-
 struct NetworkProvider {
     private let session: URLSessionProtocol
     private let disposeBag = DisposeBag()
@@ -31,7 +29,7 @@ struct NetworkProvider {
         }
     }
     
-    private func dataTask<T: Codable>(stationType: Int, api: APIProtocol, emitter: AnyObserver<T>) -> URLSessionDataTask? {
+    private func dataTask<T: Codable>(stationType: Int, api: APIProtocol, emitter: AnyObserver<T>) -> URLSessionDataTaskProtocol? {
         guard let urlRequest = URLRequest(api: api) else {
             emitter.onError(NetworkError.invalidURL)
             return nil

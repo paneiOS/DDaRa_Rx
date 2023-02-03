@@ -11,6 +11,15 @@ enum JSONParserError: Error, LocalizedError {
     case decodingFail
     case encodingFail
     
+    var title: String? {
+        switch self {
+        case .decodingFail:
+            return "decodingFail"
+        case .encodingFail:
+            return "encodingFail"
+        }
+    }
+    
     var errorDescription: String? {
         switch self {
         case .decodingFail:

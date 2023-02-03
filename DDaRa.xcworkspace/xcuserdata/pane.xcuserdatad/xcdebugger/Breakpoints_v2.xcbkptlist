@@ -302,8 +302,8 @@
             filePath = "DDaRa/Data/Network/NetworkProvider.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "getJsonToUrl(of:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -318,8 +318,8 @@
             filePath = "DDaRa/Data/Network/NetworkProvider.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "getStationList()"
             landmarkType = "7">
          </BreakpointContent>
@@ -334,8 +334,8 @@
             filePath = "DDaRaTests/Mock/MockURLSession.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "dataTask(with:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -343,47 +343,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "24A8620D-E6BA-47A7-B8E9-5BF355612204"
+            uuid = "180685EF-BDD2-4A29-977D-0DA73389E22A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DDaRa/Data/Network/NetworkProvider.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "dataTask(stationType:api:emitter:)"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "fetchData(stationType:api:decodingType:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "048FE0E5-0B3C-4F30-9D0A-E9B830C49CCA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DDaRa/Data/Network/NetworkProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "fetchData(stationType:api:decodingType:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FAEC134-B8D3-4BEE-8AA1-893728CC3C51"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DDaRa/Data/Network/NetworkProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "fetchData(stationType:api:decodingType:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "24A8620D-E6BA-47A7-B8E9-5BF355612204 - 9f65ed6599ee5a9f"
+                  uuid = "2FAEC134-B8D3-4BEE-8AA1-893728CC3C51 - 7d10e4b4fbb694f3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DDaRa.NetworkProvider.dataTask&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(stationType: Swift.Int, api: DDaRa.APIProtocol, emitter: RxSwift.AnyObserver&lt;&#x3c4;_0_0&gt;) -&gt; Swift.Optional&lt;__C.NSURLSessionDataTask&gt;"
+                  symbolName = "closure #1 (RxSwift.AnyObserver&lt;&#x3c4;_0_0&gt;) -&gt; RxSwift.Disposable in DDaRa.NetworkProvider.fetchData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(stationType: Swift.Int, api: DDaRa.Gettable, decodingType: &#x3c4;_0_0.Type) -&gt; RxSwift.Observable&lt;&#x3c4;_0_0&gt;"
                   moduleName = "DDaRa"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pane/Downloads/DDaRa_Rx/DDaRa/Data/Network/NetworkProvider.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "904">
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "332">
                </Location>
                <Location
-                  uuid = "24A8620D-E6BA-47A7-B8E9-5BF355612204 - 9f65ed6599ee5a9f"
+                  uuid = "2FAEC134-B8D3-4BEE-8AA1-893728CC3C51 - 2ff7914ca36942eb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DDaRa.NetworkProvider.dataTask&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(stationType: Swift.Int, api: DDaRa.APIProtocol, emitter: RxSwift.AnyObserver&lt;&#x3c4;_0_0&gt;) -&gt; Swift.Optional&lt;__C.NSURLSessionDataTask&gt;"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (RxSwift.AnyObserver&lt;&#x3c4;_0_0&gt;) -&gt; RxSwift.Disposable in DDaRa.NetworkProvider.fetchData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(stationType: Swift.Int, api: DDaRa.Gettable, decodingType: &#x3c4;_0_0.Type) -&gt; RxSwift.Observable&lt;&#x3c4;_0_0&gt;"
                   moduleName = "DDaRa"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pane/Downloads/DDaRa_Rx/DDaRa/Data/Network/NetworkProvider.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "952">
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "28">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -391,16 +423,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DA6DC63D-639D-4BF9-9671-81A69107EF2B"
+            uuid = "AF68FFA2-22D0-4422-B615-61B911A747CE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DDaRa/Common/JSONParser.swift"
+            filePath = "DDaRa/Data/Network/NetworkProvider.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "decode(from:)"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "fetchData(stationType:api:decodingType:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

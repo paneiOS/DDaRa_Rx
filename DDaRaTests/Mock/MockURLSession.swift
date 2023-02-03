@@ -8,54 +8,47 @@
 import Foundation
 @testable import DDaRa
 
-class MockURLSessionDataTask: URLSessionDataTask {
-    var resumeDidCall: () -> Void = {}
-    
-    override func resume() {
-        resumeDidCall()
-    }
-    
-    override func cancel() {}
-}
-
 class MockURLSession: URLSessionProtocol {
-    var isRequestSuccess: Bool
-    var sessionDataTask: MockURLSessionDataTask?
     
-    init(isRequestSuccess: Bool = true) {
-        self.isRequestSuccess = isRequestSuccess
+    typealias Response = (data: Data?, urlResponse: URLResponse?, error: Error?)
+    
+    let response: Response
+    
+    init(response: Response) {
+        self.response = response
     }
     
     func dataTask(with request: URLRequest,
-                  completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-        let sucessResponse = HTTPURLResponse(url: request.url!,
-                                             statusCode: 200,
-                                             httpVersion: nil,
-                                             headerFields: nil)
-        let failureResponse = HTTPURLResponse(url: request.url!,
-                                              statusCode: 402,
-                                              httpVersion: nil,
-                                              headerFields: nil)
+                  completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
         
-        let sessionDataTask = MockURLSessionDataTask()
-        
-        guard let path = Bundle(for: type(of: self)).path(forResource: "NetworkDummy", ofType: "json"),
-              let jsonString = try? String(contentsOfFile: path) else {
-            fatalError()
-        }
-        let data = jsonString.data(using: .utf8)
-        
-        if isRequestSuccess {
-            sessionDataTask.resumeDidCall = {
-                completionHandler(data, sucessResponse, nil)
-            }
-        } else {
-            sessionDataTask.resumeDidCall = {
-                completionHandler(nil, failureResponse, nil)
-            }
-        }
-        self.sessionDataTask = sessionDataTask
-        
-        return sessionDataTask
+        return MockURLSessionDataTask(resumeDidCall: {
+            completionHandler(self.response.data,
+                              self.response.urlResponse,
+                              self.response.error)
+        })
     }
+    
+    static func make(url: String, data: Data?, statusCode: Int) -> MockURLSession {
+            let mockURLSession: MockURLSession = {
+                let urlResponse = HTTPURLResponse(url: URL(string: url)!,
+                                               statusCode: statusCode,
+                                               httpVersion: nil,
+                                               headerFields: nil)
+                let mockResponse: MockURLSession.Response = (data: data,
+                                                             urlResponse: urlResponse,
+                                                             error: nil)
+                let mockUrlSession = MockURLSession(response: mockResponse)
+                return mockUrlSession
+            }()
+            return mockURLSession
+        }
 }
+
+//let sucessResponse = HTTPURLResponse(url: request.url!,
+//                                     statusCode: 200,
+//                                     httpVersion: nil,
+//                                     headerFields: nil)
+//let failureResponse = HTTPURLResponse(url: request.url!,
+//                                      statusCode: 402,
+//                                      httpVersion: nil,
+//                                      headerFields: nil)
