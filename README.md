@@ -23,6 +23,8 @@
 - [📻 Feature-7. 심사상태(리젝)](#-feature-7-심사상태리젝)
     + [고민한 점](#7-1-고민한-점) 
     + [Trouble Shooting](#7-2-trouble-shooting)
+- [📻 Feature-8. 추가이슈](#-feature-8-추가이슈)
+    + [Trouble Shooting](#8-1-trouble-shooting)
 
 
 ## 📻 프로젝트 소개
@@ -34,6 +36,8 @@
 `MainTabBar`로 3가지화면(설정화면을 포함하여)을 묶고 1개의 `PlayStatusView`를 공유하고있습니다. 
 
 `MVVM-C` 및 `CleanArchiTecture` 를 적용했습니다.
+
+`Test자동화`를 위해 `Git Actions`을 적용했습니다.
 
 사용한 라이브러리: `RxSwift`, `RxCocoa`, `RxDataSources`, `SnapKit`, `Kingfisher`, `Nimble`
 
@@ -197,9 +201,26 @@ Flow Coordinator에서 전달한 action을 통해서 위의 정지 기능을 클
 추가적으로 알아본 결과 보통 방송국마다 라이센스가 필요하다고 합니다. 많은 방송사들이 들어있기 때문에 출시를 포기하였습니다.
 
 #### 2️⃣ 아이패드
-DDaRa의 경우 아이패드의 경우는 고려하지 않았지만 작년에 애플에서 아이패드를 사용하지 않는 어플이어도 정상작동해야한다고 하였다.
+DDaRa의 경우 아이패드의 경우는 고려하지 않았지만 작년에 애플에서 아이패드를 사용하지 않는 어플이어도 정상작동해야한다고 하였습니다.
 
 ### 7-2 Trouble Shooting
 - 문제점: 아이패드로 실행시 ActionSheet가 Alert으로 팝업되었다. Alert로 팝업되면서 기본크기이기 떄문에 오른쪽 텍스트가 잘리는 현상이 구현되었습니다.
 - 해결방법: Alert으로 구현하지 않고 View를 커스텀하여 팝업창처럼 만들어 해결하고자하였습니다. 다만 법적문제를 해결할 방법이 없어 출시포기로 팝업창을 구현하지 않았습니다.
 
+
+## 📻 Feature-8. 추가이슈
+### 8-1 Trouble Shooting
+#### 1️⃣ 깃 폴더 대소문자
+- 문제점: 깃에서 새로 다운받아서 빌드할 경우 cell의 배경색이 적용되지 않았습니다. `Assets`에서 color를 설정해놨는데 black를 한번 Black로 만들어서 깃에 올린 이력이 있었습니다. 깃은 폴더명, 파일명이 대소문자를 가리지 못합니다. `Assets`를 설정하면 `black.colorset`이름의 폴더가 생성되는데 이때 `Black.colorset`로 생성되고 수정하여도 변동되지 않았습니다.
+- 해결방법: 1. `git mv`로 `a -> C -> A` 와같이 바꿔준다. 2. `git config core.ignorecase false를 설정하고 git rm -r --cached . 후 커밋을 하면 해결됩니다.
+
+#### 2️⃣ 유닛 테스트
+- 문제점: `Mock`에서 `URLSessionDataTask`의 `init()`이 `deprecated`되어 `14.0`이상의 기기에서 Test에 성공한것처럼 나오지만 실제로는 테스트가 되지 않았습니다.
+- 해결방법: `URLSessionDataTask`을 상속받아서 `Mock`을 만들고자하는 과정에서 생긴 문제였기에 `URLSessionDataTask`를 `프로토콜`로 만들어서 만들고 `URLSession`의 `extension`에 기본메서드를 `dataTask`를 구현하였습니다. 그리고 `URLSessionDataTask`을 반환하는곳을 전부 `URLSessionDataTaskProtocol`로 반환하도록 변경하여 해결했습니다.
+
+#### 3️⃣ Git Actions(미해결)
+- 문제점: `Atifact`로 `.ipa`파일을 올리는것은 `가능`하지만 테스트플라이트로 올리는것은 안되는 점, 에러내용(`Failed to generate JWT token`)
+- 추가시도한방법
+1. `APPSTORE_API_PRIVATE_KEY`를 `base64`로 `디코딩` 후  `~/private_keys/` 경로에 `Auth_`를 붙여서 파일을 저장하고 `xcrun altool`명령어로 시도.
+2. 2번은 명령어로 디코딩을 하였으나 직접 디코딩한 다음 `secret`에 추가하여 값을 직접 사용하여 시도.
+- 해결을 위한 시도: 현재 `gitLab 커뮤니티`에 질문을 올린 상태이다.
