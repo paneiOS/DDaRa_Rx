@@ -10,7 +10,7 @@ import Foundation
 import AVFoundation
 import MediaPlayer
 
-final class PlayStatusViewModel: ViewModel {
+struct PlayStatusViewModel: ViewModel {
     let model: DefaultStationsUseCase
     let disposeBag = DisposeBag()
     let errorMessage = PublishSubject<Alert?>()
@@ -42,15 +42,15 @@ final class PlayStatusViewModel: ViewModel {
     
     func transform(input: Input) -> Output {
         let playButtonTapped = input.playButtonTapped
-            .filter { [weak self] _ in self?.player.status == .readyToPlay }
+            .filter { _ in player.status == .readyToPlay }
             .share()
         
         playButtonTapped
-            .bind(onNext: { [weak self] bool in
+            .bind(onNext: { bool in
                 if false == bool {
-                    self?.play()
+                    play()
                 } else {
-                    self?.pause()
+                    pause()
                 }
             })
             .disposed(by: disposeBag)
@@ -63,8 +63,8 @@ final class PlayStatusViewModel: ViewModel {
     func transform(input: PlayInput) -> PlayOutput {
         let validStreamURL = input.alertActionTapped
             .filter{ $0 == .play }
-            .do ( onNext: { [weak self] _ in
-                self?.stop()
+            .do ( onNext: { _ in
+                stop()
             })
             .withLatestFrom(input.stationInfo)
             .flatMapLatest(model.getStreamUrl)
@@ -72,13 +72,13 @@ final class PlayStatusViewModel: ViewModel {
         
         validStreamURL
             .map(model.getStreamUrlValue)
-            .bind(onNext: { [weak self] url in
+            .bind(onNext: { url in
                 if let url = url {
                     let item = AVPlayerItem(url: url)
-                    self?.player.replaceCurrentItem(with: item)
-                    self?.play()
+                    player.replaceCurrentItem(with: item)
+                    play()
                 } else {
-                    self?.stop()
+                    stop()
                 }
             })
             .disposed(by: disposeBag)
