@@ -11,7 +11,6 @@ target 'DDaRa' do
   pod 'SnapKit'
   pod 'Kingfisher'
   pod 'RxDataSources', '~> 5.0'
-  pod 'Google-Mobile-Ads-SDK'
   
   target 'DDaRaTests' do
     inherit! :search_paths

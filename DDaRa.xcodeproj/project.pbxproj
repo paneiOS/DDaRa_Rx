@@ -66,8 +66,8 @@
 		39F6294B2975127A00A709F4 /* CollectionViewBasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6294A2975127A00A709F4 /* CollectionViewBasicCell.swift */; };
 		39F6294F2975C32500A709F4 /* CollectionViewLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6294E2975C32500A709F4 /* CollectionViewLabelCell.swift */; };
 		39F629512975C5F200A709F4 /* CollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F629502975C5F200A709F4 /* CollectionViewFooter.swift */; };
-		3DA50696629AA124FA7AC087 /* Pods_DDaRaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846587CE3226813FFA7B8700 /* Pods_DDaRaTests.framework */; };
-		D6E3AC21C4FA80541524A3FD /* Pods_DDaRa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6679BDFCCD64325FFAA2888F /* Pods_DDaRa.framework */; };
+		67F3662736B75076D9B145D3 /* Pods_DDaRa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035D3727D5F5DBD26400DF89 /* Pods_DDaRa.framework */; };
+		E4425F3006CCA80D97A26986 /* Pods_DDaRaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2804E8DCFD0D8953CD4DD5D1 /* Pods_DDaRaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +81,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		035D3727D5F5DBD26400DF89 /* Pods_DDaRa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDaRa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2804E8DCFD0D8953CD4DD5D1 /* Pods_DDaRaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDaRaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3929B622295B3BDD00A1CBD0 /* UITabBarController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Rx.swift"; sourceTree = "<group>"; };
 		3929B626295B4B5400A1CBD0 /* FavoriteListBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListBackgroundView.swift; sourceTree = "<group>"; };
 		3929B628295B4B7100A1CBD0 /* FavoriteListBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListBackgroundViewModel.swift; sourceTree = "<group>"; };
@@ -143,12 +145,10 @@
 		39F6294A2975127A00A709F4 /* CollectionViewBasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBasicCell.swift; sourceTree = "<group>"; };
 		39F6294E2975C32500A709F4 /* CollectionViewLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLabelCell.swift; sourceTree = "<group>"; };
 		39F629502975C5F200A709F4 /* CollectionViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFooter.swift; sourceTree = "<group>"; };
-		6679BDFCCD64325FFAA2888F /* Pods_DDaRa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDaRa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		781C51F7F9AEFD830E005E82 /* Pods-DDaRa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRa.debug.xcconfig"; path = "Target Support Files/Pods-DDaRa/Pods-DDaRa.debug.xcconfig"; sourceTree = "<group>"; };
-		846587CE3226813FFA7B8700 /* Pods_DDaRaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDaRaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C1D32C4D889340999024030 /* Pods-DDaRaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRaTests.debug.xcconfig"; path = "Target Support Files/Pods-DDaRaTests/Pods-DDaRaTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A1DFD6B2A13F2F202EFA19B3 /* Pods-DDaRaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRaTests.release.xcconfig"; path = "Target Support Files/Pods-DDaRaTests/Pods-DDaRaTests.release.xcconfig"; sourceTree = "<group>"; };
-		BA9AC9BE31C37E5C6B9C6163 /* Pods-DDaRa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRa.release.xcconfig"; path = "Target Support Files/Pods-DDaRa/Pods-DDaRa.release.xcconfig"; sourceTree = "<group>"; };
+		4BC31DB35788CEEFDE589753 /* Pods-DDaRaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRaTests.release.xcconfig"; path = "Target Support Files/Pods-DDaRaTests/Pods-DDaRaTests.release.xcconfig"; sourceTree = "<group>"; };
+		7EDF686BBC9EA7B509F297BC /* Pods-DDaRa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRa.release.xcconfig"; path = "Target Support Files/Pods-DDaRa/Pods-DDaRa.release.xcconfig"; sourceTree = "<group>"; };
+		EAF88C4661660DC2F3D31AC7 /* Pods-DDaRa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRa.debug.xcconfig"; path = "Target Support Files/Pods-DDaRa/Pods-DDaRa.debug.xcconfig"; sourceTree = "<group>"; };
+		F60944A5A9D27164956C3D42 /* Pods-DDaRaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDaRaTests.debug.xcconfig"; path = "Target Support Files/Pods-DDaRaTests/Pods-DDaRaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DA50696629AA124FA7AC087 /* Pods_DDaRaTests.framework in Frameworks */,
+				E4425F3006CCA80D97A26986 /* Pods_DDaRaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6E3AC21C4FA80541524A3FD /* Pods_DDaRa.framework in Frameworks */,
+				67F3662736B75076D9B145D3 /* Pods_DDaRa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,10 +174,10 @@
 		14FC0F1FB8B3331ACD1C2EE6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				781C51F7F9AEFD830E005E82 /* Pods-DDaRa.debug.xcconfig */,
-				BA9AC9BE31C37E5C6B9C6163 /* Pods-DDaRa.release.xcconfig */,
-				9C1D32C4D889340999024030 /* Pods-DDaRaTests.debug.xcconfig */,
-				A1DFD6B2A13F2F202EFA19B3 /* Pods-DDaRaTests.release.xcconfig */,
+				EAF88C4661660DC2F3D31AC7 /* Pods-DDaRa.debug.xcconfig */,
+				7EDF686BBC9EA7B509F297BC /* Pods-DDaRa.release.xcconfig */,
+				F60944A5A9D27164956C3D42 /* Pods-DDaRaTests.debug.xcconfig */,
+				4BC31DB35788CEEFDE589753 /* Pods-DDaRaTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -362,7 +362,7 @@
 				3929B62F295BC5FD00A1CBD0 /* DDaRaTests */,
 				39A1BEC62952FB110007C524 /* Products */,
 				14FC0F1FB8B3331ACD1C2EE6 /* Pods */,
-				F7DAE51D6CCCBFD68C02E83D /* Frameworks */,
+				D1ED2F8EF184A646097474A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -516,11 +516,11 @@
 			path = Dummy;
 			sourceTree = "<group>";
 		};
-		F7DAE51D6CCCBFD68C02E83D /* Frameworks */ = {
+		D1ED2F8EF184A646097474A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6679BDFCCD64325FFAA2888F /* Pods_DDaRa.framework */,
-				846587CE3226813FFA7B8700 /* Pods_DDaRaTests.framework */,
+				035D3727D5F5DBD26400DF89 /* Pods_DDaRa.framework */,
+				2804E8DCFD0D8953CD4DD5D1 /* Pods_DDaRaTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -532,11 +532,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3929B634295BC5FD00A1CBD0 /* Build configuration list for PBXNativeTarget "DDaRaTests" */;
 			buildPhases = (
-				F9B16B39A46F8295F044EB98 /* [CP] Check Pods Manifest.lock */,
+				5A5156C2583F81FB06FA970B /* [CP] Check Pods Manifest.lock */,
 				3929B62A295BC5FD00A1CBD0 /* Sources */,
 				3929B62B295BC5FD00A1CBD0 /* Frameworks */,
 				3929B62C295BC5FD00A1CBD0 /* Resources */,
-				6343A61B2DF570773018A2C6 /* [CP] Embed Pods Frameworks */,
+				5593568C38707E5C209105B2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -552,11 +552,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39A1BED92952FB120007C524 /* Build configuration list for PBXNativeTarget "DDaRa" */;
 			buildPhases = (
-				B9E3FCE0F6F150E62FCF6E2C /* [CP] Check Pods Manifest.lock */,
+				CE4A0C720C47FC401F4DBD30 /* [CP] Check Pods Manifest.lock */,
 				39A1BEC12952FB110007C524 /* Sources */,
 				39A1BEC22952FB110007C524 /* Frameworks */,
 				39A1BEC32952FB110007C524 /* Resources */,
-				57E9144E7C2F3AEBD2FC8C01 /* [CP] Embed Pods Frameworks */,
+				37C3B02CE14D48DD7A3741D4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -626,7 +626,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		57E9144E7C2F3AEBD2FC8C01 /* [CP] Embed Pods Frameworks */ = {
+		37C3B02CE14D48DD7A3741D4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -643,7 +643,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DDaRa/Pods-DDaRa-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6343A61B2DF570773018A2C6 /* [CP] Embed Pods Frameworks */ = {
+		5593568C38707E5C209105B2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -660,29 +660,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DDaRaTests/Pods-DDaRaTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B9E3FCE0F6F150E62FCF6E2C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DDaRa-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F9B16B39A46F8295F044EB98 /* [CP] Check Pods Manifest.lock */ = {
+		5A5156C2583F81FB06FA970B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -698,6 +676,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-DDaRaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE4A0C720C47FC401F4DBD30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DDaRa-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -801,7 +801,7 @@
 /* Begin XCBuildConfiguration section */
 		3929B635295BC5FD00A1CBD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C1D32C4D889340999024030 /* Pods-DDaRaTests.debug.xcconfig */;
+			baseConfigurationReference = F60944A5A9D27164956C3D42 /* Pods-DDaRaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -822,7 +822,7 @@
 		};
 		3929B636295BC5FD00A1CBD0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1DFD6B2A13F2F202EFA19B3 /* Pods-DDaRaTests.release.xcconfig */;
+			baseConfigurationReference = 4BC31DB35788CEEFDE589753 /* Pods-DDaRaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -957,7 +957,7 @@
 		};
 		39A1BEDA2952FB120007C524 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 781C51F7F9AEFD830E005E82 /* Pods-DDaRa.debug.xcconfig */;
+			baseConfigurationReference = EAF88C4661660DC2F3D31AC7 /* Pods-DDaRa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -990,7 +990,7 @@
 		};
 		39A1BEDB2952FB120007C524 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA9AC9BE31C37E5C6B9C6163 /* Pods-DDaRa.release.xcconfig */;
+			baseConfigurationReference = 7EDF686BBC9EA7B509F297BC /* Pods-DDaRa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

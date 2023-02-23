@@ -18,7 +18,7 @@ final class PlayStatusView: UIView {
     
     private let statusBarWidth = UIScreen.main.bounds.size.height / 25
     
-    private let cdSubView: UIView = {
+    private let cdView: UIView = {
         let view = UIView()
         view.tintColor = .white
         view.clipsToBounds = true
@@ -117,17 +117,17 @@ final class PlayStatusView: UIView {
     }
     
     private func layout() {
-        [cdSubView, stationLabel, playButton].forEach {
+        [cdView, stationLabel, playButton].forEach {
             addSubview($0)
         }
         
-        cdSubView.addSubview(cdImageView)
+        cdView.addSubview(cdImageView)
         
-        cdSubView.snp.makeConstraints {
+        cdView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
             $0.leading.equalToSuperview().offset(10)
             $0.bottom.equalToSuperview().inset(10)
-            $0.width.equalTo(cdSubView.snp.height)
+            $0.width.equalTo(cdView.snp.height)
         }
         
         cdImageView.snp.makeConstraints {
@@ -135,7 +135,7 @@ final class PlayStatusView: UIView {
         }
         
         stationLabel.snp.makeConstraints {
-            $0.leading.equalTo(cdSubView.snp.trailing).offset(10)
+            $0.leading.equalTo(cdView.snp.trailing).offset(10)
             $0.centerY.equalToSuperview()
         }
         
@@ -159,7 +159,7 @@ final class PlayStatusView: UIView {
     }
     
     private func setupRound() {
-        cdSubView.layer.cornerRadius = cdSubView.frame.size.height / 2
+        cdView.layer.cornerRadius = cdView.frame.size.height / 2
     }
     
     private func play() {
